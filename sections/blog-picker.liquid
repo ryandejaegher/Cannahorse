@@ -1,0 +1,38 @@
+
+
+
+        {% for blog in blogs %}
+
+              {{ blog.id	 }}
+
+        {% endfor %}
+
+  {%- assign blog = blogs['education'] -%}
+        {% for article in blog.articles %}
+
+              {{ article.title }}
+
+        {% endfor %}
+
+
+
+
+{% schema %}
+  {
+    "name": "Blog name",
+    "settings": [
+{
+   "type":      "blog",
+   "id":        "id",
+   "label":     "Text",
+   "info":      "Text"
+}
+	]
+  }
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}
