@@ -1,0 +1,25 @@
+{% for block in section.blocks %}
+  <div class="grid-item" {{ block.shopify_attributes }}>
+      {{ block.settings.blog_block_content }}
+  </div>
+{% endfor %}
+
+{% schema %}
+{
+    "name": "Blog Block",
+    "max_blocks": 4,
+        "blocks": [
+          {
+            "type": "Blog",
+            "name": "Blog Block",
+            "settings": [
+              {
+                  "type": "textarea",
+                  "id": "blog_block_content",
+                  "label": "label"
+              }
+            ]
+          }
+        ]
+}
+{% endschema %}
