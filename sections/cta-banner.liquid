@@ -1,8 +1,8 @@
-{{section.settings.cta_title}}
-{{section.settings.cta_content}}
-{{section.settings.cta_text}}
-{{section.settings.cta_link}}
-
+<div class="flex flex-col items-center py-16">
+    <h2 class="">{{section.settings.cta_title}}</h2>
+    <p>{{section.settings.cta_content}}</p>
+    <a href="{{section.settings.cta_link}}">{{section.settings.cta_text}}</a>
+</div>    
 {% schema %}
 {
     "name": "Call To Action Banner",
@@ -20,7 +20,7 @@
         {
             "type": "text",
             "id": "cta_text",
-            "label": "CTA Text",
+            "label": "CTA Text"
         },
         {
             "type": "url",
