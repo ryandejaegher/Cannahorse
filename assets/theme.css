@@ -1097,10 +1097,10 @@ textarea {
 
 .main-content {
   display: block;
-  padding-top: 35px; }
-  @media only screen and (min-width: 750px) {
+  /* padding-top: 35px;*/ } 
+  /* @media only screen and (min-width: 750px) {
     .main-content {
-      padding-top: 55px; } }
+      padding-top: 55px; } } */
 
 .section-header {
   margin-bottom: 35px; }
@@ -7376,5 +7376,14 @@ footer .input-group div:nth-child(3) {
 }
 
 .custom__item:nth-of-type(3) {
-    margin-top: (-88%);
+    transform: translateY(-68%);
 }
+
+.text-primary {
+  color: var(--brand-primary);
+}
+
+.bg-primary {
+  background: var(--brand-primary);
+}
+

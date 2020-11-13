@@ -1,5 +1,6 @@
 {% for block in section.blocks %}
   <div class="page-width max-w-none py-8" {{ block.shopify_attributes }}>
+      <h2 class="bg-primary text-white inline-block py-2 px-4 text-xs rounded-lg tracking-normal">{{block.settings.blog_block_tag}}</h2>
       <p class="font-semibold">{{ block.settings.blog_block_content }}</p>
       <ul class="grid grid--uniform grid--blog grid-cols-3">
         {% for article in blog.articles limit: section.settings.post_limit %}
@@ -131,7 +132,7 @@
                 "type": "range",
                 "id": "post_limit",
                 "label": "Posts",
-                "min": 3,
+                "min": 0,
                 "max": 12,
                 "step": 3,
                 "default": 3
