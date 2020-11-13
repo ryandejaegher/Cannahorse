@@ -3,7 +3,8 @@
       <p class="font-semibold">{{ block.settings.blog_block_content }}</p>
       <ul class="grid grid--uniform grid--blog grid-cols-3">
         {% for article in blog.articles limit: section.settings.post_limit %}
-        {% if article.tags contains section.settings.blog_block_tag %}
+
+        {% if article.tags contains block.settings.blog_block_tag %}
             
           <li class="grid__item medium-up--one-third">
             <article aria-labelledby="FeaturedBlogTitle-{{ forloop.index0 }}-{{ section.id }}">
