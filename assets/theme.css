@@ -7387,3 +7387,6 @@ footer .input-group div:nth-child(3) {
   background: var(--brand-primary);
 }
 
+html {
+  scroll-behavior: smooth;
+}

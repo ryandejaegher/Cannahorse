@@ -1,7 +1,7 @@
-<div class="flex flex-col items-center py-40 bg-gray-200">
+<div class="flex flex-col items-center bg-gray-200 {{section.settings.spacing}}">
     <h2 class="font-semibold text-5xl tracking-normal text-primary capitalize">{{section.settings.cta_title}}</h2>
     <p class="max-w-3xl text-center text-xl font-semibold text-sm">{{section.settings.cta_content}}</p>
-    <a class="font-semibold bg-primary text-white uppercase px-6 py-2 rounded-full" href="{{section.settings.cta_link}}">{{section.settings.cta_text}}</a>
+    <a class="font-semibold bg-primary text-white uppercase px-6 py-2 rounded-full hover:text-white " href="{{section.settings.cta_link}}">{{section.settings.cta_text}}</a>
 </div>    
 {% schema %}
 {
@@ -26,6 +26,26 @@
             "type": "url",
             "id": "cta_link",
             "label": "Link"
+        },
+        {
+            "type": "select",
+            "id": "spacing",
+            "label": "Spacing",
+            "options": [
+                {
+                    "value": "py-16",
+                    "label": "sm"
+                }, {
+                    "value": "py-20",
+                    "label": "md"
+                }, {
+                    "value": "py-32",
+                    "label": "lg"
+                }, {
+                    "value": "py-40",
+                    "label": "xl"
+                }
+            ]
         }
     ]
 }
