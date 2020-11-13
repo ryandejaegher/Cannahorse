@@ -1,9 +1,9 @@
 {% for block in section.blocks %}
   <div class="page-width max-w-none py-8" {{ block.shopify_attributes }}>
-    <div class="flex items-center">
-      <h2 id="{{block.settings.blog_block_tag | downcase | replace: " ", "-"}}"class="bg-primary text-white inline-block py-2 px-4 text-xs rounded-lg tracking-normal whitespace-no-wrap">{{block.settings.blog_block_tag}}</h2><span></span>
+    <div class="flex items-center gap-4">
+      <h2 id="{{block.settings.blog_block_tag | downcase | replace: " ", "-"}}"class="bg-primary text-white inline-block py-2 px-4 text-xs rounded-lg tracking-normal whitespace-no-wrap m-0 w-48 text-center">{{block.settings.blog_block_tag}}</h2><span class="h-px bg-gray-700 w-full"></span>
     </div>
-      <p class="font-semibold max-w-3xl">{{ block.settings.blog_block_content }}</p>
+      <p class="font-semibold max-w-3xl mt-6">{{ block.settings.blog_block_content }}</p>
       <ul class="grid grid--uniform grid--blog grid-cols-3">
         {% for article in blog.articles limit: section.settings.post_limit %}
 
@@ -36,24 +36,26 @@
                       </div>
                     </noscript>
                   {% endif %}
-    
+                    <div class="w-full h-64 bg-gray-300 mt-4">
+
+                    </div>
                   <h3 class="article__title" id="FeaturedBlogTitle-{{ forloop.index0 }}-{{ section.id }}">
                     {{ article.title }}
                   </h3>
                 </a>
     
-                {% if section.settings.blog_show_author %}
+                {% if block.settings.blog_show_author %}
                   <span class="article__author">{{ 'blogs.article.by_author' | t: author: article.author }}</span>
                 {% endif %}
     
-                {% if section.settings.blog_show_date %}
+                {% if block.settings.blog_show_date %}
                   <span class="article__date">
                     {{ article.published_at | time_tag: format: 'date' }}
                   </span>
                 {% endif %}
               </header>
     
-              <div class="article__grid-meta">
+              <div class="">
                 <div class="rte article__grid-excerpt">
                   {% if article.excerpt.size > 0 %}
                     {{ article.excerpt }}
@@ -62,7 +64,7 @@
                   {% endif %}
                 </div>
     
-                {% if article.tags.size > 0 %}
+                {% if article.tags.size > 0 and block.settings.blog_show_tags == true%}
                   <div class="article__tags rte">
                     <ul class="list--inline" aria-label="{{ 'blogs.article.tags' | t }}">
                       {% for tag in article.tags %}
@@ -142,6 +144,24 @@
                     "max": 12,
                     "step": 3,
                     "default": 3
+                },
+                {
+                  "type": "checkbox",
+                  "id": "blog_show_author",
+                  "label": "Show Blog Author",
+                  "default": true
+                },
+                {
+                  "type": "checkbox",
+                  "id": "blog_show_date",
+                  "label": "Show Blog Date",
+                  "default": true
+                },
+                {
+                  "type": "checkbox",
+                  "id": "blog_show_tags",
+                  "label": "Show Blog Tags",
+                  "default": true
                 }
             ]
         }
