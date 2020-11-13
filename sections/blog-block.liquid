@@ -1,7 +1,9 @@
 {% for block in section.blocks %}
   <div class="page-width max-w-none py-8" {{ block.shopify_attributes }}>
-      <h2 class="bg-primary text-white inline-block py-2 px-4 text-xs rounded-lg tracking-normal">{{block.settings.blog_block_tag}}</h2>
-      <p class="font-semibold">{{ block.settings.blog_block_content }}</p>
+    <div class="flex items-center">
+      <h2 id="{{block.settings.blog_block_tag | downcase | replace: " ", "-"}}"class="bg-primary text-white inline-block py-2 px-4 text-xs rounded-lg tracking-normal whitespace-no-wrap">{{block.settings.blog_block_tag}}</h2><span></span>
+    </div>
+      <p class="font-semibold max-w-3xl">{{ block.settings.blog_block_content }}</p>
       <ul class="grid grid--uniform grid--blog grid-cols-3">
         {% for article in blog.articles limit: section.settings.post_limit %}
 
@@ -100,45 +102,50 @@
 {% endfor %}
 
 {% schema %}
+
 {
     "name": "Blog Block",
     "max_blocks": 4,
-        "blocks": [
-          {
+    "blocks": [
+        {
             "type": "Blog",
             "name": "Blog Block",
             "settings": [
-              {
-                  "type": "textarea",
-                  "id": "blog_block_content",
-                  "label": "label"
-              },
-              {
-                  "type": "select",
-                  "id": "blog_block_tag",
-                  "label": "Blog Tag",
-                  "options": [
-                      {
-                          "value": "cannabis 101",
-                          "label": "Cannabis 101"
-                      },
-                      {
-                        "value": "sports & cannabis",
-                        "label": "Sports & Cannabis"
-                    }
-                  ]
-              },
-              {
-                "type": "range",
-                "id": "post_limit",
-                "label": "Posts",
-                "min": 0,
-                "max": 12,
-                "step": 3,
-                "default": 3
-              }
+                {
+                    "type": "textarea",
+                    "id": "blog_block_content",
+                    "label": "Intro to blog content"
+                }, {
+                    "type": "select",
+                    "id": "blog_block_tag",
+                    "label": "Blog Tag",
+                    "options": [
+                        {
+                            "value": "cannabis 101",
+                            "label": "Cannabis 101"
+                        }, {
+                            "value": "horses & cannabis",
+                            "label": "Horses & Cannabis"
+                        }, {
+                            "value": "sports & cannabis",
+                            "label": "Sports & Cannabis"
+                        }, {
+                            "value": "pets & cannabis",
+                            "label": "Pets & Cannabis"
+                        }
+                    ]
+                }, {
+                    "type": "range",
+                    "id": "post_limit",
+                    "label": "Posts",
+                    "min": 0,
+                    "max": 12,
+                    "step": 3,
+                    "default": 3
+                }
             ]
-          }
-        ]
+        }
+    ]
 }
+
 {% endschema %}
