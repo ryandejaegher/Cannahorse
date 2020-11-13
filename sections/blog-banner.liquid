@@ -4,19 +4,24 @@
 </div>
 
 {% schema %}
+
 {
     "name": "Blog Banner",
     "settings": [
         {
+            "type": "image_picker",
+            "id": "id",
+            "label": "label"
+        }, {
             "type": "text",
             "id": "blog_banner_title",
             "label": "Title"
-        },
-        {
+        }, {
             "type": "textarea",
             "id": "blog_banner_subtitle",
             "label": "Subtitle"
         }
     ]
 }
+
 {% endschema %}
