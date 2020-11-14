@@ -30,10 +30,10 @@
 
         <div class="feature-row__item feature-row__text feature-row__text--{{ section.settings.layout }}">
             {% if section.settings.title != blank %}
-                <h2 class="text-5xl capitalize">{{ section.settings.title | escape }}</h2>
+                <h2 class="text-3xl md:text-5xl capitalize">{{ section.settings.title | escape }}</h2>
             {% endif %}
             {% if section.settings.text != blank %}
-                <div class="rte rte-setting text-lg">{{ section.settings.text }}</div>
+                <div class="rte rte-setting text-base md:text-lg">{{ section.settings.text }}</div>
             {% endif %}
             {% if section.settings.button_label != blank and section.settings.button_link != blank %}
                 {%- capture ariaLabel -%}
@@ -50,7 +50,7 @@
                     {%- endif -%}
                 {%- endcapture -%}
 
-                <a href="{{ section.settings.button_link }}" class="text-lg font-semibold text-white py-2 px-8 mt-4 inline-block hover:text-white" aria-label="{{ ariaLabel }}">
+                <a href="{{ section.settings.button_link }}" class="text-base md:text-lg font-semibold text-white py-2 px-8 mt-4 inline-block hover:text-white" aria-label="{{ ariaLabel }}">
                     {{- section.settings.button_label | escape -}}
                 </a>
             {% endif %}

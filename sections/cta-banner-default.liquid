@@ -1,0 +1,88 @@
+<div style="background:{{section.settings.bg_color}}">
+    <div class="flex flex-col items-center {{section.settings.spacing}}">
+        <h2 class="font-semibold text-5xl tracking-normal text-primary capitalize">{{section.settings.cta_title}}</h2>
+        <p class="max-w-2xl text-center text-xl font-semibold text-sm">{{section.settings.cta_content}}</p>
+        {% unless section.settings.cta_text == blank %}
+            <a class="font-semibold bg-primary text-white uppercase px-6 py-2 rounded-full hover:text-white " href="{{section.settings.cta_link}}">{{section.settings.cta_text}}</a>
+        {% endunless %}
+
+        {%- assign formId = 'Contact_' | append: section.id -%}
+        {% form 'customer', id: formId, novalidate: 'novalidate', class: 'contact-form w-full m-0 max-w-none' %}
+            {%- if form.posted_successfully? -%}
+                <p class="form-message form-message--success" data-form-status tabindex="-1">
+                    {{ 'general.newsletter_form.confirmation' | t }}
+                </p>
+            {%- endif -%}
+            <input name="contact[tags]" type="hidden" value="newsletter">
+            <div class="{% if form.errors %} input-group--error{% endif %} flex flex-no-wrap w-1/3 gap-4 mx-auto">
+                <input type="email" name="contact[email]" id="{{ formId }}-email" class="input-group__field{% if form.errors %} input--error{% endif %}" value="{{ form.email }}" placeholder="{{ 'general.newsletter_form.email_placeholder' | t }}" aria-label="{{ 'general.newsletter_form.email_placeholder' | t }}" aria-required="true" autocorrect="off" autocapitalize="off" {% if form.errors %} aria-invalid="true" aria-describedby="{{ formId }}-email-error" data-form-status {% endif %}>
+                <span class="input-group__btn">
+                    <button class="font-semibold px-8 py-2 bg-primary text-white rounded-full" name="commit" type="submit">
+                        <span>{{ 'general.newsletter_form.submit' | t }}</span>
+                    </button>
+                </span>
+            </div>
+            {%- if form.errors contains 'email' -%}
+                <span id="{{ formId }}-email-error" class="input-error-message">
+                    <span class="visually-hidden">{{ 'general.accessibility.error' | t }}
+                    </span>
+                    {% include 'icon-error' %}
+                    <span>{{ form.errors.translated_fields['email'] | capitalize }}
+                        {{ form.errors.messages['email'] }}.</span>
+                </span>
+            {%- endif -%}
+        {% endform %}
+    </div>
+
+</div>
+
+
+{% schema %}
+
+{
+    "name": "Call To Action Banner",
+    "settings": [
+        {
+            "type": "text",
+            "id": "cta_title",
+            "label": "Heading"
+        }, {
+            "type": "textarea",
+            "id": "cta_content",
+            "label": "Content"
+        }, {
+            "type": "text",
+            "id": "cta_text",
+            "label": "CTA Text"
+        }, {
+            "type": "url",
+            "id": "cta_link",
+            "label": "Link"
+        }, {
+            "type": "select",
+            "id": "spacing",
+            "label": "Spacing",
+            "options": [
+                {
+                    "value": "py-16",
+                    "label": "sm"
+                }, {
+                    "value": "py-20",
+                    "label": "md"
+                }, {
+                    "value": "py-32",
+                    "label": "lg"
+                }, {
+                    "value": "py-40",
+                    "label": "xl"
+                }
+            ]
+        }, {
+            "type": "color",
+            "id": "bg_color",
+            "label": "Background color"
+        }
+    ]
+}
+
+{% endschema %}

@@ -86,7 +86,7 @@
       </div>
     {%- endif -%}
       <div class="hero__inner">
-        <div class="page-width {{section.settings.text_alignment}} {{section.settings.container}}">
+        <div class="page-width m-0 {{section.settings.text_alignment}} {{section.settings.container}}">
           {%- if section.settings.title != blank -%}
             <h2 class="h1 mega-title{% if section.settings.text_size == 'large' %} mega-title--large{% endif %}">{{ section.settings.title | escape }}</h2>
           {%- endif -%}
@@ -106,7 +106,7 @@
             {%- endcapture -%}
 
             <a href="{{ section.settings.button_link }}"
-              class="btn hero__btn"
+              class="text-base text-white font-semibold bg-primary py-2 px-8 text-base md:text-xl inline-block rounded-full mt-4"
               aria-label="{{ ariaLabel }}">
               {{- section.settings.button_label | escape -}}
             </a>
@@ -211,11 +211,11 @@
        "label": "Full width"
      },
 	{
-       "value": "max-w-fixed",
+       "value": "max-w-fixed mx-0",
        "label": "Fixed width"
      }
    ],
-   "default":   "max-w-fixed",
+   "default":   "max-w-fixed mx-0",
    "info":      "Controls the text container size"
 },
     {
