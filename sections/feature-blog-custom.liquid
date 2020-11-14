@@ -1,4 +1,4 @@
-<div class="page-width">
+<div class="page-width {{section.settings.spacing}}">
   {% if section.settings.title != blank %}
     <header class="section-header">
       <h2>{{ section.settings.title | escape }}</h2>
@@ -168,7 +168,7 @@
     "zh-CN": "博客文章",
     "zh-TW": "部落格文章"
   },
-  "class": "index-section",
+  "class": "test",
   "settings": [
     {
       "type": "text",
@@ -220,6 +220,26 @@
         "zh-TW": "部落格文章"
       }
     },
+    {
+      "type": "select",
+      "id": "spacing",
+      "label": "Spacing",
+      "options": [
+          {
+              "value": "py-16",
+              "label": "sm"
+          }, {
+              "value": "py-20",
+              "label": "md"
+          }, {
+              "value": "py-32",
+              "label": "lg"
+          }, {
+              "value": "py-40",
+              "label": "xl"
+          }
+      ]
+  },
     {
       "id": "blog",
       "type": "blog",
@@ -363,6 +383,7 @@
       "default": false
     }
   ],
+  
   "presets": [
     {
       "name": {
