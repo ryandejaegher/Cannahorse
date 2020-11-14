@@ -3945,7 +3945,7 @@ hr {
 ==============================================================================*/
 .grid--blog {
   margin-bottom: 0;
-  overflow: auto; }
+ }
 
 .article__grid-tag {
   margin-right: 10px; }
@@ -7418,3 +7418,4 @@ html {
 .aspect-16-9 {
   padding-top: 56.25%;
 }
+

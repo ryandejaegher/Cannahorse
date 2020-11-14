@@ -1,0 +1,173 @@
+{%- assign blog = blogs['blog'] -%}
+
+{% for block in section.blocks %}
+  <div class="page-width max-w-none py-8" {{ block.shopify_attributes }}>
+    <div class="flex items-center gap-4">
+      <h2 id="{{block.settings.blog_block_heading | downcase | replace: " ", "-"}}"class="bg-primary text-white inline-block py-2 px-4 text-xs rounded-lg tracking-normal whitespace-no-wrap m-0 w-48 text-center">{{block.settings.blog_block_heading}}</h2><span class="h-px bg-gray-700 w-full"></span>
+    </div>
+      <p class="font-semibold max-w-3xl mt-6">{{ block.settings.blog_block_content }}</p>
+      <ul class="grid grid--uniform grid--blog grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
+        {% for article in blog.articles limit: section.settings.post_limit %}
+
+
+            
+          <li class="grid__item medium-up--one-third">
+            <article aria-labelledby="FeaturedBlogTitle-{{ forloop.index0 }}-{{ section.id }}">
+              <header>
+                <a href="{{ article.url }}" class="article__link">
+                  {% if article.image %}
+                    {% capture img_id %}ArticleImage-{{ article.image.id }}{% endcapture %}
+                    {% capture img_wrapper_id %}ArticleImageWrapper-{{ article.image.id }}{% endcapture %}
+                    {%- assign img_url = article.image | img_url: '1x1' | replace: '_1x1.', '_{width}x.' -%}
+    
+                    {% include 'image-style', image: article.image, height: 345, wrapper_id: img_wrapper_id, img_id: img_id %}
+                    <div id="{{ img_wrapper_id }}" class="article__grid-image-wrapper js">
+                      <div class="article__grid-image-container" style="padding-top:{{ 1 | divided_by: article.image.aspect_ratio | times: 100}}%;" data-image-loading-animation>
+                        <img id="{{ img_id }}"
+                            class="article__grid-image lazyload"
+                            data-src="{{ img_url }}"
+                            data-widths="[180, 360, 540, 720, 900, 1080, 1296, 1512, 1728, 2048]"
+                            data-aspectratio="{{ article.image.aspect_ratio }}"
+                            data-sizes="auto"
+                            alt="">
+                      </div>
+                    </div>
+                    <noscript>
+                      <div class="article__grid-image-wrapper">
+                        {{ article | img_url: '345x345', scale: 2 | img_tag: article.title, 'article__grid-image' }}
+                      </div>
+                    </noscript>
+                  {% endif %}
+                    <div class="w-full h-64 bg-gray-300">
+
+                    </div>
+                  <h3 class="article__title text-primary mt-4" id="FeaturedBlogTitle-{{ forloop.index0 }}-{{ section.id }}">
+                    {{ article.title }}
+                  </h3>
+                </a>
+    
+                {% if block.settings.blog_show_author %}
+                  <span class="article__author">{{ 'blogs.article.by_author' | t: author: article.author }}</span>
+                {% endif %}
+    
+                {% if block.settings.blog_show_date %}
+                  <span class="font-semibold">
+                    {{ article.published_at | time_tag: format: 'date' }}
+                  </span>
+                {% endif %}
+              </header>
+    
+              <div class="">
+                <div class="rte article__grid-excerpt">
+                  {% if article.excerpt.size > 0 %}
+                    {{ article.excerpt }}
+                  {% else %}
+                    {{ article.content | strip_html | truncate: 150 }}
+                  {% endif %}
+                </div>
+    
+                {% if article.tags.size > 0 and block.settings.blog_show_tags == true%}
+                  <div class="article__tags rte">
+                    <ul class="list--inline" aria-label="{{ 'blogs.article.tags' | t }}">
+                      {% for tag in article.tags %}
+                        <li>
+                          <a href="{{ blog.url }}/tagged/{{ tag | handle }}" class="article__grid-tag">{{ tag }}</a>
+                        </li>
+                      {% endfor %}
+                    </ul>
+                  </div>
+                {% endif %}
+    
+                <ul class="list--inline article__meta-buttons">
+                  <li>
+                    <a href="{{ article.url }}" class="px-2 py-2 -mx-2 uppercase font-semibold" aria-label="{{ 'blogs.article.read_more_title' | t: title: article.title }}">
+                      {{ 'blogs.article.read_more' | t }}→
+                    </a>
+                  </li>
+    
+                  {% if blog.comments_enabled? and article.comments_count > 0 %}
+                    <li>
+                      <a href="{{ article.url }}#comments" class="article__comment-count btn btn--tertiary btn--small">
+                        {{ 'blogs.comments.comments_with_count' | t: count: article.comments_count }}
+                      </a>
+                    </li>
+                  {% endif %}
+                </ul>
+              </div>
+            </article>
+          </li>
+        {% endfor %}
+      </ul>
+      
+    </div>
+  </div>
+  
+{% endfor %}
+
+{% schema %}
+
+{
+    "name": "Blog Block",
+    "max_blocks": 4,
+    "blocks": [
+        {
+            "type": "Blog",
+            "name": "Blog Block",
+            "settings": [
+                {
+                    "type": "text",
+                    "id": "blog_block_heading",
+                    "label": "Section heading"
+                }, {
+                    "type": "textarea",
+                    "id": "blog_block_content",
+                    "label": "Intro to blog content"
+                }, {
+                    "type": "select",
+                    "id": "blog_block_tag",
+                    "label": "Blog Tag",
+                    "options": [
+                        {
+                            "value": "cannabis 101",
+                            "label": "Cannabis 101"
+                        }, {
+                            "value": "horses & cannabis",
+                            "label": "Horses & Cannabis"
+                        }, {
+                            "value": "sports & cannabis",
+                            "label": "Sports & Cannabis"
+                        }, {
+                            "value": "pets & cannabis",
+                            "label": "Pets & Cannabis"
+                        }
+                    ]
+                }, {
+                    "type": "range",
+                    "id": "post_limit",
+                    "label": "Posts",
+                    "min": 0,
+                    "max": 12,
+                    "step": 3,
+                    "default": 3
+                }, {
+                    "type": "checkbox",
+                    "id": "blog_show_author",
+                    "label": "Show Blog Author",
+                    "default": true
+                }, {
+                    "type": "checkbox",
+                    "id": "blog_show_date",
+                    "label": "Show Blog Date",
+                    "default": true
+                }, {
+                    "type": "checkbox",
+                    "id": "blog_show_tags",
+                    "label": "Show Blog Tags",
+                    "default": true
+                }
+            ]
+        }
+    ]
+}
+
+{% endschema %}
