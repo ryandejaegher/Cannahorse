@@ -1,3 +1,5 @@
+{{ product.description }}
+
 <div class="product-template__container page-width"
   id="ProductSection-{{ section.id }}"
   data-section-id="{{ section.id }}"
@@ -266,10 +268,13 @@
           data-base-url="{{ shop.url }}{{ routes.root_url }}"
         >
         </div>
+        
+{%- comment -%}
 
-        <div class="product-single__description rte">
-          {{ product.description }}
-        </div>
+<div class="product-single__description rte">
+  {{ product.description }}
+</div>
+{%- endcomment -%}
 
         {% if section.settings.show_share_buttons %}
           {% include 'social-sharing', share_title: product.title, share_permalink: product.url, share_image: product.featured_media %}
