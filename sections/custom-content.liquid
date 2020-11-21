@@ -70,10 +70,10 @@
                           {% when 'text' %}
                               <div class="medium-up--text-{{ block.settings.align_text }}">
                                   {% if block.settings.title != blank %}
-                                      <h4 class="h3">{{ block.settings.title | escape }}</h4>
+                                      <h4 data-aos="up" class="h3">{{ block.settings.title | escape }}</h4>
                                   {% endif %}
                                   {% if block.settings.text != blank %}
-                                      <div class="rte-setting rte">{{ block.settings.text }}</div>
+                                      <div data-aos="up" data-aos-offset="150" class="rte-setting rte">{{ block.settings.text }}</div>
                                   {% endif %}
                               </div>
                           {% when 'video' %}
@@ -178,7 +178,7 @@
                               {%- assign cover_image = block.settings.cover_image -%}
   
                               {%- if article != empty -%}
-                                  <div class="article" id="Article-{{ article.image.id }}">
+                                  <div data-aos="up" class="article" id="Article-{{ article.image.id }}">
                                       <a href="{{ article.url }}" class="article__link article__link--fixed-overlay">
                                           {%- if article.image and cover_image != 'none' -%}
                                               {%- capture img_id -%}ArticleImage-{{ article.image.id }}
@@ -267,7 +267,7 @@
                                       </ul>
                                   </div>
                               {%- else -%}
-                                  <div class="article">
+                                  <div data-aos="up" class="article">
                                       <a class="article__link article__link--fixed-overlay" href="#">
                                           {%- if article.image and cover_image != 'none' -%}
                                               <div class="article__grid-image-wrapper article__grid-image-wrapper--{{ cover_image }} article-image-wrapper">

@@ -1,7 +1,7 @@
 <div class="page-width {{section.settings.spacing}}">
     {% if section.settings.title != blank %}
         <div class="section-header {{section.settings.text_alignment}} text-2xl md:text-4xl">
-            <h2>{{ section.settings.title | escape }}</h2>
+            <h2 data-aos="down">{{ section.settings.title | escape }}</h2>
         </div>
     {% endif %}
 
@@ -26,7 +26,7 @@
 
     <ul class="grid grid--uniform grid--view-items">
         {% for product in collection.products limit: product_limit %}
-            <li class="grid__item grid__item--{{section.id}} {{ grid_item_width }}">
+            <li data-aos="up" data-aos-offset="{{forloop.index | times: 100}}" class="grid__item grid__item--{{section.id}} {{ grid_item_width }}">
                 {% include 'product-card-grid', max_height: max_height, product: product, show_vendor: section.settings.show_vendor %}
             </li>
         {% else %}

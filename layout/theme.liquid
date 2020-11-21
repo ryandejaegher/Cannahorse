@@ -19,6 +19,8 @@
 
   <link rel="preload" href="{{ 'theme.css' | asset_url }}" as="style">
   {{ 'glider.min.css' | asset_url | stylesheet_tag }} 
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
   <link rel="preload" as="font" href="{{ header_font | font_url }}" type="font/woff2" crossorigin>
   <link rel="preload" as="font" href="{{ base_font | font_url }}" type="font/woff2" crossorigin>
   <link rel="preload" as="font" href="{{ base_font_bold | font_url }}" type="font/woff2" crossorigin>
@@ -197,5 +199,16 @@
   </ul>
   
   {{ 'glider.min.js' | asset_url | script_tag }}
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  {%- comment -%}
+  Initialty Animate on Scroll
+  {%- endcomment -%}
+  <script>
+    AOS.init({
+      offset: 200,
+      duration: 500,
+      easing: 'ease-in-out-cubic'
+    });
+  </script>
 </body>
 </html>

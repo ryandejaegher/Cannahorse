@@ -7380,13 +7380,31 @@ footer .input-group div:nth-child(3) {
     align-self: start;
 }
 
-.custom__item:nth-of-type(2) {
-    transform: translateY(5%);
+#shopify-section-1605057359e5d3918b .custom__item--1605057359e5d3918b-0 h4 {
+  color: var(--brand-primary);
+  font-size: 48px;
+}
+
+.custom__item--a82dc95c-2b5d-4272-9b73-e56bc9d6c3a4 p {
+  font-size: 18px;
+}
+
+.custom__item--a82dc95c-2b5d-4272-9b73-e56bc9d6c3a4 a {
+  font-weight: 600;
+  background: var(--brand-primary);
+  color: white;
+  border-radius: 100px;
+  display: inline-block;
+  padding: 12px 24px !important;
+}
+
+a:hover {
+  color: white !important;
 }
 
 @media(min-width: 767px) {
   .custom__item:nth-of-type(3) {
-    margin-top: -120%;
+    margin-top: -110%;
 }
 }
 
@@ -7419,3 +7437,80 @@ html {
   padding-top: 56.25%;
 }
 
+#shopify-section-header {
+  position: sticky;
+  top: 0;
+  box-shadow: 0px 4px 20px 0px rgba(0,0,0,.2);
+  z-index: 10;
+}
+
+[data-aos="up"] {
+  opacity: 0;
+  transform: translateY(16px);
+  transition-property: transform, opacity;
+}
+
+[data-aos="up"].aos-animate {
+  opacity: 1;
+  transform: translateY(0px);
+}
+
+[data-aos="down"] {
+  opacity: 0;
+  transform: translateY(-16px);
+  transition-property: transform, opacity;
+}
+
+[data-aos="down"].aos-animate {
+  opacity: 1;
+  transform: translateY(0px);
+}
+[data-aos="left"] {
+  opacity: 0;
+  transform: translateX(-16px);
+  transition-property: transform, opacity;
+}
+
+[data-aos="left"].aos-animate {
+  opacity: 1;
+  transform: translateX(0px);
+}
+
+[data-aos="right"] {
+  opacity: 0;
+  transform: translateX(16px);
+  transition-property: transform, opacity;
+}
+
+[data-aos="right"].aos-animate {
+  opacity: 1;
+  transform: translateX(0px);
+}
+
+.glider-prev {
+  left: -8%;
+}
+.glider-next {
+  right: -8%;
+}
+
+.site-header__icons-wrapper path {
+  fill: var(--brand-primary) !important;
+}
+
+hr {
+  margin: 0 !important;
+  padding: 8px 0px;
+}
+
+.site-footer__copyright-content, .site-footer__copyright-content a  {
+  color: white !important;
+}
+
+.site-footer__item-inner--link_list {
+  width: 100%;
+}
+
+.site-footer__linklist {
+  width: fit-content;
+}

@@ -1,6 +1,6 @@
 <div class="feature-row">
     {% capture image_layout %}
-        <div class="feature-row__item feature-row__image-wrapper">
+        <div data-aos="up" data-aos-offset="300" class="feature-row__item feature-row__image-wrapper">
             {% if section.settings.image != blank %}
                 {% capture img_id %}FeatureRowImage-{{ section.id }}
                 {% endcapture %}
@@ -28,7 +28,7 @@
             {{ image_layout }}
         {% endif %}
 
-        <div class="feature-row__item feature-row__text feature-row__text--{{ section.settings.layout }}">
+        <div data-aos="down" class="feature-row__item feature-row__text feature-row__text--{{ section.settings.layout }}">
             {% if section.settings.title != blank %}
                 <h2 class="text-3xl md:text-5xl capitalize">{{ section.settings.title | escape }}</h2>
             {% endif %}

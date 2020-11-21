@@ -1,7 +1,7 @@
 <div class="page-width {{section.settings.spacing}} ">
   {% if section.settings.title != blank %}
     <header class="section-header">
-      <h2 class="text-2xl md:text-5xl">{{ section.settings.title | escape }}</h2>
+      <h2 data-aos="down" class="text-2xl md:text-5xl">{{ section.settings.title | escape }}</h2>
     </header>
   {% endif %}
 
@@ -99,7 +99,7 @@
 <div class="glider-contain">
     <div class="grid grid--uniform grid--blog glider">
       {% for i in (1..section.settings.post_limit) %}
-        <div class="grid__item medium-up--one-third">
+        <div data-aos="up" data-aos-delay="{{forloop.index | times:100 }}" class="grid__item medium-up--one-third">
           <div class="article__grid-meta">
             <h3 class="article__title">
               <a href="#">{{ 'homepage.onboarding.blog_title' | t }}</a>

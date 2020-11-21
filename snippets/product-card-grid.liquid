@@ -43,7 +43,8 @@
   </noscript>
 
   <div class="h4 grid-view-item__title product-card__title" aria-hidden="true">{{ product.title }}</div>
-    <div class="h4 grid-view-item__title product-card__description" aria-hidden="true">{{ product.description }}</div>
+    
+  <!-- <div class="h4 grid-view-item__title product-card__description" aria-hidden="true">{{ product.description }}</div> -->
 
   {% include 'product-price-listing', product: product, show_vendor: show_vendor %}
   <a class="product-card__button" href={{ product.url }}>View Product</a>

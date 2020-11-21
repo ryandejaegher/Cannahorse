@@ -46,7 +46,7 @@
     "brace_block": true
   },
   "json": {
-    "preserve": 2,
+  "preserve": 2,
     "indent_lines": 2,
     "braces": false,
     "brace_block": true,
