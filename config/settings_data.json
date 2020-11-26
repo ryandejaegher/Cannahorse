@@ -25,13 +25,13 @@
           "image": "shopify:\/\/shop_images\/home-hero_a8cd52a8-f73c-4143-8295-091b805b0eee.jpg",
           "show_gradient": true,
           "text_alignment": "",
-          "container": "max-w-none",
+          "container": "max-w-fixed mx-0",
           "alignment": "center",
           "hero_layout": "full_width",
           "hero_size": "large",
           "text_size": "large",
           "title": "Equine Medicine Elevated.",
-          "text": "<p>CannaHorse is a cannabis focused equine medical company, <br\/>advancing health and science through the benefits of the plant.<\/p>",
+          "text": "<p>CannaHorse is a cannabis focused equine medical company, advancing health and science through the benefits of the plant.<\/p>",
           "button_label": "SHOP NOW",
           "button_link": "#"
         }
@@ -93,7 +93,8 @@
         "type": "collection",
         "settings": {
           "title": "Our Products",
-          "text_alignment": "text-center",
+          "text_alignment": "",
+          "spacing": "py-20",
           "collection": "homepage-collection",
           "grid": 3,
           "rows": 1,
@@ -275,8 +276,9 @@
         "settings": {
           "image": "shopify:\/\/shop_images\/Pets-and-Cannabis_e33d0e48-ae46-44b7-b355-948a7f6dba5c.jpg",
           "layout": "left",
+          "aspect": "aspect-4-3",
           "title": "Pets & Cannabis",
-          "text": "<p>A number of clinical trials for dogs and cats have <br\/>been completed. These studies have shown success <br\/>in treating similar ailments to humans such as pain <br\/>and arthritis, seizures, and anxiety.<\/p>",
+          "text": "<p>A number of clinical trials for dogs and cats have been completed. These studies have shown success in treating similar ailments to humans such as pain and arthritis, seizures, and anxiety.<\/p>",
           "button_label": "READ MORE",
           "button_link": "#"
         }
@@ -286,6 +288,7 @@
         "settings": {
           "image": "shopify:\/\/shop_images\/Patients.jpg",
           "layout": "right",
+          "aspect": "aspect-4-3",
           "title": "Patients",
           "text": "<p>There are a multitude of ways medical cannabis could help your horse. Below we introduce you to a few of our “patients&quot;. These are fictional case studies outlining the various situations where cannabis could benefit your horse. <\/p>",
           "button_label": "READ MORE",
@@ -298,7 +301,7 @@
           "1605057359e5d3918b-0": {
             "type": "text",
             "settings": {
-              "title": "Talk about your brand",
+              "title": "How Cannabis Can Help Your Horse",
               "text": "<p>Use this text to share information about your brand with your customers. Describe a product, share announcements, or welcome customers to your store.<\/p>",
               "width": "50%",
               "alignment": "center",
@@ -308,7 +311,7 @@
           "8aa1c776-0e50-4f64-abe4-879e5a8d417d": {
             "type": "article",
             "settings": {
-              "article": "",
+              "article": "news\/what-canna-loving-canadians-have-to-be-thankful-for-this-thanksgiving",
               "width": "50%",
               "alignment": "center",
               "cover_image": "large",
@@ -319,7 +322,7 @@
           "101e9112-7491-409c-a93e-1cc1a04586d9": {
             "type": "article",
             "settings": {
-              "article": "",
+              "article": "news\/the-straight-dope-on-equine-cbd",
               "width": "50%",
               "alignment": "center",
               "cover_image": "large",
@@ -327,14 +330,14 @@
               "show_date": true
             }
           },
-          "767c3dd9-12ee-44f6-86bf-72fb25c266ff": {
+          "a82dc95c-2b5d-4272-9b73-e56bc9d6c3a4": {
             "type": "text",
             "settings": {
-              "title": "Talk about your brand",
-              "text": "<p>Use this text to share information about your brand with your customers. Describe a product, share announcements, or welcome customers to your store.<\/p>",
+              "title": "",
+              "text": "<p>There&#x27;s more where that came from<\/p><p><a href=\"\/blogs\/education\" title=\"Education\">SEE ALL ARTICLES<\/a><\/p>",
               "width": "50%",
               "alignment": "center",
-              "align_text": "left"
+              "align_text": "center"
             }
           }
         },
@@ -342,18 +345,21 @@
           "1605057359e5d3918b-0",
           "8aa1c776-0e50-4f64-abe4-879e5a8d417d",
           "101e9112-7491-409c-a93e-1cc1a04586d9",
-          "767c3dd9-12ee-44f6-86bf-72fb25c266ff"
+          "a82dc95c-2b5d-4272-9b73-e56bc9d6c3a4"
         ],
         "settings": {
-          "title": "How Cannabis can help your horse"
+          "title": "",
+          "spacing": "py-16",
+          "bg_color": "#efefef"
         }
       },
       "1605061965e60258cf": {
         "type": "feature-blog-custom",
         "settings": {
           "title": "In The Press",
+          "spacing": "py-20",
           "blog": "news",
-          "post_limit": 9,
+          "post_limit": 6,
           "blog_show_author": false,
           "blog_show_date": true,
           "show_view_all": false
@@ -362,7 +368,7 @@
       "blog-template": {
         "type": "blog-template",
         "settings": {
-          "blog_page_title": "Cannahorse Blog",
+          "blog_page_title": "Cannahorse Yo",
           "blog_page_subtitle": "",
           "featured_article": "",
           "layout": "list",
@@ -374,7 +380,265 @@
       "blog-picker": {
         "type": "blog-picker",
         "settings": {
-          "id": "patients"
+          "id": ""
+        }
+      },
+      "blog-banner": {
+        "type": "blog-banner",
+        "settings": {
+          "show_icon": true,
+          "blog_banner_title": "Education",
+          "blog_banner_subtitle": "Insights & Education about the use of cannabis in horses, humans, sports and pets.",
+          "spacing": "py-16"
+        }
+      },
+      "blog-custom-section": {
+        "type": "blog-custom-section",
+        "settings": {}
+      },
+      "cta-banner": {
+        "type": "cta-banner",
+        "settings": {
+          "cta_title": "Have questions?",
+          "cta_content": "We're here to help, If you’re an equine professional or veterinary professional book a 30 minute consultation with us below. Otherwise you can try the live chat if you have any questions about how medical cannabis could benefit your horse.",
+          "cta_text": "Schedule Consulation",
+          "spacing": "py-16"
+        }
+      },
+      "blog-category-bar": {
+        "type": "blog-category-bar",
+        "blocks": {
+          "ef3e4992-f95b-49b3-af19-f535a8c5b8a2": {
+            "type": "Blog",
+            "settings": {
+              "link_text": "CANNABIS 101",
+              "link_url": "#cannabis-101"
+            }
+          },
+          "57afc725-60c0-4be4-9589-4be95a962b98": {
+            "type": "Blog",
+            "settings": {
+              "link_text": "HORSES & CANNABIS",
+              "link_url": "#horses-&-cannabis"
+            }
+          },
+          "310c37a3-f700-43db-b863-460fad626614": {
+            "type": "Blog",
+            "settings": {
+              "link_text": "SPORTS & CANNABIS",
+              "link_url": "#sports-&-cannabis"
+            }
+          },
+          "2e50869f-cd72-4923-b7d2-e3dcd116a125": {
+            "type": "Blog",
+            "settings": {
+              "link_text": "PETS & CANNABIS",
+              "link_url": "#pets-&-cannabis"
+            }
+          }
+        },
+        "block_order": [
+          "ef3e4992-f95b-49b3-af19-f535a8c5b8a2",
+          "57afc725-60c0-4be4-9589-4be95a962b98",
+          "310c37a3-f700-43db-b863-460fad626614",
+          "2e50869f-cd72-4923-b7d2-e3dcd116a125"
+        ],
+        "settings": {}
+      },
+      "blog-patients-template": {
+        "type": "blog-patients-template",
+        "settings": {
+          "blog_page_title": "Yo",
+          "blog_page_subtitle": "",
+          "featured_article": "",
+          "layout": "list",
+          "blog_show_author": true,
+          "blog_show_feature_image": true,
+          "blog_show_date": true
+        }
+      },
+      "blog-banner-default": {
+        "type": "blog-banner-default",
+        "settings": {
+          "show_icon": false,
+          "blog_banner_title": "CannaHorse Blog",
+          "blog_banner_subtitle": "Product info, latest events in the news and notes on CannaHorse.",
+          "spacing": "py-16"
+        }
+      },
+      "cta-banner-default": {
+        "type": "cta-banner-default",
+        "settings": {
+          "cta_title": "Subscribe for more",
+          "cta_content": "Sign up to get notifications on new content to stay up to date with all things CannaHorse.",
+          "cta_text": "",
+          "spacing": "py-32",
+          "bg_color": "#e3e3e3"
+        }
+      },
+      "feature-blog-article": {
+        "type": "feature-blog-article",
+        "settings": {
+          "feature_section_heading": "FEATURED STORY",
+          "feature_article": "education\/education-post-2"
+        }
+      },
+      "blog-banner-education": {
+        "type": "blog-banner-education",
+        "settings": {
+          "show_icon": true,
+          "blog_banner_title": "Education",
+          "blog_banner_subtitle": "Insights & Education about the use of cannabis in horses, humans, sports and pets.",
+          "spacing": "py-16"
+        }
+      },
+      "article-template": {
+        "type": "article-template",
+        "settings": {
+          "blog_show_author": true,
+          "blog_show_date": true,
+          "show_share_buttons": false
+        }
+      },
+      "hero": {
+        "type": "hero",
+        "settings": {
+          "show_gradient": false,
+          "text_alignment": "text-center",
+          "container": "max-w-fixed mx-0",
+          "alignment": "center",
+          "hero_layout": "full_width",
+          "hero_size": "medium",
+          "text_size": "medium",
+          "title": "COOOL",
+          "text": "<p>Use overlay text to give your customers insight into your brand. Select imagery and text that relates to your style and story.<\/p>",
+          "button_label": ""
+        }
+      },
+      "article-template-alternate": {
+        "type": "article-template-alternate",
+        "settings": {
+          "blog_show_author": true,
+          "blog_show_date": false,
+          "show_share_buttons": false
+        }
+      },
+      "custom-content": {
+        "type": "custom-content",
+        "blocks": {
+          "abcecd32-7b70-42c4-8696-db3787b5ac99": {
+            "type": "video",
+            "settings": {
+              "video_url": "",
+              "width": "100%",
+              "alignment": "top-middle"
+            }
+          }
+        },
+        "block_order": [
+          "abcecd32-7b70-42c4-8696-db3787b5ac99"
+        ],
+        "settings": {
+          "title": "Custom content",
+          "spacing": "py-16",
+          "bg_color": "rgba(0,0,0,0)"
+        }
+      },
+      "blog-block-education": {
+        "type": "blog-block-education",
+        "blocks": {
+          "c90bd735-a43b-4eea-b1f1-6b642bc4f477": {
+            "type": "Blog",
+            "settings": {
+              "blog_block_content": "It’s vitally important that cannabis use in both humans and animals is taken very seriously. Cannabis, especially the cannabinoid CBD has the potential to become an alternative to a multitude of pharmaceutical medications. Offering few, if any, side affects, cannabis can help horses to live a healthier, more natural life.",
+              "blog_block_tag": "cannabis 101",
+              "post_limit": 3,
+              "blog_show_author": false,
+              "blog_show_date": true,
+              "blog_show_tags": false
+            }
+          },
+          "b7f50922-ccc3-4779-9184-4b92bbb432cc": {
+            "type": "Blog",
+            "settings": {
+              "blog_block_content": "We are only in the infancy of the use of cannabis in animals. To date, there have not been any clinical trials for dosage, efficacy, tolerance or benefits conducted. While numerous untested products exist, the manufacturers have no knowledge of dosage or efficacy.  \n\nBelow you can learn about advancements in animal and equine medical cannabis and how cannabis could help your horse.",
+              "blog_block_tag": "horses & cannabis",
+              "post_limit": 3,
+              "blog_show_author": false,
+              "blog_show_date": true,
+              "blog_show_tags": false
+            }
+          },
+          "ddb8f0fa-5ea1-4c44-b66e-e192b3af6ca3": {
+            "type": "Blog",
+            "settings": {
+              "blog_block_content": "Athletes are seeing the benefits of CBD for everyday health, training and competition recovery. Anecdotally dogs seem to be having the same physical benefits as humans and the similarity of the endocannabinoid systems should extend to horses. While we await comprehensive trials in horses we think it is important to follow along with the developments of human athletes to gain a better understanding of the benefits and risks of cannabis for athletes.",
+              "blog_block_tag": "sports & cannabis",
+              "post_limit": 3,
+              "blog_show_author": false,
+              "blog_show_date": true,
+              "blog_show_tags": false
+            }
+          },
+          "51deafab-57b4-417f-a994-64984d77a5ff": {
+            "type": "Blog",
+            "settings": {
+              "blog_block_content": "A number of clinical trials for dogs and cats have been completed. These studies have shown success in treating similar ailments to humans such as pain and arthritis, seizures, and anxiety.",
+              "blog_block_tag": "pets & cannabis",
+              "post_limit": 3,
+              "blog_show_author": false,
+              "blog_show_date": true,
+              "blog_show_tags": false
+            }
+          }
+        },
+        "block_order": [
+          "c90bd735-a43b-4eea-b1f1-6b642bc4f477",
+          "b7f50922-ccc3-4779-9184-4b92bbb432cc",
+          "ddb8f0fa-5ea1-4c44-b66e-e192b3af6ca3",
+          "51deafab-57b4-417f-a994-64984d77a5ff"
+        ],
+        "settings": {}
+      },
+      "blog-block-default": {
+        "type": "blog-block-default",
+        "blocks": {
+          "4c01f698-928a-46df-a057-1ed827e026f7": {
+            "type": "Blog",
+            "settings": {
+              "blog_block_heading": "RECENT ARTICLES",
+              "blog_block_content": "",
+              "blog_block_tag": "cannabis 101",
+              "post_limit": 3,
+              "blog_show_author": false,
+              "blog_show_date": true,
+              "blog_show_tags": false
+            }
+          }
+        },
+        "block_order": [
+          "4c01f698-928a-46df-a057-1ed827e026f7"
+        ],
+        "settings": {}
+      },
+      "product-template": {
+        "type": "product-template",
+        "settings": {
+          "show_quantity_selector": false,
+          "show_vendor": false,
+          "enable_payment_button": false,
+          "show_share_buttons": false,
+          "media_size": "small",
+          "enable_image_zoom": false,
+          "enable_video_looping": false
+        }
+      },
+      "product-recommendations": {
+        "type": "product-recommendations",
+        "settings": {
+          "show_product_recommendations": true,
+          "heading": "You may also like",
+          "show_vendor": false
         }
       }
     },

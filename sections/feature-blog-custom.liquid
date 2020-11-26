@@ -8,9 +8,12 @@
   {%- assign blog = blogs[section.settings.blog] -%}
 
   {% unless blog.articles_count == 0 %}
-    <ul class="grid grid--uniform grid--blog">
+  <div class="glider-contain">
+
+  
+    <ul class="grid grid--uniform grid--blog glider">
       {% for article in blog.articles limit: section.settings.post_limit %}
-        <li class="grid__item medium-up--one-third">
+        <li data-aos="up" data-aos-delay="{{forloop.index | times:100 }}" class="grid__item medium-up--one-third">
           <article aria-labelledby="FeaturedBlogTitle-{{ forloop.index0 }}-{{ section.id }}">
             <header>
               <a href="{{ article.url }}" class="article__link">
@@ -95,6 +98,10 @@
         </li>
       {% endfor %}
     </ul>
+    <button aria-label="Previous" class="glider-prev">«</button>
+    <button aria-label="Next" class="glider-next">»</button>
+    <div role="tablist" class="dots"></div>  
+  </div>
   {% else %}
 <div class="glider-contain">
     <div class="grid grid--uniform grid--blog glider">

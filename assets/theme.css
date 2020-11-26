@@ -1421,8 +1421,8 @@ ol {
   -webkit-overflow-scrolling: touch; }
 
 /*================ #Links and Buttons ================*/
-a:not([disabled]):hover, a:focus {
-  color: var(--color-text-focus); }
+/* a:not([disabled]):hover, a:focus {
+  color: var(--color-text-focus); } */
 
 .password-powered-by a:not([disabled]):hover, .password-powered-by a:focus {
   color: var(--color-text-focus);
@@ -2021,6 +2021,7 @@ textarea {
 
 .site-nav__link:focus .site-nav__label, .site-nav__link:not([disabled]):hover .site-nav__label {
   border-bottom-color: var(--color-text); }
+
 
 @media only screen and (max-width: 989px) {
   .site-nav__link--button {
@@ -7399,7 +7400,7 @@ footer .input-group div:nth-child(3) {
 }
 
 a:hover {
-  color: white !important;
+  opacity: 0.8 !important;
 }
 
 @media(min-width: 767px) {
@@ -7513,4 +7514,17 @@ hr {
 
 .site-footer__linklist {
   width: fit-content;
+}
+
+
+.brand-primary {
+  color: var(--brand-primary);
+}
+
+.w-90 {
+  width: 90%;
+}
+
+#shopify-section-16063481606dc8124f {
+  background: hsla(105, 0%, 95%, 1.00);
 }
