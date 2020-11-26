@@ -1,0 +1,62 @@
+
+{% unless section.blocks.size > 0 %}
+    Hide me
+{% endunless %}
+
+{% if customer %}
+  Customer is logged in. You can access the customer
+  attributes such as {{ customer.first_name }}.
+  {% else %}
+  customer not logged in
+{% endif %}
+
+<div class="page-width py-16">
+    <h3>{{section.settings.faq_heading}}</h3>
+    <p>{{section.settings.faq_intro}}</p>
+    <div class="space-y-2 max-w-2xl mx-auto">
+    {% for block in section.blocks %}
+
+        <div class="border relative py-4 px-4">
+            <p class="" data-faq="question">{{block.settings.faq_question}}</p>
+            <p class="faq-hide" data-faq="answer">{{block.settings.faq_answer}}</p>    
+        </div>
+        {% endfor %}
+    </div>
+</div>
+
+{% schema %}
+{
+    "name": "FAQ Block",
+    "settings": [
+        {
+            "type": "text",
+            "id": "faq_heading",
+            "label": "FAQ Heading"
+        },
+        {
+            "type": "textarea",
+            "id": "faq_intro",
+            "label": "label"
+        }
+    ],
+    "max_blocks": 10,
+    "blocks": [
+        {
+            "type": "FAQ",
+            "name": "FAQ Blocks",
+            "settings": [
+            {
+                "type": "text",
+                "id": "faq_question",
+                "label": "Question"
+            },
+            {
+                "type": "textarea",
+                "id": "faq_answer",
+                "label": "Answer"
+            }
+            ]
+        }    
+    ]
+}
+{% endschema %}
