@@ -316,7 +316,8 @@
               "alignment": "center",
               "cover_image": "large",
               "show_author": false,
-              "show_date": false
+              "show_date": false,
+              "show_tags": false
             }
           },
           "101e9112-7491-409c-a93e-1cc1a04586d9": {
@@ -327,7 +328,8 @@
               "alignment": "center",
               "cover_image": "large",
               "show_author": false,
-              "show_date": true
+              "show_date": false,
+              "show_tags": false
             }
           },
           "a82dc95c-2b5d-4272-9b73-e56bc9d6c3a4": {
@@ -358,20 +360,22 @@
         "settings": {
           "title": "In The Press",
           "spacing": "py-20",
-          "blog": "news",
+          "blog": "patients",
           "post_limit": 6,
           "blog_show_author": false,
-          "blog_show_date": true,
-          "show_view_all": false
+          "blog_show_date": false,
+          "show_tags": false,
+          "show_view_all": false,
+          "aspect_ratio": "aspect-16-9"
         }
       },
       "blog-template": {
         "type": "blog-template",
         "settings": {
-          "blog_page_title": "Cannahorse Yo",
-          "blog_page_subtitle": "",
+          "blog_page_title": "",
+          "blog_page_subtitle": "Very Exciting",
           "featured_article": "",
-          "layout": "list",
+          "layout": "grid",
           "blog_show_author": true,
           "blog_show_feature_image": true,
           "blog_show_date": true
@@ -480,7 +484,7 @@
         "type": "feature-blog-article",
         "settings": {
           "feature_section_heading": "FEATURED STORY",
-          "feature_article": "education\/education-post-2"
+          "feature_article": "news\/what-canna-loving-canadians-have-to-be-thankful-for-this-thanksgiving"
         }
       },
       "blog-banner-education": {
@@ -518,6 +522,7 @@
       "article-template-alternate": {
         "type": "article-template-alternate",
         "settings": {
+          "blog_show_banner": true,
           "blog_show_author": true,
           "blog_show_date": false,
           "show_share_buttons": false
@@ -547,15 +552,16 @@
       "blog-block-education": {
         "type": "blog-block-education",
         "blocks": {
-          "c90bd735-a43b-4eea-b1f1-6b642bc4f477": {
+          "b5373968-0320-4f2b-9cae-b6493e9e9b0e": {
             "type": "Blog",
             "settings": {
               "blog_block_content": "It’s vitally important that cannabis use in both humans and animals is taken very seriously. Cannabis, especially the cannabinoid CBD has the potential to become an alternative to a multitude of pharmaceutical medications. Offering few, if any, side affects, cannabis can help horses to live a healthier, more natural life.",
               "blog_block_tag": "cannabis 101",
-              "post_limit": 3,
-              "blog_show_author": false,
+              "post_limit": 6,
+              "blog_show_author": true,
               "blog_show_date": true,
-              "blog_show_tags": false
+              "blog_show_tags": false,
+              "aspect_ratio": "aspect-16-9"
             }
           },
           "b7f50922-ccc3-4779-9184-4b92bbb432cc": {
@@ -566,7 +572,8 @@
               "post_limit": 3,
               "blog_show_author": false,
               "blog_show_date": true,
-              "blog_show_tags": false
+              "blog_show_tags": false,
+              "aspect_ratio": "aspect-16-9"
             }
           },
           "ddb8f0fa-5ea1-4c44-b66e-e192b3af6ca3": {
@@ -577,7 +584,8 @@
               "post_limit": 3,
               "blog_show_author": false,
               "blog_show_date": true,
-              "blog_show_tags": false
+              "blog_show_tags": false,
+              "aspect_ratio": "aspect-16-9"
             }
           },
           "51deafab-57b4-417f-a994-64984d77a5ff": {
@@ -588,17 +596,20 @@
               "post_limit": 3,
               "blog_show_author": false,
               "blog_show_date": true,
-              "blog_show_tags": false
+              "blog_show_tags": false,
+              "aspect_ratio": "aspect-1-1"
             }
           }
         },
         "block_order": [
-          "c90bd735-a43b-4eea-b1f1-6b642bc4f477",
+          "b5373968-0320-4f2b-9cae-b6493e9e9b0e",
           "b7f50922-ccc3-4779-9184-4b92bbb432cc",
           "ddb8f0fa-5ea1-4c44-b66e-e192b3af6ca3",
           "51deafab-57b4-417f-a994-64984d77a5ff"
         ],
-        "settings": {}
+        "settings": {
+          "blog_handle": "patients"
+        }
       },
       "blog-block-default": {
         "type": "blog-block-default",
@@ -640,6 +651,201 @@
           "heading": "You may also like",
           "show_vendor": false
         }
+      },
+      "16063481606dc8124f": {
+        "type": "instafeed",
+        "settings": {
+          "heading_font": "helvetica_n4",
+          "heading_size": 20,
+          "feed_width": 90,
+          "html_area": "<h2 class=\"brand-primary text-4xl mx-auto w-90\">Follow Us <\/h2>"
+        }
+      },
+      "blog-banner-patients": {
+        "type": "blog-banner-patients",
+        "settings": {
+          "show_icon": false,
+          "blog_banner_title": "PATIENTS",
+          "blog_banner_subtitle": "This is where you will write an intro to the patitents section",
+          "spacing": "py-16"
+        }
+      },
+      "blog-category-bar-patients": {
+        "type": "blog-category-bar-patients",
+        "blocks": {
+          "a4d93d88-f218-437f-92e0-c84e60149f47": {
+            "type": "Blog",
+            "settings": {
+              "link_text": "CATEGORY 1"
+            }
+          },
+          "87a120b7-3204-4f4c-880a-ff0fc18daa1f": {
+            "type": "Blog",
+            "settings": {
+              "link_text": "CATEGORY 2"
+            }
+          },
+          "241ded31-e8ed-4e82-b1de-4315331a4f70": {
+            "type": "Blog",
+            "settings": {
+              "link_text": "CATEGORY 3"
+            }
+          },
+          "d16c9275-b58d-4c75-9084-4285fa3eaa1f": {
+            "type": "Blog",
+            "settings": {
+              "link_text": "CATEGORY 4"
+            }
+          }
+        },
+        "block_order": [
+          "a4d93d88-f218-437f-92e0-c84e60149f47",
+          "87a120b7-3204-4f4c-880a-ff0fc18daa1f",
+          "241ded31-e8ed-4e82-b1de-4315331a4f70",
+          "d16c9275-b58d-4c75-9084-4285fa3eaa1f"
+        ],
+        "settings": {}
+      },
+      "blog-block-patients": {
+        "type": "blog-block-patients",
+        "blocks": {
+          "a05451b9-7c12-4651-a5f4-fb18613a08c5": {
+            "type": "Blog",
+            "settings": {
+              "blog_block_content": "",
+              "blog_block_tag": "cannabis 101",
+              "post_limit": 3,
+              "blog_show_author": true,
+              "blog_show_date": true,
+              "blog_show_tags": true,
+              "aspect_ratio": "aspect-16-9"
+            }
+          },
+          "ea2835ff-8057-4326-b92f-72671de05770": {
+            "type": "Blog",
+            "settings": {
+              "blog_block_content": "",
+              "blog_block_tag": "pets & cannabis",
+              "post_limit": 3,
+              "blog_show_author": false,
+              "blog_show_date": true,
+              "blog_show_tags": true,
+              "aspect_ratio": "aspect-1-1"
+            }
+          },
+          "ac64e33e-9967-48d4-966d-fe71a07b349a": {
+            "type": "Blog",
+            "settings": {
+              "blog_block_content": "",
+              "blog_block_tag": "cannabis 101",
+              "post_limit": 3,
+              "blog_show_author": true,
+              "blog_show_date": true,
+              "blog_show_tags": false,
+              "aspect_ratio": "aspect-1-1"
+            }
+          }
+        },
+        "block_order": [
+          "a05451b9-7c12-4651-a5f4-fb18613a08c5",
+          "ea2835ff-8057-4326-b92f-72671de05770",
+          "ac64e33e-9967-48d4-966d-fe71a07b349a"
+        ],
+        "settings": {
+          "blog_handle": "patients"
+        }
+      },
+      "list-collections-template": {
+        "type": "list-collections-template",
+        "settings": {
+          "display_type": "all",
+          "sort": "alphabetical",
+          "grid": 3
+        }
+      },
+      "collection-template": {
+        "type": "collection-template",
+        "settings": {
+          "layout": "grid",
+          "grid": 3,
+          "rows": 2,
+          "show_collection_image": true,
+          "show_vendor": false,
+          "sort_enable": true,
+          "tags_enable": true
+        }
+      },
+      "faq-block": {
+        "type": "faq-block",
+        "blocks": {
+          "d47e3aab-670d-47b3-831b-f843245ba8a3": {
+            "type": "FAQ",
+            "settings": {
+              "faq_question": "What is this",
+              "faq_answer": "A city for ants"
+            }
+          },
+          "0dfce523-fb4f-4bc8-9cf6-4dfb53900207": {
+            "type": "FAQ",
+            "settings": {
+              "faq_question": "But really what is this?",
+              "faq_answer": "I have no idea"
+            }
+          },
+          "1fe3f3e0-2926-4b80-b405-b9e0f70ed296": {
+            "type": "FAQ",
+            "settings": {
+              "faq_question": "I really have a question?",
+              "faq_answer": "And I don't an answer for you"
+            }
+          }
+        },
+        "block_order": [
+          "d47e3aab-670d-47b3-831b-f843245ba8a3",
+          "0dfce523-fb4f-4bc8-9cf6-4dfb53900207",
+          "1fe3f3e0-2926-4b80-b405-b9e0f70ed296"
+        ],
+        "settings": {
+          "faq_heading": "FAQ",
+          "faq_intro": ""
+        }
+      },
+      "feature-blog-article-patients": {
+        "type": "feature-blog-article-patients",
+        "settings": {
+          "feature_section_heading": "Featured Patient",
+          "feature_article": "news\/what-canna-loving-canadians-have-to-be-thankful-for-this-thanksgiving"
+        }
+      },
+      "hero-stories": {
+        "type": "hero-stories",
+        "settings": {
+          "show_gradient": true,
+          "text_alignment": "",
+          "container": "max-w-none",
+          "alignment": "center",
+          "hero_layout": "full_width",
+          "hero_size": "large",
+          "text_size": "large",
+          "title": "Your Stories",
+          "text": "<p>Use overlay text to give your customers insight into your brand. Select imagery and text that relates to your style and story.<\/p>",
+          "button_label": ""
+        }
+      },
+      "horse-stories": {
+        "type": "horse-stories",
+        "settings": {
+          "heading": "",
+          "content": "",
+          "bg_color": "rgba(0,0,0,0)"
+        }
+      },
+      "cta-bar": {
+        "type": "cta-bar",
+        "settings": {
+          "cta_text": "",
+          "cta_link_text": ""
+        }
       }
     },
     "content_for_index": [
@@ -650,7 +856,8 @@
       "1605039777a53d097f",
       "160503979120498332",
       "hero-2",
-      "1605061965e60258cf"
+      "1605061965e60258cf",
+      "16063481606dc8124f"
     ]
   },
   "presets": {
