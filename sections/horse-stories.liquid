@@ -1,0 +1,72 @@
+
+{{section.settings.heading}}
+{{section.settings.content}}
+{{section.settings.bg_color}}
+
+<div>
+    {% for block in section.blocks %}
+    
+    {% endfor %}
+</div>
+
+{% schema %}
+{
+    "name": "Horse Stories",
+    "max_blocks": 3,
+    "settings": [
+        {
+            "type": "text",
+            "id": "heading",
+            "label": "Heading"
+        },
+        {
+            "type": "textarea",
+            "id": "content",
+            "label": "Content"
+        },
+        {
+            "type": "color",
+            "id": "bg_color",
+            "label": "Section Color"
+        }
+    ],
+    "blocks": [
+        {
+            "type":"Article",
+            "name":"Article Block",
+            "settings": [
+                {
+                    "type": "article",
+                    "id": "article",
+                    "label": "Feature Article"
+                },
+                {
+                    "type": "select",
+                    "id": "aspect_ratio",
+                    "label": "Image aspect ratio",
+                    "options": [
+                      {
+                        "value": "aspect-1-1",
+                        "label": "1:1"
+                      },
+                      {
+                        "value": "aspect-4-3",
+                        "label": "4:3"
+                      },
+                      {
+                        "value": "aspect-3-2",
+                        "label": "3:2"
+                      },
+                      {
+                        "value": "aspect-16-9",
+                        "label": "16:9"
+                      }
+                    ],
+                    "default": "aspect-1-1"
+                  }
+            ]
+        }
+    ]    
+
+}
+{% endschema %}

@@ -174,47 +174,69 @@
                                   {%- endif -%}
                               </div>
                           {%- when 'article' -%}
-                              {%- assign article = articles[block.settings.article] -%}
-                              {%- assign cover_image = block.settings.cover_image -%}
-  
-                              {%- if article != empty -%}
-                                  <div data-aos="up" class="article" id="Article-{{ article.image.id }}">
-                                      <a href="{{ article.url }}" class="article__link article__link--fixed-overlay">
-                                          {%- if article.image and cover_image != 'none' -%}
-                                              {%- capture img_id -%}ArticleImage-{{ article.image.id }}
-                                              {%- endcapture -%}
-                                              {%- capture img_wrapper_id -%}ArticleImageWrapper-{{ article.image.id }}
-                                              {%- endcapture -%}
-                                              {%- assign img_url = article.image | img_url: '1x1' | replace: '_1x1.', '_{width}x.' -%}
-  
-                                              {% render 'image-style', image: article.image, height: 600, wrapper_id: img_wrapper_id, img_id: img_id %}
-  
-                                              {%- style -%}
-  
-  #Article-{{article.image.id}}.article__link:not([disabled]):hover .article__grid-image-wrapper::before,
-  #Article-{{article.image.id}}.article__link:focus .article__grid-image-wrapper::before {
-      padding-top: {{1 | divided_by: article.image.aspect_ratio | times: 100}}%;
-  }
-  
-  {%- endstyle -%}
-  
-                                              <div id="{{ img_wrapper_id }}" class="article__grid-image-wrapper article__grid-image-wrapper--{{ cover_image }} article-image-wrapper js">
-                                                  <div class="article__grid-image-container" data-image-loading-animation style="padding-top:{{ 1 | divided_by: article.image.aspect_ratio | times: 100 }}%;">
-                                                      <img id="{{ img_id }}" class="article__list-image lazyload" data-src="{{ img_url }}" data-widths="[180, 360, 540, 720, 905, 1090, 1296, 1512, 1728, 2048]" data-aspectratio="{{ article.image.aspect_ratio }}" data-sizes="auto" alt="">
-                                                  </div>
-                                              </div>
-  
-                                              <noscript>
-                                                  <p>
-                                                      <a href="{{ article.url }}">
-                                                          {{ article | img_url: '455x300', scale: 2 | img_tag: article.title }}
-                                                      </a>
-                                                  </p>
-                                              </noscript>
-                                          {%- endif -%}
-  
-                                          <h2 class="article__title h3">{{ article.title }}</h2>
-                                      </a>
+                          {%- assign article = articles[block.settings.article] -%}
+                          {%- assign cover_image = block.settings.cover_image -%}
+
+                          {%- if article != empty -%}
+                          <div data-aos="up" class="article" id="Article-{{ article.image.id }}">
+                              <a href="{{ article.url }}" class="article__link article__link--fixed-overlay">
+                                {%- comment -%}
+
+                                Default Debut Image
+                                   {%- if article.image and cover_image != 'none' -%}
+                                  {%- capture img_id -%}ArticleImage-{{ article.image.id }}
+                                  {%- endcapture -%}
+                                  {%- capture img_wrapper_id -%}ArticleImageWrapper-{{ article.image.id }}
+                                  {%- endcapture -%}
+                                  {%- assign img_url = article.image | img_url: '1x1' | replace: '_1x1.', '_{width}x.' -%}
+
+                                  {% render 'image-style', image: article.image, height: 600, wrapper_id: img_wrapper_id, img_id: img_id %}
+
+                                  {%- style -%}
+
+                                  #Article-{{article.image.id}}.article__link:not([disabled]):hover
+                                  .article__grid-image-wrapper::before,
+                                  #Article-{{article.image.id}}.article__link:focus .article__grid-image-wrapper::before
+                                  {
+                                  padding-top: {{1 | divided_by: article.image.aspect_ratio | times: 100}}%;
+                                  }
+
+                                  {%- endstyle -%}
+                                  <div id="{{ img_wrapper_id }}"
+                                      class="article__grid-image-wrapper article__grid-image-wrapper--{{ cover_image }} article-image-wrapper js">
+                                      <div class="article__grid-image-container" data-image-loading-animation
+                                          style="padding-top:{{ 1 | divided_by: article.image.aspect_ratio | times: 100 }}%;">
+                                          <img id="{{ img_id }}" class="article__list-image lazyload"
+                                              data-src="{{ img_url }}"
+                                              data-widths="[180, 360, 540, 720, 905, 1090, 1296, 1512, 1728, 2048]"
+                                              data-aspectratio="{{ article.image.aspect_ratio }}" data-sizes="auto"
+                                              alt="">
+                                      </div>
+                                  </div>
+
+                                  <noscript>
+                                      <p>
+                                          <a href="{{ article.url }}">
+                                              {{ article | img_url: '455x300', scale: 2 | img_tag: article.title }}
+                                          </a>
+                                      </p>
+                                  </noscript>
+                                  {%- endif -%}
+                                {%- endcomment -%}
+                                {% if article.image != 'none' %}
+                                <div class="block aspect-3-2 relative">
+                                    <img id="{{ img_id }}"
+                                      class="absolute w-full h-full object-cover" lazyload"
+                                      src="{{ article.image | img_url: '1200x', scale: 2 }}"
+                                      data-src="{{ img_url }}"
+                                      data-widths="[180, 360, 540, 720, 900, 1080, 1296, 1512, 1728, 2048]"
+                                      data-aspectratio="{{ article.image.aspect_ratio }}"
+                                      data-sizes="auto"
+                                      alt="{{ article.image.alt | escape }}">
+                                    </div>
+                                {% endif %}
+                                  <h2 class="article__title h3">{{ article.title }}</h2>
+                              </a>
   
                                       {%- if block.settings.show_author or block.settings.show_date -%}
                                           <div class="article__meta">
@@ -238,7 +260,7 @@
                                           {%- endif -%}
                                       </div>
   
-                                      {%- if article.tags.size > 0 -%}
+                                      {%- if article.tags.size > 0 and block.settings.show_tags == true  -%}
                                           <div class="article__tags rte">
                                               <ul class="list--inline" aria-label="{{ 'blogs.article.tags' | t }}">
                                                   {%- for tag in article.tags -%}
@@ -4033,6 +4055,12 @@
                         "zh-TW": "顯示日期"
                     },
                     "default": true
+                },
+                {
+                    "type": "checkbox",
+                    "id": "show_tags",
+                    "label": "Show tags",
+                    "default": false
                 }
             ]
         }, {

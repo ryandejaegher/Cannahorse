@@ -3,15 +3,8 @@
     Hide me
 {% endunless %}
 
-{% if customer %}
-  Customer is logged in. You can access the customer
-  attributes such as {{ customer.first_name }}.
-  {% else %}
-  customer not logged in
-{% endif %}
-
 <div class="page-width py-16">
-    <h3>{{section.settings.faq_heading}}</h3>
+    <h3 class="text-center">{{section.settings.faq_heading}}</h3>
     <p>{{section.settings.faq_intro}}</p>
     <div class="space-y-2 max-w-2xl mx-auto">
     {% for block in section.blocks %}

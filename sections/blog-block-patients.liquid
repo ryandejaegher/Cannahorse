@@ -1,3 +1,4 @@
+{%- assign blog = blogs[section.settings.blog_handle] -%}
 
 {% for block in section.blocks %}
   <div class="page-width max-w-none py-8" {{ block.shopify_attributes }}>
@@ -14,7 +15,7 @@
             <article aria-labelledby="FeaturedBlogTitle-{{ forloop.index0 }}-{{ section.id }}">
               <header>
                 <a href="{{ article.url }}" class="article__link">
-                  <div class="block aspect-16-9 relative">
+                  <div class="block {{block.settings.aspect_ratio}} relative">
                     <img id=""
                       class="absolute w-full h-full object-cover" lazyload"
                       src="{{ article.image | img_url: '1200x', scale: 2 }}"
@@ -94,6 +95,13 @@
 {
     "name": "Blog Block",
     "max_blocks": 4,
+    "settings": [
+      {
+        "type": "blog",
+        "id": "blog_handle",
+        "label": "Select your blog"
+      }
+    ],
     "blocks": [
         {
             "type": "Blog",
@@ -127,7 +135,7 @@
                     "id": "post_limit",
                     "label": "Posts",
                     "min": 0,
-                    "max": 12,
+                    "max": 9,
                     "step": 3,
                     "default": 3
                 },
@@ -147,7 +155,31 @@
                   "type": "checkbox",
                   "id": "blog_show_tags",
                   "label": "Show Blog Tags",
-                  "default": true
+                  "default": false
+                },
+                {
+                  "type": "select",
+                  "id": "aspect_ratio",
+                  "label": "Image aspect ratio",
+                  "options": [
+                    {
+                      "value": "aspect-1-1",
+                      "label": "1:1"
+                    },
+                    {
+                      "value": "aspect-4-3",
+                      "label": "4:3"
+                    },
+                    {
+                      "value": "aspect-3-2",
+                      "label": "3:2"
+                    },
+                    {
+                      "value": "aspect-16-9",
+                      "label": "16:9"
+                    }
+                  ],
+                  "default": "aspect-1-1"
                 }
             ]
         }

@@ -17,6 +17,8 @@
           <article aria-labelledby="FeaturedBlogTitle-{{ forloop.index0 }}-{{ section.id }}">
             <header>
               <a href="{{ article.url }}" class="article__link">
+                {%- comment -%}
+                Default image behaviour
                 {% if article.image %}
                   {% capture img_id %}ArticleImage-{{ article.image.id }}{% endcapture %}
                   {% capture img_wrapper_id %}ArticleImageWrapper-{{ article.image.id }}{% endcapture %}
@@ -39,6 +41,20 @@
                       {{ article | img_url: '345x345', scale: 2 | img_tag: article.title, 'article__grid-image' }}
                     </div>
                   </noscript>
+                {% endif %}
+                {%- endcomment -%}
+                {% if article.image %}
+                  
+                <div class="block aspect-3-2 relative">
+                  <img id="{{ img_id }}"
+                    class="absolute w-full h-full object-cover" lazyload"
+                    src="{{ article.image | img_url: '1200x', scale: 2 }}"
+                    data-src="{{ img_url }}"
+                    data-widths="[180, 360, 540, 720, 900, 1080, 1296, 1512, 1728, 2048]"
+                    data-aspectratio="{{ article.image.aspect_ratio }}"
+                    data-sizes="auto"
+                    alt="{{ article.image.alt | escape }}">
+                  </div>
                 {% endif %}
 
                 <h3 class="article__title" id="FeaturedBlogTitle-{{ forloop.index0 }}-{{ section.id }}">
@@ -66,7 +82,7 @@
                 {% endif %}
               </div>
 
-              {% if article.tags.size > 0 %}
+              {% if article.tags.size > 0 and section.settings.show_tags == true %}
                 <div class="article__tags rte">
                   <ul class="list--inline" aria-label="{{ 'blogs.article.tags' | t }}">
                     {% for tag in article.tags %}
@@ -360,6 +376,12 @@
         "zh-TW": "顯示日期"
       },
       "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "show_tags",
+      "label": "Show tags",
+      "default": false
     },
     {
       "type": "checkbox",

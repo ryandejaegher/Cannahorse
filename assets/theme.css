@@ -7405,7 +7405,7 @@ a:hover {
 
 @media(min-width: 767px) {
   .custom__item:nth-of-type(3) {
-    margin-top: -110%;
+    margin-top: -70%;
 }
 }
 
