@@ -45,7 +45,7 @@
                 {%- endcomment -%}
                 {% if article.image %}
                   
-                <div class="block aspect-3-2 relative">
+                <div class="block {{section.settings.aspect_ratio}} relative">
                   <img id="{{ img_id }}"
                     class="absolute w-full h-full object-cover" lazyload"
                     src="{{ article.image | img_url: '1200x', scale: 2 }}"
@@ -410,6 +410,34 @@
         "zh-TW": "顯示「檢視全部」按鈕"
       },
       "default": false
+    },
+    {
+      "type": "header",
+      "content": "Style"
+    },
+    {
+      "type": "select",
+      "id": "aspect_ratio",
+      "label": "Image aspect ratio",
+      "options": [
+        {
+          "value": "aspect-1-1",
+          "label": "1:1"
+        },
+        {
+          "value": "aspect-4-3",
+          "label": "4:3"
+        },
+        {
+          "value": "aspect-3-2",
+          "label": "3:2"
+        },
+        {
+          "value": "aspect-16-9",
+          "label": "16:9"
+        }
+      ],
+      "default": "aspect-1-1"
     }
   ],
   
