@@ -1,6 +1,13 @@
+{%- comment -%}
 {{section.settings.cta_text}}
 {{section.settings.cta_link_text}}
 {{section.settings.cta_url}}
+{%- endcomment -%}
+
+<div data-aos="fade" data-aos-offset="10" class="{{section.settings.spacing}} bg-brand-primary flex flex-col justify-center items-center space-x-0 space-y-4 px-4 md:space-x-8 md:flex-row md:space-y-0">
+<p class="text-white text-center md:text-left font-bold mb-0">{{section.settings.cta_text}}</p><a class="inline-block bg-white brand-primary font-bold px-8 py-2 rounded-full" href="{{section.settings.cta_url}}">{{section.settings.cta_link_text}}</a>
+</div>
+
 
 {% schema %}
 {
@@ -28,6 +35,23 @@
         {
             "type": "header",
             "content": "Style"
+        },
+        {
+            "type": "select",
+            "id": "spacing",
+            "label": "Spacing",
+            "options": [
+                {
+                    "value": "py-2",
+                    "label": "sm"
+                }, {
+                    "value": "py-4",
+                    "label": "md"
+                }, {
+                    "value": "py-8",
+                    "label": "lg"
+                }
+            ]
         }
     ]
 }

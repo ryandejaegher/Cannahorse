@@ -1301,7 +1301,7 @@ h6,
 @media only screen and (min-width: 750px) {
   .mega-subtitle {
     font-size: calc(((var(--font-size-base) + 4) / (var(--font-size-base))) * 1em);
-    margin: 0 auto; }
+   }
     .text-center .mega-subtitle {
       max-width: 75%; } }
 
@@ -7040,7 +7040,19 @@ hr {
  border-radius: 20px;
 }
 
- .bg-gradient:after {
+.bg-gradient:after {
+  position: absolute;
+  content: '';
+  top: 0;
+  left: 0;
+  padding-bottom: unset !important;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(110deg, rgba(255,255,255,1) 50%, rgba(255,255,255,.8));
+} 
+
+@media(min-width: 767px) {
+  .bg-gradient:after {
     position: absolute;
     content: '';
     top: 0;
@@ -7048,8 +7060,13 @@ hr {
     padding-bottom: unset !important;
     width: 100%;
     height: 100%;
-    background: linear-gradient(to right, white 50%, transparent);
-} 
+    background: linear-gradient(to right, rgba(255,255,255,1) 50%, rgba(255,255,255,.3));
+  } 
+  
+
+}
+
+
 
 #shopify-section-hero-2 .mega-title, 
 #shopify-section-hero-2 p {
@@ -7086,7 +7103,7 @@ flex-direction: row;
 
 .logo-bar {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     grid-gap: 0px;
     justify-items: center;
     align-items:center;
@@ -7521,6 +7538,10 @@ hr {
   color: var(--brand-primary);
 }
 
+.bg-brand-primary {
+  background: var(--brand-primary);
+}
+
 .w-90 {
   width: 90%;
 }
@@ -7567,3 +7588,6 @@ hr {
   left: 0;
 }
 
+.grid {
+  margin-left: 0;
+}

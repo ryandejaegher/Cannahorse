@@ -1,12 +1,26 @@
 
-{{section.settings.heading}}
-{{section.settings.content}}
-{{section.settings.bg_color}}
-
-<div>
-    {% for block in section.blocks %}
+<div style="background-color: {{section.settings.bg_color}};">
+    <div data-aos="up" class="container mx-auto px-4 {{section.settings.spacing}} md:px-0">
+        <h2 class="brand-primary text-2xl md:text-5xl">
+            {{section.settings.heading}}
+        </h2>
+        <p class="max-w-2xl">
+            {{section.settings.content}}
+        </p>
     
-    {% endfor %}
+        <div class="grid grid-cols-1 md:grid-cols-3 ml-0 gap-8 mt-8">
+            {% for block in section.blocks %}
+            {% render 'article' with articles[block.settings.article] as article, aspect_ratio: block.settings.aspect_ratio, index: forloop.index  %}
+            {% endfor %}
+        </div>
+        <div data-aos="down" class="flex flex-col items-center mt-8">
+            <p>
+    {{section.settings.cta_text}}
+            </p>
+            <a class="inline-block bg-brand-primary px-6 py-2 text-white font-bold rounded-full" href="{{section.settings.cta_url}}">SEE ALL ARTICLES</a>
+        </div>
+
+    </div>
 </div>
 
 {% schema %}
@@ -25,9 +39,43 @@
             "label": "Content"
         },
         {
+            "type": "text",
+            "id": "cta_text",
+            "label": "CTA Text"
+        },
+        {
+            "type": "url",
+            "id": "cta_url",
+            "label": "CTA Link"
+        },
+        {
+            "type": "header",
+            "content": "Style"
+        },        
+        {
             "type": "color",
             "id": "bg_color",
             "label": "Section Color"
+        },
+        {
+            "type": "select",
+            "id": "spacing",
+            "label": "Spacing",
+            "options": [
+                {
+                    "value": "py-16",
+                    "label": "sm"
+                }, {
+                    "value": "py-20",
+                    "label": "md"
+                }, {
+                    "value": "py-32",
+                    "label": "lg"
+                }, {
+                    "value": "py-40",
+                    "label": "xl"
+                }
+            ]
         }
     ],
     "blocks": [

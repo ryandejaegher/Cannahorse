@@ -1,0 +1,25 @@
+{%- comment -%}    
+This can be used to easily render articles 
+{% render 'article' with articles[block.settings.article] as article %}
+
+{%- endcomment -%}
+
+<div data-aos="up" class="transition-shadow duration-200 hover:shadow-lg">
+    <div class="block {{aspect_ratio}} relative">
+        <img id=""
+          class="absolute w-full h-full object-cover lazyload" 
+          src="{{ article.image | img_url: '1200x', scale: 2 }}"
+          data-src="{{ img_url }}"
+          data-widths="[180, 360, 540, 720, 900, 1080, 1296, 1512, 1728, 2048]"
+          data-aspectratio="{{ article.image.aspect_ratio }}"
+          data-sizes="auto"
+          alt="{{ article.image.alt | escape }}">
+    </div>
+    <div style="background: #f9f9f9;" class="py-6 px-4">
+        <h2 class="capitalize mt-4 text-4xl font-bold tracking-normal">{{article.title}}</h2>
+        {% unless article.excerpt == blank %}
+        <p>{{article.excerpt}}</p>
+        {% endunless %}
+        <a class="inline-block px-4 py-2 -mx-4 font-bold rounded-full hover:underline" href="{{article.url}}">Read More</a>
+    </div>
+</div>
