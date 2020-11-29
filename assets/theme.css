@@ -1303,7 +1303,7 @@ h6,
     font-size: calc(((var(--font-size-base) + 4) / (var(--font-size-base))) * 1em);
    }
     .text-center .mega-subtitle {
-      max-width: 75%; } }
+       } }
 
 .mega-subtitle p {
   color: var(--color-overlay-title-text); }
