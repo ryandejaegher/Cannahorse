@@ -1,4 +1,6 @@
 {% assign article = articles[section.settings.feature_article] %}
+{% unless section.settings.feature_article == blank  %}
+    
 
 <div class="page-width max-w-none py-8">
     <div class="flex items-center gap-4">
@@ -8,8 +10,15 @@
 
     <div class="flex flex-col md:flex-row gap-8 mt-6">
         <div class="flex-initial md:w-7/12">
-            <div class="block aspect-16-9 relative">
-                <img class="absolute w-full h-full object-cover" src="{{ article.image.src | img_url: '500x' }}" alt="">
+            <div class="block aspect-16-9 relative w-full overflow-hidden">
+                <img id=""
+                  class="absolute w-full h-full object-cover lazyload" 
+                  src="{{ article.image | img_url: '1200x', scale: 2 }}"
+                  data-src="{{ img_url }}"
+                  data-widths="[180, 360, 540, 720, 900, 1080, 1296, 1512, 1728, 2048]"
+                  data-aspectratio="{{ article.image.aspect_ratio }}"
+                  data-sizes="auto"
+                  alt="{{ article.image.alt | escape }}">
             </div>
         </div>
         <div class="flex-initial md:w-5/12 flex flex-col self-center">
@@ -20,7 +29,7 @@
         </div>
     </div>
 </div>
-
+{% endunless %}
    
 
 
@@ -43,7 +52,8 @@
         }, {
             "type": "article",
             "id": "feature_article",
-            "label": "Feature article"
+            "label": "Feature article",
+            "info": "Set a feature article to display it on the page"
         }
     ]
 }

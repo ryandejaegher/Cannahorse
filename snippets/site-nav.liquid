@@ -79,7 +79,7 @@
         </div>
       </li>
     {% else %}
-      <li data-aos="up" data-aos-delay="{{forloop.index | times: 100}}" {% if link.active %} class="site-nav--active"{% endif %}>
+      <li data-aos="up" data-aos-delay="{{forloop.index | times: 100}}" data-aos-offset="0" {% if link.active %} class="site-nav--active"{% endif %}>
         <a href="{{ link.url }}"
           class="site-nav__link site-nav__link--main{% if link.active %} site-nav__link--active{% endif %}"
           {% if link.current %} aria-current="page"{% endif %}

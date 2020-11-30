@@ -1,0 +1,51 @@
+{% assign blog = blogs[section.settings.blog_handle] %}
+
+<div class="{{section.settings.spacing}}">
+    <div class="container mx-auto">
+        <div class="flex items-center gap-4 mx-auto">
+            <h2 class="bg-primary text-white inline-block py-2 px-4 text-xs rounded-lg tracking-normal whitespace-no-wrap m-0 w-48 text-center">{{section.settings.title}}</h2><span class="h-px bg-gray-700 w-full"></span>
+        </div>
+        <div class="grid grid-cols-1 gap-4 mx-auto container px-4 mt-8 md: grid-cols-2 md:px-0 lg:grid-cols-3">
+            {% for article in blog.articles %}
+            {% render 'article' with article as article, aspect_ratio: 'aspect-3-2' %}
+            {% endfor %}
+        </div>
+    </div>
+</div>
+{% schema %}
+{
+    "name": "All Articles",
+    "settings": [
+        {
+            "type": "text",
+            "id": "title",
+            "label": "Section Title"
+        },
+        {
+            "type": "select",
+            "id": "spacing",
+            "label": "Spacing",
+            "options": [
+                {
+                    "value": "py-16",
+                    "label": "sm"
+                }, {
+                    "value": "py-20",
+                    "label": "md"
+                }, {
+                    "value": "py-32",
+                    "label": "lg"
+                }, {
+                    "value": "py-40",
+                    "label": "xl"
+                }
+            ]
+        },
+        {
+            "type": "blog",
+            "id": "blog_handle",
+            "label": "Blog"
+        }
+    ]
+}
+{% endschema %}
