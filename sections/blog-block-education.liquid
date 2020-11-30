@@ -1,6 +1,7 @@
 {%- assign blog = blogs[section.settings.blog_handle] -%}
 
 {% for block in section.blocks %}
+{% assign count = 0 %}
   <div class="page-width max-w-none py-8" {{ block.shopify_attributes }}>
     <div class="flex items-center gap-4">
       <h2 id="{{block.settings.blog_block_tag | downcase | replace: " ", "-"}}"class="bg-primary text-white inline-block py-2 px-4 text-xs rounded-lg tracking-normal whitespace-no-wrap m-0 w-48 text-center">{{block.settings.blog_block_tag}}</h2><span class="h-px bg-gray-700 w-full"></span>
@@ -8,10 +9,10 @@
       <p class="font-semibold max-w-3xl mt-6">{{ block.settings.blog_block_content }}</p>
       <ul class="grid grid--uniform grid--blog grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
 
-        {% for article in blog.articles limit: block.settings.post_limit %}
+        {% for article in blog.articles %}
 
-        {% if article.tags contains block.settings.blog_block_tag %}
-            
+        {% if article.tags contains block.settings.blog_block_tag and count < block.settings.post_limit %}
+            {% assign count = count | plus: 1%}
           <li class="grid__item medium-up--one-third">
             <article aria-labelledby="FeaturedBlogTitle-{{ forloop.index0 }}-{{ section.id }}">
               <header>
@@ -147,17 +148,30 @@
                     "label": "Blog Tag",
                     "options": [
                         {
+                            "value": "anxiety",
+                            "label": "Anxiety"
+                        }, 
+                        {
+                            "value": "cannabis & you",
+                            "label": "Cannabis & You"
+                        }, 
+                        {
                             "value": "cannabis 101",
                             "label": "Cannabis 101"
+                        }, 
+                        {
+                            "value": "equestrians of cannabis",
+                            "label": "Equestrians of Cannabis"
+                        }, 
+                        {
+                            "value": "general ed",
+                            "label": "General Ed"
                         }, {
-                            "value": "horses & cannabis",
-                            "label": "Horses & Cannabis"
+                            "value": "horse patients",
+                            "label": "Horse Patients"
                         }, {
-                            "value": "sports & cannabis",
-                            "label": "Sports & Cannabis"
-                        }, {
-                            "value": "pets & cannabis",
-                            "label": "Pets & Cannabis"
+                            "value": "terpenes",
+                            "label": "Terpenes"
                         }
                     ]
                 }, {
