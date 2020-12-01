@@ -62,10 +62,10 @@
      </div>
   </div>
   
-  <header class="site-header site-header-border py-2 {% if section.settings.align_logo == 'left' %} border-bottom logo--left{% else %} logo--center{% endif %}" role="banner">
+  <header class="site-header site-header-border {% if section.settings.align_logo == 'left' %} border-bottom logo--left{% else %} logo--center{% endif %}" role="banner">
 
 
-    <div class="grid--no-gutters flex items-center site-header__mobile-nav">
+    <div class="grid--no-gutters flex items-center py-2 site-header__mobile-nav">
       {% if section.settings.align_logo == 'center' %}
         {%- assign logo_classes = 'medium-up--one-third medium-up--push-one-third logo-align--center' -%}
       {% else %}

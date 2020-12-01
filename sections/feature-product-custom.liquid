@@ -1,0 +1,41 @@
+<div>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-x-12 items-center container mx-auto bg-gray-200 px-6 py-6 my-20">
+      <div class="block aspect-3-2 relative w-full overflow-hidden bg-white">
+        <img id="" class="absolute w-full h-full object-cover lazyload" src="{{ section.settings.feature_row_image | img_url: '1200x', scale: 2 }}" data-src="{{ img_url }}" data-widths="[180, 360, 540, 720, 900, 1080, 1296, 1512, 1728, 2048]" data-aspectratio="{{ section.settings.feature_row_image.aspect_ratio }}" data-sizes="auto" alt="{{ section.settings.feature_row_image.alt | escape }}">
+      </div>
+      <div>
+        <h2 class="text-4xl font-bold">{{section.settings.feature_row_title}}</h2>
+        <p class="mt-4">{{section.settings.feature_row_content}}</p>
+      </div>
+
+    </div>
+  </div>
+
+  {% schema %}
+  {
+      "name": "Feature Product",
+      "settings": [
+      {
+        "type": "text",
+        "id": "feature_row_title",
+        "label": "Feature Row Title"
+      },
+      {
+        "type": "textarea",
+        "id": "feature_row_content",
+        "label": "Feature Row Content"
+      },
+      {
+        "type": "image_picker",
+        "id": "feature_row_image",
+        "label": "Feature Row Image"
+      }
+      ],
+      "presets": [
+      {
+        "category": "Products",
+        "name": "Feature Product"
+  }
+  ]
+}
+  {% endschema %}
