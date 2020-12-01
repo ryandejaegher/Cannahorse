@@ -11,9 +11,9 @@
   {%- assign number_of_comments = article.comments_count -%}
 {%- endif -%}
 
-<article class="page-width" aria-labelledby="title-0">
+<article class="container mx-auto" aria-labelledby="title-0">
   <div class="grid">
-    <div class="bg-gray-200 mt-16 pb-32">
+    <div class="mt-16 pb-16 bg-gray-200 px-4 md:px-0">
       {% section 'article-template' %}
     </div>
   </div>
@@ -133,7 +133,7 @@
   </div>
 {% endif %}
 
-<div class="text-center return-link-wrapper page-width">
+<div class="text-center return-link-wrapper my-12">
   <a href="{{ blog.url }}" class="btn btn--secondary btn--has-icon-before">
     {% include 'icon-arrow-left' %}
     {{ 'blogs.article.back_to_blog' | t: title: blog.title }}

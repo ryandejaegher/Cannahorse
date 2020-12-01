@@ -1,9 +1,9 @@
-<div class="h-64">
+<div class="h-40 height-80 -mx-4 md:mx-0 ">
   <img class="w-full h-full object-cover" src="{{article.image.src | img_url: '1920x'}}" alt="">
 </div>
 
-<div class="section-header mx-auto max-w-2xl mt-16">
-  <h1 class="article__title text-5xl" id="title-0">{{ article.title }}</h1>
+<div class="section-header mx-auto max-w-2xl mt-8 md:mt-16">
+  <h1 class="article__title text-3xl md:text-4xl" id="title-0">{{ article.title }}</h1>
   {% if section.settings.blog_show_author %}
     <span class="article__author">{{ 'blogs.article.by_author' | t: author: article.author }}</span>
   {% endif %}

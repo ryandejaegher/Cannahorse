@@ -70,7 +70,7 @@
                           {% when 'text' %}
                               <div class="medium-up--text-{{ block.settings.align_text }}">
                                   {% if block.settings.title != blank %}
-                                      <h4 data-aos="up" class="h3">{{ block.settings.title | escape }}</h4>
+                                      <h4 data-aos="up" class="h3 text-2xl md:text-5xl">{{ block.settings.title | escape }}</h4>
                                   {% endif %}
                                   {% if block.settings.text != blank %}
                                       <div data-aos="up" data-aos-offset="150" class="rte-setting rte">{{ block.settings.text }}</div>
@@ -235,7 +235,7 @@
                                       alt="{{ article.image.alt | escape }}">
                                     </div>
                                 {% endif %}
-                                  <h2 class="article__title h3">{{ article.title }}</h2>
+                                  <h2 class="article__title h3 mt-4 ">{{ article.title }}</h2>
                               </a>
   
                                       {%- if block.settings.show_author or block.settings.show_date -%}
