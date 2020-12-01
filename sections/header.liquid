@@ -53,7 +53,7 @@
     {% endif %}
   {% endif %}
 
-  <div class="second-header bg-white hidden justify-between items-center py-2 md:flex">
+  <div class="second-header bg-white hidden justify-between items-center md:flex">
      <span class="brand-primary font-semibold text-base uppercase">
        Equine Professionals
      </span>
@@ -62,7 +62,7 @@
      </div>
   </div>
   
-  <header class="site-header site-header-border {% if section.settings.align_logo == 'left' %} border-bottom logo--left{% else %} logo--center{% endif %}" role="banner">
+  <header class="site-header site-header-border py-2 {% if section.settings.align_logo == 'left' %} border-bottom logo--left{% else %} logo--center{% endif %}" role="banner">
 
 
     <div class="grid--no-gutters flex items-center site-header__mobile-nav">
@@ -81,7 +81,7 @@
         {% if request.page_type == 'index' %}
           <h1 class="h2 site-header__logo">
         {% else %}
-          <div class="h2 site-header__logo">
+          <div class=" site-header__logo">
         {% endif %}
           {% if section.settings.logo %}
             {%- assign img_url = section.settings.logo | img_url: '1x1' | replace: '_1x1.', '_{width}x.' -%}

@@ -1,4 +1,4 @@
-<div class="bg-green-400" style="background-image: {{section.settings.hero_image | img_url: '1920x' scale:'2'}}">
+<div class="bg-brand-primary cover bg-blend-multiply bg-center px-4 md:px-0" style="background-image: url({{section.settings.hero_image | img_url:'1920x', scale:2}})">
     <div class="container mx-auto py-32 md:py-64">
       <h1 class="font-bold text-5xl text-white">{{section.settings.hero_text}}</h1>
     </div>
@@ -7,17 +7,11 @@
   <div>
     <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center container mx-auto bg-gray-200 px-6 py-6 my-20">
       <div class="block aspect-3-2 relative w-full overflow-hidden">
-        <img id="" class="absolute w-full h-full object-cover lazyload" src="https://source.unsplash.com/random?skateboard" data-src="{{ img_url }}" data-widths="[180, 360, 540, 720, 900, 1080, 1296, 1512, 1728, 2048]" data-aspectratio="{{ article.image.aspect_ratio }}" data-sizes="auto" alt="{{ article.image.alt | escape }}">
+        <img id="" class="absolute w-full h-full object-cover lazyload" src="{{ section.settings.row_one_image | img_url: '1200x', scale: 2 }}" data-src="{{ img_url }}" data-widths="[180, 360, 540, 720, 900, 1080, 1296, 1512, 1728, 2048]" data-aspectratio="{{ section.settings.row_one_image.aspect_ratio }}" data-sizes="auto" alt="{{ section.settings.row_one_image.alt | escape }}">
       </div>
       <div>
         <h2 class="text-4xl font-bold">{{section.settings.row_one_title}}</h2>
-        <p class="mt-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-          do eiusmod tempor incididunt ut labore et dolore magna
-          aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-          do eiusmod tempor incididunt ut labore et dolore magna
-          aliqua Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-          do eiusmod tempor incididunt ut labore et dolore magna
-          aliqua</p>
+        <p class="mt-4">{{section.settings.row_one_content}}</p>
       </div>
 
     </div>
@@ -27,22 +21,16 @@
   <div class="bg-gray-200 py-24">
     <div class="container mx-auto px-4 md:px-0">
       <div>
-        <h2 class="text-4xl font-bold">What We Do</h2>
+        <h2 class="text-4xl font-bold brand-primary">{{section.settings.three_col_title}}</h2>
       </div>
 
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 mt-8 gap-12 lg:gap-20">
-        <div class="bg-white px-4 py-4">
-          <h4 class="font-bold text-lg">Research</h4>
-          <p class="mt-4">Lacinia pharetra congue efficitur sollicitudin ut faucibus netus orci, quisque purus conubia dapibus porttitor varius semper accumsan, placerat aenean pretium proin laoreet justo finibus.</p>
-        </div>
-        <div class="bg-white px-4 py-4">
-          <h4 class="font-bold text-lg">Product Development</h4>
-          <p class="mt-4">Our suite of products will target common equine conditions and ailments that have been proven to be aided by cannabis in humans and other animal species. All of our products will be of medical quality, these aren’t trendy health supplements. Products will focus on calming and anxiety, pain and inflammation, exercise and surgical recovery, gut health, and skin conditions and wounds</p>
-        </div>
-        <div class="bg-white px-4 py-4">
-          <h4 class="font-bold text-lg">White Label & Licensing</h4>
-          <p class="mt-4">Lacinia pharetra congue efficitur sollicitudin ut faucibus netus orci, quisque purus conubia dapibus porttitor varius semper accumsan, placerat aenean pretium proin laoreet justo finibus.</p>
-        </div>
+          {% for block in section.blocks %}
+          <div class="bg-white px-4 py-4">
+            <h4 class="font-bold text-lg">{{block.settings.block_title}}</h4>
+            <p class="mt-4">{{block.settings.block_content}}</p>
+          </div>
+          {% endfor %}
       </div>
     </div>
 
@@ -52,17 +40,11 @@
   <div>
     <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center container mx-auto bg-gray-200 px-6 py-6 my-20">
       <div>
-        <h2 class="text-4xl font-bold">Our Story</h2>
-        <p class="mt-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-          do eiusmod tempor incididunt ut labore et dolore magna
-          aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-          do eiusmod tempor incididunt ut labore et dolore magna
-          aliqua Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-          do eiusmod tempor incididunt ut labore et dolore magna
-          aliqua</p>
+        <h2 class="text-4xl font-bold">{{section.settings.row_two_title}}</h2>
+        <p class="mt-4">{{section.settings.row_two_content}}</p>
       </div>
       <div class="block aspect-3-2 relative w-full overflow-hidden">
-        <img id="" class="absolute w-full h-full object-cover lazyload" src="https://source.unsplash.com/random?skateboard" data-src="{{ img_url }}" data-widths="[180, 360, 540, 720, 900, 1080, 1296, 1512, 1728, 2048]" data-aspectratio="{{ article.image.aspect_ratio }}" data-sizes="auto" alt="{{ article.image.alt | escape }}">
+        <img id="" class="absolute w-full h-full object-cover lazyload" src="{{ section.settings.row_two_image | img_url: '1200x', scale: 2 }}" data-src="{{ img_url }}" data-widths="[180, 360, 540, 720, 900, 1080, 1296, 1512, 1728, 2048]" data-aspectratio="{{ section.settings.row_two_image.aspect_ratio }}" data-sizes="auto" alt="{{ section.settings.row_two_image.alt | escape }}">
       </div>
 
     </div>
@@ -119,5 +101,25 @@
       "label": "Row Two Image"
     }
   ],
+  "max_blocks": 3,
+  "blocks": [
+  {
+      "type": "Text",
+      "name": "Text Block",
+      "settings": [
+          {
+              "type": "text",
+              "id": "block_title",
+              "label": "Block Title"
+          },
+          {
+              "type": "textarea",
+              "id": "block_content",
+              "label": "Block Content"
+          }
+      ]
+  }
+  ]
+  
 }
 {% endschema %}
