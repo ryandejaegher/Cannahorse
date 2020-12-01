@@ -262,7 +262,7 @@
   {%- assign socials = "Facebook Twitter Pinterest Instagram Tumblr Snapchat YouTube Vimeo" | split: ' ' -%}
 
 
-
+{%- comment -%}
 <div class="page-width">
     <div class="grid grid--no-gutters small--text-center grid--footer-float-right">
       {%- if show_selectors -%}
@@ -323,6 +323,7 @@
 
       <div class="grid__item {% if show_selectors or show_payment_icons %}one-half{% endif %} small--one-whole site-footer-item-tall">
         {%- if social_icons -%}
+
           <ul class="list--inline site-footer__social-icons social-icons site-footer__icon-list">
             {%- for social in socials -%}
               {%- assign social_link = social | prepend: 'social_' | append: '_link' | downcase -%}
@@ -336,7 +337,7 @@
                 </li>
               {%- endif -%}
             {%- endfor -%}
-{%- comment -%}
+
 
 {%- if request.page_type == 'blog' or request.page_type == 'article' -%}
 <li>
@@ -346,8 +347,9 @@
   </a>
 </li>
 {%- endif -%}
-{%- endcomment -%}
+
           </ul>
+
         {%- else -%}
           <div class="small--hide site-footer-item-align-right {% if show_selectors or show_payment_icons %}site-footer-item-center-vertically{% endif %}">
             <small class="site-footer__copyright-content">&copy; {{ 'now' | date: "%Y" }}, {{ shop.name | link_to: routes.root_url }}</small>
@@ -375,9 +377,9 @@
       </div>
     </div>
   </div>
-{%- comment -%}
+{%- endcomment -%}
 
-<ul class="list--inline site-footer__social-icons social-icons site-footer__icon-list">
+<ul class="flex justify-center py-8 gap-4">
   {%- for social in socials -%}
     {%- assign social_link = social | prepend: 'social_' | append: '_link' | downcase -%}
     {%- assign icon_link = social | prepend: 'icon-' | downcase -%}
@@ -390,7 +392,8 @@
       </li>
     {%- endif -%}
   {%- endfor -%}
-{%- endcomment -%}
+  </ul>
+
 </footer>
 
 

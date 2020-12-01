@@ -7039,6 +7039,8 @@ hr {
  padding: 4px 24px;
  font-size: 1.3em;
  border-radius: 20px;
+ white-space: nowrap;
+ margin-left: 20px;
 }
 
 .bg-gradient:after {
@@ -7615,4 +7617,12 @@ hr {
     height: 24rem;
   }
 }
+
+@media(min-width: 767px) {
+  .site-header-border {
+    border-top: 1px solid var(--brand-primary);
+    border-bottom: 1px solid var(--brand-primary);
+  }
+}
+
 
