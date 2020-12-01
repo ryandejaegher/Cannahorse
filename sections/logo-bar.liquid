@@ -1,4 +1,4 @@
-<div class="logo-bar-wrapper">
+<div class="logo-bar-wrapper {{section.settings.spacing}}">
 <div class="page-width {{section.settings.container}}">
   {% if section.settings.title != blank %}
     <div class="section-header text-center">
@@ -7,7 +7,7 @@
   {% endif %}
 
   {% if section.blocks.size > 0 %}
-    <ul class="logo-bar{% if section.settings.title_enable %} logo-bar--large{% endif %}">
+    <ul class="logo-bar mt-4 md:mt-0{% if section.settings.title_enable %} logo-bar--large{% endif %}">
       {% for block in section.blocks %}
         <li data-aos="fade" data-aos-delay="{{forloop.index | times:100}}" data-aos-offset="20" class="logo-bar__item{% if section.settings.title_enable %} logo-bar__item--large{% endif %}" {{ block.shopify_attributes }}>
           {% if block.settings.link != blank %}
@@ -127,6 +127,26 @@
    ],
    "default":   "max-w-fixed",
    "info":      "Controls the text container size"
+},
+{
+  "type": "select",
+  "id": "spacing",
+  "label": "Spacing",
+  "options": [
+      {
+          "value": "py-16",
+          "label": "sm"
+      }, {
+          "value": "py-20",
+          "label": "md"
+      }, {
+          "value": "py-32",
+          "label": "lg"
+      }, {
+          "value": "py-40",
+          "label": "xl"
+      }
+  ]
 }
   ],
   "blocks": [
