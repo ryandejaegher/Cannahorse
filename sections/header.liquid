@@ -53,8 +53,8 @@
     {% endif %}
   {% endif %}
 
-  <div class="site-header hidden justify-between items-center md:flex">
-     <span class="brand-primary font-semibold text-lg uppercase">
+  <div class="second-header bg-white hidden justify-between items-center py-2 md:flex">
+     <span class="brand-primary font-semibold text-base uppercase">
        Equine Professionals
      </span>
      <div class="desktop-icons">
@@ -125,7 +125,7 @@
         {% render 'mobile-icons' %}
 </div>
       {%- comment -%}
-      < data-aos="right" data-aos-offset="0" class="grid__item {% if section.settings.align_logo == 'left' %}medium-up--one-quarter{% else %}medium-up--one-third medium-up--push-one-third{% endif %} text-right site-header__icons{% if shop.customer_accounts_enabled %} site-header__icons--plus{% endif %}">
+      <div data-aos="right" data-aos-offset="0" class="grid__item {% if section.settings.align_logo == 'left' %}medium-up--one-quarter{% else %}medium-up--one-third medium-up--push-one-third{% endif %} text-right site-header__icons{% if shop.customer_accounts_enabled %} site-header__icons--plus{% endif %}">
         <div class="site-header__icons-wrapper">
 
           <button type="button" class="btn--link site-header__icon site-header__search-toggle js-drawer-open-top" data-predictive-search-open-drawer>
@@ -164,7 +164,7 @@
           {% endunless %}
           <a href="#" class="header-button hidden md:block">OUR PRODUCTS</a>
         </div>
-      </>
+      </div>
       {%- endcomment -%}
     </div>
 

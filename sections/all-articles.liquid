@@ -4,7 +4,7 @@
             <h2 class="bg-primary text-white inline-block py-2 px-4 text-xs rounded-lg tracking-normal whitespace-no-wrap m-0 w-48 text-center">{{section.settings.title}}</h2><span class="h-px bg-gray-700 w-full"></span>
         </div>
      {% render 'blog-filter'  %}
-        <div class="grid ml-0 grid-cols-1 gap-4 mx-auto container px-4 mt-8 md:grid-cols-2 md:px-0 lg:grid-cols-3">
+        <div class="grid ml-0 grid-cols-1 gap-4 mx-auto container mt-8 md:grid-cols-2 md:px-0 lg:grid-cols-3">
             {% for article in blog.articles %}
             {% render 'article' with article as article, aspect_ratio: 'aspect-3-2'%}
             {% endfor %}
