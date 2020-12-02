@@ -34,6 +34,9 @@ var faqs = document.querySelectorAll('[data-faq="question"]');
 faqs.forEach(faq => {
   nextUntil(faq,'[data-faq="question"]').forEach(item => item.classList.add('faq-hide','transition','cursor'))
   faq.addEventListener('click', function(e) {
-    nextUntil(this,'[data-faq="question"]').forEach(item => item.classList.toggle('faq-hide'))
+    nextUntil(this,'[data-faq="question"]').forEach(item => {
+		e.target.classList.toggle('visible');
+		item.classList.toggle('faq-hide')
+	})
   })
 })

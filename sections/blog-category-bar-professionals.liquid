@@ -1,0 +1,34 @@
+<div class="">
+    <ul class="flex lg:justify-center border-t-2 border-b-2 overflow-x-scroll">
+        {% for block in section.blocks %}
+        <li class="whitespace-no-wrap"><a class="inline-block font-semibold py-6 px-4 tracking-wider hover:bg-gray-200" href="{{block.settings.link_url}}">{{block.settings.link_text}}</a></li>    
+        {% endfor %}
+        
+    </ul>
+</div>
+{% schema %}
+
+{
+    "name": "Blog Category Bar",
+    "max_blocks": 4,
+    "blocks": [
+        {
+            "type": "Blog",
+            "name": "Blog Category Link",
+            "settings": [
+                {
+                    "type": "text",
+                    "id": "link_text",
+                    "label": "Link Text"
+                }, {
+                    "type": "url",
+                    "id": "link_url",
+                    "label": "Link URL"
+                }
+            ]
+        }
+    ]
+
+}
+
+{% endschema %}
