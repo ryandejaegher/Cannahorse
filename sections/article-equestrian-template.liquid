@@ -4,6 +4,7 @@
 
 <div class="section-header mx-auto max-w-2xl mt-8 md:mt-16">
   <h1 class="article__title text-3xl md:text-4xl" id="title-0">{{ article.title }}</h1>
+  
   {% if section.settings.blog_show_author %}
     <span class="article__author">{{ 'blogs.article.by_author' | t: author: article.author }}</span>
   {% endif %}
@@ -13,6 +14,18 @@
       {{ article.published_at | time_tag: format: 'date' }}
     </span>
   {% endif %}
+  <div class="w-1/2 float-right ml-8">
+    <div class="block {{block.settings.aspect_ratio}} aspect-16-9 relative">
+      <img id=""
+        class="absolute w-full h-full object-cover lazyload"
+        src="{{ article.image | img_url: '1200x', scale: 2 }}"
+        data-src="{{ img_url }}"
+        data-widths="[180, 360, 540, 720, 900, 1080, 1296, 1512, 1728, 2048]"
+        data-aspectratio="{{ article.image.aspect_ratio }}"
+        data-sizes="auto"
+        alt="{{ article.image.alt | escape }}">
+      </div>
+  </div>
 </div>
 
 <div class="rte max-w-2xl mx-auto">
