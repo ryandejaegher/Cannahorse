@@ -4,7 +4,7 @@
 {% endunless %}
 
 <div class="page-width py-16">
-    <h3 class="text-center">{{section.settings.faq_heading}}</h3>
+    <h3 class="text-center text-primary {{section.settings.text_size}}">{{section.settings.faq_heading}}</h3>
     <p>{{section.settings.faq_intro}}</p>
     <div class="space-y-2 max-w-2xl mx-auto">
     {% for block in section.blocks %}
@@ -21,18 +21,61 @@
 {
     "name": "FAQ Block",
     "settings": [
+    {
+        "type": "header",
+        "content": "FAQ Heading"
+    },
         {
             "type": "text",
             "id": "faq_heading",
             "label": "FAQ Heading"
         },
         {
+            "type": "select",
+            "id": "text_size",
+            "label": "Header Size",
+            "options": [
+                {
+                    "value": "text-base",
+                    "label": "base"
+                }, 
+                {
+                    "value": "text-lg",
+                    "label": "lg"
+                }, 
+                {
+                    "value": "text-xl",
+                    "label": "xl"
+                }, 
+                {
+                    "value": "text-2xl",
+                    "label": "2xl"
+                },
+                {
+                    "value": "text-3xl",
+                    "label": "3xl"
+                },
+                {
+                    "value": "text-4xl",
+                    "label": "4xl"
+                },
+                {
+                    "value": "text-5xl",
+                    "label": "5xl"
+                },
+                {
+                    "value": "text-6xl",
+                    "label": "6xl"
+                }
+            ]
+        },
+        {
             "type": "textarea",
-            "id": "faq_intro",
-            "label": "label"
+            "id": "faq_intro",  
+            "label": "FAQ Intro"
         }
     ],
-    "max_blocks": 10,
+    "max_blocks": 12,
     "blocks": [
         {
             "type": "FAQ",

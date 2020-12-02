@@ -7612,6 +7612,14 @@ hr {
 .social-icons {
   text-align: center;
 }
+
+.social-icons__link svg {
+  width: 30px;
+  height: 30px;
+  fill: var(--brand-primary)
+}
+
+
 @media(min-width: 767px) {
   .height-80 {
     height: 24rem;
