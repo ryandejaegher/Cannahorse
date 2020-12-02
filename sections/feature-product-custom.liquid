@@ -7,7 +7,12 @@
         <img id="" class="absolute w-full h-full object-contain lazyload" src="{{ section.settings.feature_row_image | img_url: '1200x', scale: 2 }}" data-src="{{ img_url }}" data-widths="[180, 360, 540, 720, 900, 1080, 1296, 1512, 1728, 2048]" data-aspectratio="{{ section.settings.feature_row_image.aspect_ratio }}" data-sizes="auto" alt="{{ section.settings.feature_row_image.alt | escape }}">
       </div>
       <div>
+          {% unless section.settings.product_logo == blank %}
+          <img class="w-1/2 mt-4 md:mt-0" src="{{section.settings.product_logo | img_url:'400x', scale:2}}" alt="">
+          {% endunless %}
+        {% unless section.settings.feature_row_title == blank %}
         <h2 class="font-bold {{section.settings.text_size}} mt-4 md:mt-0">{{section.settings.feature_row_title}}</h2>
+        {% endunless %}
         <p class="mt-4">{{section.settings.feature_row_content}}</p>
 </div>
 
@@ -76,6 +81,11 @@
         "type": "image_picker",
         "id": "feature_row_image",
         "label": "Feature Row Image"
+      },
+      {
+          "type": "image_picker",
+          "id": "product_logo",
+          "label": "Product Logo"
       },
       {
           "type": "header",

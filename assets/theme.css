@@ -7674,3 +7674,11 @@ hr {
   transition: transform .3s ease;
 } 
 
+.newsletter-title {
+  font-size: 24px;
+}
+
+.newsletter-text {
+  font-size: 16px;
+  font-weight: 600;
+}
