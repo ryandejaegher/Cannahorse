@@ -5,7 +5,7 @@
   </div>
   <!-- First Row: Our Story -->
   <div>
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-x-12 items-center container mx-auto bg-gray-200 px-6 py-6 my-20">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-x-12 items-center container mx-auto bg-grey px-6 py-6 my-20">
       <div class="block aspect-3-2 relative w-full overflow-hidden">
         <img id="" class="absolute w-full h-full object-cover lazyload" src="{{ section.settings.row_one_image | img_url: '1200x', scale: 2 }}" data-src="{{ img_url }}" data-widths="[180, 360, 540, 720, 900, 1080, 1296, 1512, 1728, 2048]" data-aspectratio="{{ section.settings.row_one_image.aspect_ratio }}" data-sizes="auto" alt="{{ section.settings.row_one_image.alt | escape }}">
       </div>
@@ -18,7 +18,7 @@
   </div>
 
   <!-- What We Do  -->
-  <div class="bg-gray-200 py-24">
+  <div class="bg-grey py-24">
     <div class="container mx-auto px-4 md:px-0">
       <div>
         <h2 class="text-4xl font-bold brand-primary">{{section.settings.three_col_title}}</h2>
@@ -38,7 +38,7 @@
 
   <!--  Second Row: Our Products  -->
   <div>
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center container mx-auto bg-gray-200 px-6 py-6 my-20">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center container mx-auto bg-grey px-6 py-6 my-20">
       <div>
         <h2 class="text-4xl font-bold">{{section.settings.row_two_title}}</h2>
         <p class="mt-4">{{section.settings.row_two_content}}</p>

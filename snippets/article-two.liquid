@@ -5,6 +5,7 @@ This can be used to easily render articles
 {%- endcomment -%}
 
 <div data-aos="up" class="transition-shadow duration-200 hover:shadow-lg">
+    <a class="cursor-pointer" href="{{article.url}}">
     <div class="block {{aspect_ratio}} relative">
         <img id=""
           class="absolute w-full h-full object-cover lazyload" 
@@ -22,4 +23,5 @@ This can be used to easily render articles
         {% endunless %}
         <a class="inline-block px-4 py-2 -mx-4 font-bold rounded-full hover:underline" href="{{article.url}}">Read More</a>
     </div>
+    </a>
 </div>

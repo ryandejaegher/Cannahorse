@@ -1,3 +1,6 @@
+{% unless section.settings.feature_article == blank %}
+    
+
 {% assign article = articles[section.settings.feature_article] %}
 
 <div class="page-width max-w-none py-8">
@@ -30,7 +33,7 @@
     </div>
 </div>
 
-   
+{% endunless %}
 
 
 

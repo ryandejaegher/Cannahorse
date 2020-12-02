@@ -4,20 +4,24 @@ This can be used to easily render articles
 
 {%- endcomment -%}
 
-<div class="p-4 bg-white transition-shadow duration-200 hover:shadow-lg hover:transition-shadow">
-    <div class="flex flex-col items-start h-full data-aos="up" data-aos-delay="{{index | times: 150}}">
-        <div class="block aspect-16-9 relative w-full overflow-hidden">
-            <img id=""
-              class="absolute w-full h-full object-cover lazyload" 
-              src="{{ article.image | img_url: '1200x', scale: 2 }}"
-              data-src="{{ img_url }}"
-              data-widths="[180, 360, 540, 720, 900, 1080, 1296, 1512, 1728, 2048]"
-              data-aspectratio="{{ article.image.aspect_ratio }}"
-              data-sizes="auto"
-              alt="{{ article.image.alt | escape }}">
+
+    <div class="p-4 relative bg-white transition-shadow duration-200 hover:shadow-lg hover:transition-shadow">
+        <a href="{{article.url}}" class="cursor-pointer">
+        <div class="flex flex-col items-start h-full" data-aos="up" data-aos-delay="{{index | times: 150}}">
+            <div class="block aspect-16-9 relative w-full overflow-hidden">
+                <img id=""
+                  class="absolute w-full h-full object-cover lazyload" 
+                  src="{{ article.image | img_url: '1200x', scale: 2 }}"
+                  data-src="{{ img_url }}"
+                  data-widths="[180, 360, 540, 720, 900, 1080, 1296, 1512, 1728, 2048]"
+                  data-aspectratio="{{ article.image.aspect_ratio }}"
+                  data-sizes="auto"
+                  alt="{{ article.image.alt | escape }}">
+            </div>
+            <h2 class="mt-4">{{article.title}}</h2>
+            <p>{{article.excerpt}}</p>
+            <a class="inline-block bg-brand-primary px-4 py-2 text-white font-bold rounded-full mt-auto" href="{{article.url}}">READ MORE</a>
         </div>
-        <h2 class="mt-4">{{article.title}}</h2>
-        <p>{{article.excerpt}}</p>
-        <a class="inline-block bg-brand-primary px-4 py-2 text-white font-bold rounded-full mt-auto" href="{{article.url}}">READ MORE</a>
+    </a>
     </div>
-</div>
+

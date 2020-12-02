@@ -54,8 +54,9 @@
   {% endif %}
 
   <div class="second-header bg-white hidden justify-between items-center md:flex">
-     <span class="brand-primary font-semibold text-base uppercase">
-       Equine Professionals
+     <span class="font-semibold text-base uppercase">
+       <a class="brand-primary" href="{{section.settings.second_header_url}}">{{section.settings.second_header_text}}</a>
+
      </span>
      <div class="desktop-icons">
        {% render 'header-icons' %}
@@ -79,7 +80,7 @@
           Site name gets precedence with H1 tag on homepage, div on other pages.
         {% endcomment %}
         {% if request.page_type == 'index' %}
-          <h1 class="h2 site-header__logo">
+          <h1 class="site-header__logo">
         {% else %}
           <div class=" site-header__logo">
         {% endif %}
@@ -509,6 +510,20 @@
         "zh-TW": "選單"
       },
       "default": "main-menu"
+    },
+    {
+      "type": "header",
+      "content": "Second Header"
+    },
+    {
+      "type": "text",
+      "id": "second_header_text",
+      "label": "Second Header Text"
+    },
+    {
+      "type": "url",
+      "id": "second_header_url",
+      "label": "Second Header URL"
     },
     {
       "type": "header",

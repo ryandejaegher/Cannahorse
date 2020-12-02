@@ -7637,3 +7637,11 @@ hr {
 .cover {
   background-size: cover !important;
 }
+
+.site-header__logo {
+  margin: 0 !important;
+}
+
+.bg-grey {
+  background: #efefef;
+}

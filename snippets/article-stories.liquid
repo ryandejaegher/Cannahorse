@@ -3,9 +3,9 @@ This can be used to easily render articles
 {% render 'article' with articles[block.settings.article] as article %}
 
 {%- endcomment -%}
-
 <div class="p-4 bg-white transition-shadow duration-200 hover:shadow-lg hover:transition-shadow">
-    <div class="flex flex-col items-start h-full data-aos="up" data-aos-delay="{{index | times: 150}}">
+
+    <div class="flex flex-col items-start h-full" data-aos="up" data-aos-delay="{{index | times: 150}}">
         <div class="block {{aspect_ratio}} relative w-full overflow-hidden">
             <img id=""
               class="absolute w-full h-full object-cover lazyload" 
