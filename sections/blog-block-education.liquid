@@ -3,9 +3,10 @@
 {% for block in section.blocks %}
 
 {% assign count = 0 %}
+
   <div class="page-width max-w-none py-8" {{ block.shopify_attributes }}>
     <div class="flex items-center gap-4">
-      <h2 id="{{block.settings.blog_block_title | downcase | replace: " ", "-"}}"class="bg-primary text-white inline-block py-2 px-4 text-xs rounded-lg tracking-normal whitespace-no-wrap m-0 w-48 text-center">{{block.settings.blog_block_title}}</h2><span class="h-px bg-gray-700 w-full"></span>
+      <h2 id="{{block.settings.blog_block_title | downcase | replace: " ", "-"}}" class="bg-primary text-white inline-block py-2 px-4 text-xs rounded-lg tracking-normal whitespace-no-wrap m-0 w-48 text-center anchor">{{block.settings.blog_block_title}}</h2><span class="h-px bg-gray-700 w-full"></span>
     </div>
       <p class="font-semibold max-w-3xl mt-6">{{ block.settings.blog_block_content }}</p>
       <ul class="grid grid--uniform grid--blog gap-4 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
@@ -128,7 +129,7 @@
 
 {
     "name": "Blog Block",
-    "max_blocks": 4,
+    "max_blocks": 5,
     "settings": [
       {
         "type": "blog",
@@ -157,71 +158,87 @@
                     "options": [
                     {
                       "value": "animal",
-                      "label":"animal"
+                      "label": "animal"
                       },
                       {
                       "value": "anxiety",
-                      "label":"anxiety"
+                      "label": "anxiety"
+                      },
+                      {
+                      "value": "Athletes",
+                      "label": "Athletes"
                       },
                       {
                       "value": "Bone fracture recovery",
-                      "label":"Bone fracture recovery"
+                      "label": "Bone fracture recovery"
+                      },
+                      {
+                      "value": "Cannabinoids",
+                      "label": "Cannabinoids"
                       },
                       {
                       "value": "cannabis & you",
-                      "label":"cannabis & you"
+                      "label": "cannabis & you"
                       },
                       {
                       "value": "cannabis 101",
-                      "label":"cannabis 101"
+                      "label": "cannabis 101"
                       },
                       {
                       "value": "Equestians of Cannabis",
-                      "label":"Equestians of Cannabis"
+                      "label": "Equestians of Cannabis"
+                      },
+                      {
+                      "value": "equine",
+                      "label": "equine"
                       },
                       {
                       "value": "exercise recovery",
-                      "label":"exercise recovery"
+                      "label": "exercise recovery"
                       },
                       {
                       "value": "general ed",
-                      "label":"general ed"
+                      "label": "general ed"
                       },
                       {
                       "value": "gut",
-                      "label":"gut"
+                      "label": "gut"
                       },
                       {
                       "value": "Horse Patients",
-                      "label":"Horse Patients"
+                      "label": "Horse Patients"
                       },
                       {
                       "value": "Horses & Cannabis",
-                      "label":"Horses & Cannabis"
+                      "label": "Horses & Cannabis"
                       },
                       {
                       "value": "human",
-                      "label":"human"
+                      "label": "human"
                       },
                       {
                       "value": "pain and inflammation",
-                      "label":"pain and inflammation"
+                      "label": "pain and inflammation"
+                      },
+                      {
+                      "value": "pets",
+                      "label": "pets"
                       },
                       {
                       "value": "Pets & Cannabis",
-                      "label":"Pets & Cannabis"
+                      "label": "Pets & Cannabis"
                       },
                       {
                       "value": "safety",
-                      "label":"safety"
+                      "label": "safety"
                       },
                       {
                       "value": "sports & cannabis",
-                      "label":"sports & cannabis"
+                      "label": "sports & cannabis"
                       },
                       {
                       "value": "terpenes",
-                      "label":"terpenes"
+                      "label": "terpenes"
                       }
                     ]
                 }, {

@@ -14,7 +14,7 @@
       {{ article.published_at | time_tag: format: 'date' }}
     </span>
   {% endif %}
-  <div class="w-1/2 float-right ml-8">
+  <div class="w-full float-none mt-6 md:w-1/2 md:float-right md:ml-8 md:-mt-8">
     <div class="block {{block.settings.aspect_ratio}} aspect-16-9 relative">
       <img id=""
         class="absolute w-full h-full object-cover lazyload"

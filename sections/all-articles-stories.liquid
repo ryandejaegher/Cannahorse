@@ -3,7 +3,7 @@
 <div class="{{section.settings.spacing}}">
     <div class="container mx-auto">
         <div class="flex items-center gap-4 mx-auto">
-            <h2 class="bg-primary text-white inline-block py-2 px-4 text-xs rounded-lg tracking-normal whitespace-no-wrap m-0 w-48 text-center">{{section.settings.title}}</h2><span class="h-px bg-gray-700 w-full"></span>
+            <h2 id="{{section.settings.title | downcase | replace: " ", "-"}}" class="bg-primary text-white inline-block py-2 px-4 text-xs rounded-lg tracking-normal whitespace-no-wrap m-0 w-48 text-center">{{section.settings.title}}</h2><span class="h-px bg-gray-700 w-full"></span>
         </div>
         <div class="grid grid-cols-1 gap-4 mx-auto container px-4 mt-8 md:grid-cols-2 md:px-0 lg:grid-cols-3">
             {% for article in blog.articles %}

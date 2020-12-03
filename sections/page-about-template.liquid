@@ -1,15 +1,15 @@
 <div class="bg-brand-primary cover bg-blend-multiply bg-center px-4 md:px-0" style="background-image: url({{section.settings.hero_image | img_url:'1920x', scale:2}})">
-    <div class="container mx-auto py-32 md:py-64">
+    <div data-aos="left" class="container mx-auto py-32 md:py-64">
       <h1 class="font-bold text-5xl text-white">{{section.settings.hero_text}}</h1>
     </div>
   </div>
   <!-- First Row: Our Story -->
   <div>
     <div class="grid grid-cols-1 md:grid-cols-2 gap-x-12 items-center container mx-auto bg-grey px-6 py-6 my-20">
-      <div class="block aspect-3-2 relative w-full overflow-hidden">
+      <div data-aos="up" data-aos-delay="200" class="block aspect-3-2 relative w-full overflow-hidden">
         <img id="" class="absolute w-full h-full object-cover lazyload" src="{{ section.settings.row_one_image | img_url: '1200x', scale: 2 }}" data-src="{{ img_url }}" data-widths="[180, 360, 540, 720, 900, 1080, 1296, 1512, 1728, 2048]" data-aspectratio="{{ section.settings.row_one_image.aspect_ratio }}" data-sizes="auto" alt="{{ section.settings.row_one_image.alt | escape }}">
       </div>
-      <div>
+      <div data-aos="down">
         <h2 class="text-4xl font-bold">{{section.settings.row_one_title}}</h2>
         <p class="mt-4">{{section.settings.row_one_content}}</p>
       </div>
@@ -20,13 +20,13 @@
   <!-- What We Do  -->
   <div class="bg-grey py-24">
     <div class="container mx-auto px-4 md:px-0">
-      <div>
+      <div data-aos="down">
         <h2 class="text-4xl font-bold brand-primary">{{section.settings.three_col_title}}</h2>
       </div>
 
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 mt-8 gap-x-12 gap-y-4 lg:gap-20">
           {% for block in section.blocks %}
-          <div class="bg-white px-4 py-4">
+          <div data-aos="up" data-aos-delay="{{forloop.index | times:150}}" class="bg-white px-4 py-4">
                 <div class="block w-24 h-32 mx-auto relative">
                   <img id=""
                     class="w-full h-full object-contain lazyload"
@@ -49,11 +49,11 @@
   <!--  Second Row: Our Products  -->
   <div>
     <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center container mx-auto bg-grey px-6 py-6 my-20">
-      <div>
+      <div data-aos="down">
         <h2 class="text-4xl font-bold">{{section.settings.row_two_title}}</h2>
         <p class="mt-4">{{section.settings.row_two_content}}</p>
       </div>
-      <div class="block aspect-3-2 relative w-full overflow-hidden">
+      <div data-aos="up" data-aos-delay="200" class="block aspect-3-2 relative w-full overflow-hidden">
         <img id="" class="absolute w-full h-full object-cover lazyload" src="{{ section.settings.row_two_image | img_url: '1200x', scale: 2 }}" data-src="{{ img_url }}" data-widths="[180, 360, 540, 720, 900, 1080, 1296, 1512, 1728, 2048]" data-aspectratio="{{ section.settings.row_two_image.aspect_ratio }}" data-sizes="auto" alt="{{ section.settings.row_two_image.alt | escape }}">
       </div>
 
