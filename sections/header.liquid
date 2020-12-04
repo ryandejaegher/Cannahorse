@@ -119,7 +119,9 @@
           {% include 'site-nav', linklist: section.settings.main_linklist %}
         </nav>
       {% endif %}
-      <a href="#" class="header-button hidden md:block whitespace-nowrap">OUR PRODUCTS</a>
+      {% unless section.settings.header_button_text == blank %}
+      <a href="{{section.settings.header_button_url}}" class="header-button hidden md:block whitespace-nowrap">{{section.settings.header_button_text}}</a>
+      {% endunless %}
 
       
 <div class="mobile-icons md:hidden">
@@ -524,6 +526,20 @@
       "type": "url",
       "id": "second_header_url",
       "label": "Second Header URL"
+    },
+    {
+      "type": "header",
+      "content": "Header Button"
+    },
+    {
+      "type": "text",
+      "id": "header_button_text",
+      "label": "Header Button"
+    },
+    {
+      "type": "url",
+      "id": "header_button_url",
+      "label": "Header Button URL"
     },
     {
       "type": "header",

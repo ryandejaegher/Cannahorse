@@ -7711,3 +7711,20 @@ hr {
 .product-single__title {
   margin-top: 12px;
 }
+
+
+.product-grid {
+  grid-template-columns: 1fr;
+}
+@media(min-width: 767px) {
+  .product-grid {
+    grid-template-columns: 1fr 350px;
+  }
+
+}
+
+.price-item {
+  display: none !important;
+}
+
+
