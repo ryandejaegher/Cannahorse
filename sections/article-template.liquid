@@ -15,9 +15,18 @@
   {% endif %}
 </div>
 
+{% if customer and blog.handle == 'equestrian-professionals' %}
+  
 <div class="rte max-w-2xl mx-auto">
   {{ article.content }}
 </div>
+{%elsif blog.handle != 'equestrian-professionals' %}
+<div class="rte max-w-2xl mx-auto">
+  {{ article.content }}
+</div>
+{% else %}
+{% render 'login-form' landing_page:article.url %}
+{% endif %}
 
 {% if section.settings.show_share_buttons %}
   {% include 'social-sharing', share_title: article.title, share_permalink: article.url, share_image: article.image %}

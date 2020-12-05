@@ -1,6 +1,11 @@
 
 
 {% section 'blog-banner-professionals' %}
+{% if customer %}
+    
 {% section 'feature-blog-article-professionals' %}
 {% section 'blog-category-bar-professionals' %}
 {% section 'blog-block-professionals' %}
+{% else %}
+{% render 'login-form' landing_page:"/pages/equine-professionals" %}
+{% endif%}

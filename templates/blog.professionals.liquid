@@ -3,6 +3,8 @@
 {% endcomment %}
 
 {% section 'blog-banner-professionals' %}
+{% if customer %}
+  
 {% section 'feature-blog-article-professionals' %}
 {% section 'all-articles' %}
 
@@ -11,6 +13,9 @@
 {%- endcomment -%}
 
 {% section 'cta-banner' %}
+{% else %}
+{% render 'login-form' landing_page:"/blogs/equestrian-professionals" %}
+{% endif %}
 
 {%- comment -%}
 {% section 'faq-block' %}

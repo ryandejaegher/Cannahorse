@@ -7214,9 +7214,21 @@ grid-template-columns: repeat(6, 1fr);
 }
 
 .site-footer__linklist {
-	display: grid;
-  	grid-template-columns: repeat(2, 1fr);
+  column-count: 2;
 }
+
+@media(min-width: 767px) {
+
+  .site-footer__linklist {
+    column-count: 0;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+}
+
+
+
 
 .site-footer__linklist-item a {
   font-weight: 600;
@@ -7747,3 +7759,16 @@ hr {
 a[href*='elfsight'] {
   display: none !important;
 }
+
+.shopify-challenge__container {
+  padding-top: 80px;
+  padding-bottom: 80px;
+}
+
+@media(min-width: 767px) {
+  .site-nav li:nth-of-type(4),.site-nav li:nth-of-type(5) {
+    display: none;
+  }
+}
+
+

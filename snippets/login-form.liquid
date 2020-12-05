@@ -1,11 +1,65 @@
-{% form 'customer_login' %} {{ form.errors | default_errors }}
+<div class="container px-4 mx-auto md:px-0">
+    <div class="max-w-xl flex flex-col items-center mx-auto mt-8 md:mt-16">
+        
+        <h2 class="text-2xl md:text-5xl">
+            Welcome
+        </h2>
+        <p>To view this content, please login below or create an account.</p>
+    </div>
+</div>
 
-<label for="customer_email">Email Address</label>
-<input type="email" name="customer[email]" />
+<div id="CustomerLoginForm" class="form-vertical max-w-xl mx-auto mt-8 py-16 bg-grey px-8 mb-8">
 
-<label for="customer_password">Password</label>
-<input type="password" name="customer[password]" />
+    <h1 id="LoginHeading" class="text-center">{{ 'customer.login.title' | t }}</h1>
 
-<input type="submit" value="Sign In" />
+    {% form 'customer_login', novalidate: 'novalidate' %}
+    <input type="hidden" name="checkout_url" value={{landing_page}}>
+      {%- if form.errors -%}
+        <div class="form-message form-message--error">
+          <h2 class="h3 form-message__title " tabindex="-1" data-form-status>{{ 'contact.form.error_heading' | t }}</h2>
+          {{ form.errors | default_errors }}
+        </div>
+      {%- endif -%}
 
-{% endform %} 
+      <label for="CustomerEmail">{{ 'customer.login.email' | t }}</label>
+      <input
+        type="email"
+        name="customer[email]"
+        id="CustomerEmail"
+        autocomplete="email"
+        autocorrect="off"
+        autocapitalize="off"
+        {%- if form.errors contains 'form' -%}
+          class="input--error"
+          aria-invalid="true"
+        {%- endif -%}
+        >
+
+      {% if form.password_needed %}
+        <label for="CustomerPassword">{{ 'customer.login.password' | t }}</label>
+        <input
+          type="password"
+          value=""
+          name="customer[password]"
+          id="CustomerPassword"
+          {%- if form.errors contains 'form' -%}
+            class="input--error"
+            aria-invalid="true"
+          {%- endif -%}
+        >
+      {% endif %}
+
+      <div class="text-center">
+        {% if form.password_needed %}
+          <p><a href="#recover" id="RecoverPassword">{{ 'customer.login.forgot_password' | t }}</a></p>
+        {% endif %}
+
+        <input type="submit" class="btn" value="{{ 'customer.login.sign_in' | t }}">
+
+        <p>
+          {{ 'layout.customer.create_account' | t | customer_register_link }}
+        </p>
+      </div>
+
+    {% endform %}
+  </div>
