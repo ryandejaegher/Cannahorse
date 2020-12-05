@@ -2,7 +2,7 @@
     <div class="container mx-auto px-4 md:px-0">
         <h2 class="text-2xl text-primary md:text-4xl">{{section.settings.section_heading}}</h2>
     </div>
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-x-12 items-center container mx-auto bg-grey px-6 py-6 mt-4">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-x-12 items-center container mx-auto bg-grey px-6 py-6 mt-4 feature-product">
       <div class="block aspect-3-2 relative w-full overflow-hidden bg-white">
         <img id="" class="absolute w-full h-full object-contain lazyload" src="{{ section.settings.feature_row_image | img_url: '1200x', scale: 2 }}" data-src="{{ img_url }}" data-widths="[180, 360, 540, 720, 900, 1080, 1296, 1512, 1728, 2048]" data-aspectratio="{{ section.settings.feature_row_image.aspect_ratio }}" data-sizes="auto" alt="{{ section.settings.feature_row_image.alt | escape }}">
       </div>

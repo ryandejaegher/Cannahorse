@@ -1,5 +1,5 @@
 <div class="">
-    <ul class="flex lg:justify-center border-t-2 border-b-2 overflow-x-scroll">
+    <ul class="flex justify-center border-t-2 border-b-2 overflow-x-scroll">
         {% for block in section.blocks %}
         <li class="whitespace-no-wrap"><a class="inline-block font-semibold py-6 px-4 tracking-wider hover:bg-gray-200" href="{{block.settings.link_url}}">{{block.settings.link_text}}</a></li>    
         {% endfor %}

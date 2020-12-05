@@ -7,7 +7,7 @@
 {% assign count = 0 %}
 
   <div class="page-width max-w-none py-8" {{ block.shopify_attributes }}>
-    <div class="flex items-center gap-4">
+    <div class="flex items-center gap-4 space-x-4">
       <h2 id="{{block.settings.blog_block_title | downcase | replace: " ", "-"}}" class="bg-primary text-white inline-block py-2 px-4 text-xs rounded-lg tracking-normal whitespace-no-wrap m-0 w-48 text-center anchor">{{block.settings.blog_block_title}}</h2><span class="h-px bg-gray-700 w-full"></span>
     </div>
       <p class="font-semibold max-w-3xl mt-6">{{ block.settings.blog_block_content }}</p>

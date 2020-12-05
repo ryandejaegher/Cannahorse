@@ -248,6 +248,7 @@
                   </ul>
                   <hr>
                   <small class="site-footer__copyright-content">&copy; {{ 'now' | date: "%Y" }}, {{ shop.name | link_to: routes.root_url }}</small>
+                  <div class="mt-4"><p class="text-white text-sm" style="color: white">{{section.settings.disclaimer_text}}</p></div>
             {%- endcase -%}
 
           </div>
@@ -731,6 +732,11 @@
         "zh-TW": "顯示幣別選擇器"
       },
       "default": true
+    },
+    {
+      "type": "textarea",
+      "id": "disclaimer_text",
+      "label": "Disclaimer Text"
     }
   ],
   "blocks": [

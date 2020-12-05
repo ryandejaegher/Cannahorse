@@ -1,8 +1,8 @@
 {% if blog.tags.size > 0 %}
-<div class="blog-filter flex-col md:flex-row">
-  <label class="blog-filter__label select-label" for="BlogTagFilter">{{ 'collections.filters.title_tags' | t }}</label>
-  <div class="select-group">
-    <select id="BlogTagFilter" aria-describedby="a11y-refresh-page-message a11y-selection-message" data-blog-tag-filter>
+<div class="blog-filter flex-col md:flex-row md:max-w-sm mx-auto mt-4 px-4">
+  <label class="blog-filter__label select-label whitespace-nowrap" for="BlogTagFilter">{{ 'collections.filters.title_tags' | t }}</label>
+  <div class="select-group w-full mt-4">
+    <select class="w-full md:mt-0" id="BlogTagFilter" aria-describedby="a11y-refresh-page-message a11y-selection-message" data-blog-tag-filter>
       <option value="{{ blog.url }}">{{ 'blogs.article.all_topics' | t }}</option>
       {% for tag in blog.all_tags %}
         <option value="{{ blog.url }}/tagged/{{ tag | handleize }}" {% if current_tags contains tag %}selected{% endif %}>{{ tag }}</option>
