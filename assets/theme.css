@@ -7382,10 +7382,10 @@ footer .input-group div:nth-child(3) {
 
 @media(min-width: 767px) {
   .glider-dot {
-    width: 28px;
-    height: 28px;
-    margin-left: 24px;
-    margin-right: 24px;
+    width: 24px;
+    height: 24px;
+    margin-left: 16px;
+    margin-right: 16px;
   }
 
 }
@@ -7780,6 +7780,21 @@ a[href*='elfsight'] {
 
 
 #shopify-section-16071946464a6a0a1a {
-  padding-top: 0px;
-  padding-bottom: 0px;
+  padding-top: 24px;
+  padding-bottom: 24px;
+}
+
+@media(min-width: 767px) {
+  #shopify-section-16071946464a6a0a1a {
+    padding-top: 0px;
+    padding-bottom: 0px;
+  }
+
+}
+
+
+
+
+.glider::-webkit-scrollbar {
+  display: none;
 }
