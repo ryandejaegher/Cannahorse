@@ -1,3 +1,4 @@
+
 <div class="feature-row">
     {% capture image_layout %}
         <div data-aos="up" data-aos-offset="300" class="feature-row__item feature-row__image-wrapper">
@@ -35,7 +36,7 @@
             {% if section.settings.text != blank %}
                 <div class="rte rte-setting text-base md:text-lg">{{ section.settings.text }}</div>
             {% endif %}
-            {% if section.settings.button_label != blank and section.settings.button_link != blank %}
+            {% if section.settings.button_label != blank and section.settings.show_calendly %}
                 {%- capture ariaLabel -%}
                     {{- section.settings.button_label -}}
                     {%- if section.settings.button_link.type == 'frontpage_link' -%}
@@ -49,7 +50,9 @@
                         {{ section.settings.button_link.object.title -}}
                     {%- endif -%}
                 {%- endcapture -%}
-
+        
+                <a href="" class="font-semibold bg-primary text-white uppercase px-6 py-2 rounded-full hover:text-white" onclick="Calendly.initPopupWidget({url: 'https://calendly.com/cannahorse/cannahorse-introduction?hide_event_type_details=1&hide_gdpr_banner=1&text_color=085400&primary_color=085400'});return false;">{{section.settings.button_label}}</a>
+                {% else %}
                 <a href="{{ section.settings.button_link }}" class="text-base md:text-lg font-semibold text-white py-2 px-8 mt-4 inline-block hover:text-white brand-primary-hover" aria-label="{{ ariaLabel }}">
                     {{- section.settings.button_label | escape -}}
                 </a>
@@ -366,6 +369,13 @@
                 "zh-CN": "按钮链接",
                 "zh-TW": "按鈕連結"
             }
+        },
+        {
+            "type": "checkbox",
+            "id": "show_calendly",
+            "label": "Show Calendly Link",
+            "info": "If checked link will display Calendly popup",
+            "default": true
         }
     ],
     "presets": [

@@ -1,7 +1,7 @@
 <div class="">
     <ul class="flex lg:justify-center border-t-2 border-b-2 overflow-x-scroll">
         {% for block in section.blocks %}
-        <li class="whitespace-no-wrap w-1/2"><a class="inline-block font-semibold py-2 px-4 tracking-wider text-base md:py-6 hover:bg-gray-200" href="{{block.settings.link_url}}">{{block.settings.link_text}}</a></li>    
+        <li class="whitespace-no-wrap"><a class="inline-block font-semibold py-2 px-4 tracking-wider text-base md:py-6 hover:bg-gray-200" href="{{block.settings.link_url}}">{{block.settings.link_text}}</a></li>    
         {% endfor %}
         
     </ul>
