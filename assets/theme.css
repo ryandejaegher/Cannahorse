@@ -7442,7 +7442,7 @@ a:hover {
 
 @media(min-width: 767px) {
   .custom__item:nth-of-type(3) {
-    margin-top: -70%;
+    margin-top: -50%;
 }
 }
 
@@ -7792,9 +7792,9 @@ a[href*='elfsight'] {
 
 }
 
-
-
-
 .glider::-webkit-scrollbar {
   display: none;
+}
+#shopify-section-1605057359e5d3918b .article__title {
+  margin-top: 8px;
 }
