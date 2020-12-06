@@ -7228,6 +7228,13 @@ grid-template-columns: repeat(6, 1fr);
 }
 
 
+.snap-container {
+  scroll-snap-type: x mandatory;
+}
+.snap-x {
+  scroll-snap-align: center;
+}
+
 
 
 .site-footer__linklist-item a {
@@ -7772,3 +7779,7 @@ a[href*='elfsight'] {
 }
 
 
+#shopify-section-16071946464a6a0a1a {
+  padding-top: 0px;
+  padding-bottom: 0px;
+}

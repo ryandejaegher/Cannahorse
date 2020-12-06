@@ -1,0 +1,163 @@
+<div class="{{section.settings.spacing}}">
+<div class="container px-4 md:px0 mx-auto">
+    <div class="flex flex-col text-center max-w-3xl mx-auto">
+        <h3 class="text-2xl md:text-5xl font-bold">{{section.settings.section_title}}</h3>
+        <p>{{section.settings.section_content}}</p>
+    </div>
+
+<div class="grid grid-cols-1 md:grid-cols-3 mt-12 md:mt-20 space-y-8 md:space-x-12 md:space-y-0">
+
+    <div class="text-center">
+        <h4 class="text-xl md:text-3xl font-bold" style="color:{{section.settings.col_one_color}}">{{section.settings.col_one_title}}</h4>
+        <p>{{section.settings.col_one_content}}</p>
+        <div>
+            {{section.settings.col_one_listing}}
+        </div>
+    </div>
+
+    <div>
+        <div class="glider-work">
+            <div class="block relative">
+                <img id=""
+                  class="w-full h-full object-contain lazyload"
+                  src="{{ section.settings.image_one | img_url: '1200x', scale: 2 }}"
+                  data-src="{{ img_url }}"
+                  data-widths="[180, 360, 540, 720, 900, 1080, 1296, 1512, 1728, 2048]"
+                  data-aspectratio="{{ section.settings.image_one.aspect_ratio }}"
+                  data-sizes="auto"
+                  alt="{{ section.settings.image_one.alt | escape }}">
+            </div>
+            <div class="block relative">
+                <img id=""
+                  class="w-full h-full object-contain lazyload"
+                  src="{{ section.settings.image_two | img_url: '1200x', scale: 2 }}"
+                  data-src="{{ img_url }}"
+                  data-widths="[180, 360, 540, 720, 900, 1080, 1296, 1512, 1728, 2048]"
+                  data-aspectratio="{{ section.settings.image_two.aspect_ratio }}"
+                  data-sizes="auto"
+                  alt="{{ section.settings.image_two.alt | escape }}">
+            </div>
+        </div>
+        <div role="tablist" class="dots-work"></div>
+    </div>
+
+    <div class="text-center">
+        <h4 class="text-xl md:text-3xl font-bold" style="color:{{section.settings.col_two_color}}">{{section.settings.col_two_title}}</h4>
+        <p>{{section.settings.col_two_content}}</p>
+        <div>
+            {{section.settings.col_two_listing}}
+        </div>
+    </div>
+</div>
+</div>
+</div>
+
+{% schema %}
+{
+    "name": "How Does It Work?",
+    "presets": [
+    {
+      "category": "Custom Content",
+      "name": "How Does It Work"
+    }
+    ],
+    "settings": [
+{
+    "type": "header",
+    "content": "Section"
+},
+        {
+            "type": "text",
+            "id": "section_title",
+            "label": "Section Title"
+        },
+        {
+            "type": "textarea",
+            "id": "section_content",
+            "label": "Section Content"
+        },
+        {
+            "type": "header",
+            "content": "Column One"
+        },
+        {
+            "type": "text",
+            "id": "col_one_title",
+            "label": "Column One Title"
+        },
+        {
+            "type": "color",
+            "id": "col_one_color",
+            "label": "Col Title Color"
+        },
+        {
+            "type": "textarea",
+            "id": "col_one_content",
+            "label": "Column One Content"
+        },
+        {
+            "type": "richtext",
+            "id": "col_one_listing",
+            "label": "Column One Listing"
+        },
+        {
+            "type": "image_picker",
+            "id": "image_one",
+            "label": "Image One"
+        },
+        {
+            "type": "image_picker",
+            "id": "image_two",
+            "label": "Image Two"
+        },
+        {
+            "type": "header",
+            "content": "Column Two"
+        },
+        {
+            "type": "text",
+            "id": "col_two_title",
+            "label": "Column Two Title"
+        },
+        {
+            "type": "color",
+            "id": "col_two_color",
+            "label": "Col Title Color"
+        },
+        {
+            "type": "textarea",
+            "id": "col_two_content",
+            "label": "Column Two Content"
+        },
+        {
+            "type": "richtext",
+            "id": "col_two_listing",
+            "label": "Column Two Listing"
+        },
+        {
+            "type": "header",
+            "content": "Style"
+        },
+        {
+            "type": "select",
+            "id": "spacing",
+            "label": "Spacing",
+            "options": [
+                {
+                    "value": "py-16",
+                    "label": "sm"
+                }, {
+                    "value": "py-12 md:py-20",
+                    "label": "md"
+                }, {
+                    "value": "py-32",
+                    "label": "lg"
+                }, {
+                    "value": "py-40",
+                    "label": "xl"
+                }
+            ]
+        }
+    ]
+}
+{% endschema %}

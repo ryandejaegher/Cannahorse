@@ -9703,4 +9703,12 @@ window.addEventListener('load', function(){
       }
     ]
   })
+
+  new Glider(document.querySelector('.glider-work'), {
+    dots: '.dots-work',
+    slidesToShow:1,
+    slidesToScroll:1,
+    rewind: true,
+    scrollLock: true
+  })
 })
