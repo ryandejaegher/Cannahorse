@@ -1,7 +1,8 @@
-{% unless section.settings.feature_article == blank %}
-    
-
 {% assign article = articles[section.settings.feature_article] %}
+{% if section.settings.feature_article == blank %}
+    {% assign article = blog.articles[0] %}
+{% endif %}
+
 
 <div class="page-width max-w-none py-8">
     <div class="flex items-center gap-4">
@@ -33,7 +34,7 @@
     </div>
 </div>
 
-{% endunless %}
+
 
 
 
