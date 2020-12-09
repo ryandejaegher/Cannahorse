@@ -156,7 +156,7 @@
   {%- if request.page_type contains 'customers/' -%}
     <script src="{{ 'shopify_common.js' | shopify_asset_url }}" defer="defer"></script>
   {%- endif -%}
-  <script src="https://apps.elfsight.com/p/platform.js" defer></script>
+
   
   <script src="{{ 'theme.js' | asset_url }}" defer="defer"></script>
   <script src="{{ 'lazysizes.js' | asset_url }}" async="async"></script>
@@ -191,10 +191,10 @@
   
   {% section 'custom-header-nav' %}
   {%- endcomment -%}
-  <div class="elfsight-app-f992bd71-52ac-4d2e-9a98-5d65579be5f2"></div>
+
   <div class="page-container drawer-page-content" id="PageContainer">
 
-    <main class="main-content js-focus-hidden" id="MainContent" role="main" tabindex="-1">
+    <main id="page-{{page.id}}" class="main-content js-focus-hidden" id="MainContent" role="main" tabindex="-1">
       {{ content_for_layout }}
     </main>
 

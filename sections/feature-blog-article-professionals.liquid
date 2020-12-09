@@ -1,11 +1,14 @@
+{% assign blog = blogs['equestrian-professionals']%}
 {% assign article = articles[section.settings.feature_article] %}
 {% if section.settings.feature_article == blank %}
     {% assign article = blog.articles[0] %}
 {% endif %}
 
+{% unless section.settings.show_article == false %}
+    
 
 <div class="page-width max-w-none py-8">
-    <div class="flex items-center gap-4">
+    <div class="flex items-center gap-4 space-x-4">
         <h2 id="{{section.settings.feature_section_heading}}" class="bg-primary text-white inline-block py-2 px-4 text-xs rounded-lg tracking-normal whitespace-no-wrap m-0 w-48 text-center">{{section.settings.feature_section_heading}}</h2>
         <span class="h-px bg-gray-700 w-full"></span>
     </div>
@@ -33,7 +36,7 @@
         </div>
     </div>
 </div>
-
+{% endunless %}
 
 
 
@@ -57,6 +60,11 @@
             "type": "article",
             "id": "feature_article",
             "label": "Feature article"
+        },
+        {
+            "type": "checkbox",
+            "id": "show_article",
+            "label": "Show Feature Article"
         }
     ]
 }

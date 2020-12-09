@@ -1,7 +1,7 @@
 <div class="page-width">
   <div class="grid">
-    <div class="grid__item medium-up--five-sixths medium-up--push-one-twelfth">
-      <div class="section-header text-center">
+    <div class="">
+      <div class="section-header text-center mt-8">
         <h1>{{ page.title }}</h1>
       </div>
 
@@ -10,8 +10,9 @@
           {{ page.content }}
         </div>
       {% endif %}
+{% include 'social-icons' %}
 
-      <div class="contact-form form-vertical">
+      <div class="contact-form form-vertical form-vertical max-w-xl mx-auto mt-8 py-16 bg-grey px-8 mb-8">
         {%- assign formId = 'ContactForm' -%}
         {% form 'contact', id: formId %}
           {% include 'form-status', form: form, form_id: formId %}

@@ -1,0 +1,68 @@
+<div class="container px-4 md:px-0 mx-auto {{section.settings.spacing}}">
+    <div class="flex flex-col items-center text-center mt-4 md:mt-8">
+        <h4>{{section.settings.title}}</h4>
+        <p>{{section.settings.content}}</p>
+    </div>
+<div class="flex flex-col max-w-xs mx-auto md:flex-col justify-center space-y-4 md:space-y-4 mt-8">
+    {% for block in section.blocks %}
+        <a class="inline-block bg-brand-primary px-6 py-2 text-white font-bold rounded-full text-center" href="{{block.settings.button_url}}">{{block.settings.button_text}}</a>
+    {% endfor %}
+</div>
+</div>
+
+{% schema %}
+{
+    "name": "Welcome Buttons",
+    "max_blocks": 4,
+    "settings": [
+        {
+            "type": "text",
+            "id": "title",
+            "label": "Welcome title"
+        },
+        {
+            "type": "textarea",
+            "id": "content",
+            "label": "Welcome content"
+        },
+        {
+            "type": "select",
+            "id": "spacing",
+            "label": "Spacing",
+            "options": [
+                {
+                    "value": "py-16",
+                    "label": "sm"
+                }, {
+                    "value": "py-20",
+                    "label": "md"
+                }, {
+                    "value": "py-32",
+                    "label": "lg"
+                }, {
+                    "value": "py-40",
+                    "label": "xl"
+                }
+            ]
+        }  
+    ],
+    "blocks": [
+        {
+        "type":"text",
+        "name":"Buttons",
+        "settings": [
+            {
+                "type": "text",
+                "id": "button_text",
+                "label": "Button Text"
+            },
+            {
+                "type": "url",
+                "id": "button_url",
+                "label": "Button URL"
+            }
+        ]
+        }
+    ]
+}
+{% endschema %}

@@ -7239,11 +7239,22 @@ grid-template-columns: repeat(6, 1fr);
 
 .site-footer__linklist-item a {
   font-weight: 600;
-  font-size: 24px;
+  font-size: 18px;
   color: white !important;
   display: inline-block;
   border-bottom: 1px solid transparent;
 }
+
+@media(min-width: 767px) {
+  .site-footer__linklist-item a {
+
+    font-size: 24px;
+  }
+
+}
+
+
+
 
 .site-footer__linklist-item a:hover {
 	border-color: white !important;
@@ -7797,4 +7808,9 @@ a[href*='elfsight'] {
 }
 #shopify-section-1605057359e5d3918b .article__title {
   margin-top: 8px;
+}
+
+#page-74236068031 .section-header {
+  text-align: left !important;
+  padding-top: 40px;
 }

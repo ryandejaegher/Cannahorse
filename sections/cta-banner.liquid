@@ -1,6 +1,6 @@
 <div class="flex flex-col items-center bg-grey px-4 {{section.settings.spacing}}">
     <h2 class="font-semibold text-3xl md:text-5xl tracking-normal text-primary capitalize">{{section.settings.cta_title}}</h2>
-    <p class="max-w-3xl text-center text-lg md:text-xl font-semibold text-sm">{{section.settings.cta_content}}</p>
+    <p class="max-w-3xl text-center text-base md:text-xl font-semibold">{{section.settings.cta_content}}</p>
     {% if section.settings.show_calendly %}
         
     <a href="" class="font-semibold bg-primary text-white uppercase px-6 py-2 rounded-full hover:text-white" onclick="Calendly.initPopupWidget({url: 'https://calendly.com/cannahorse/cannahorse-introduction?hide_event_type_details=1&hide_gdpr_banner=1&text_color=085400&primary_color=085400'});return false;">{{section.settings.cta_text}}</a>

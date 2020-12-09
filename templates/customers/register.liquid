@@ -10,7 +10,7 @@
 
         {%- assign formId = 'RegisterForm' -%}
         {% form 'create_customer', id: formId, novalidate: 'novalidate' %}
-        <input type="hidden" name="checkout_url" value>
+          
           {% include 'form-status', form: form, form_id: formId %}
 
           <label for="{{ formId }}-FirstName">{{ 'customer.register.first_name' | t }}</label>
