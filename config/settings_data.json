@@ -4,6 +4,14 @@
     "image_overlay_opacity": 40,
     "type_header_font": "work_sans_n6",
     "type_base_font": "work_sans_n4",
+    "predictive_search_enabled": true,
+    "share_facebook": true,
+    "share_twitter": true,
+    "share_pinterest": true,
+    "social_twitter_link": "https:\/\/twitter.com\/cannahorse",
+    "social_facebook_link": "https:\/\/facebook.com\/cannahorse",
+    "social_instagram_link": "http:\/\/instagram.com\/cannahorse.co",
+    "favicon": "shopify:\/\/shop_images\/CannaHorse_Social_Logo.png",
     "sections": {
       "header": {
         "type": "header",
@@ -12,9 +20,13 @@
           "logo": "shopify:\/\/shop_images\/cannahorse_logo.png",
           "logo_max_width": 250,
           "main_linklist": "main-menu",
+          "second_header_text": "EQUINE PROFESSIONALS",
+          "second_header_url": "shopify:\/\/pages\/equine-professionals",
+          "header_button_text": "OUR PRODUCTS",
+          "header_button_url": "shopify:\/\/products\/equilibrium",
           "message": false,
           "home_page_only": false,
-          "message_text": "Announce something here",
+          "message_text": "",
           "color_bg": "#3a3a3a",
           "color_text": "#ffffff"
         }
@@ -31,9 +43,9 @@
           "hero_size": "large",
           "text_size": "large",
           "title": "Equine Medicine Elevated.",
-          "text": "<p>CannaHorse is a cannabis focused equine medical company, advancing health and science through the benefits of the plant.<\/p>",
-          "button_label": "SHOP NOW",
-          "button_link": "#"
+          "text": "<p>CannaHorse is a global leader in the research and development of cannabinoid-based <br\/>therapies for horses.<\/p>",
+          "button_label": "",
+          "button_link": "shopify:\/\/products\/equilibrium"
         }
       },
       "feature-row": {
@@ -91,6 +103,7 @@
       },
       "collection": {
         "type": "collection",
+        "disabled": true,
         "settings": {
           "title": "Our Products",
           "text_alignment": "",
@@ -116,7 +129,7 @@
           "title": "Equestrians of Cannabis",
           "text": "<p>We believe in the power of plant-based medicine for humans and how that can extend to our horses. In our ongoing series Equestrians of Cannabis we profile how the plant has helped the lives of horse people around the world. <br\/><br\/>If your life has been improved with cannabis, we&#x27;d love to share your story.<\/p>",
           "button_label": "READ MORE",
-          "button_link": "#"
+          "button_link": "shopify:\/\/pages\/stories"
         }
       },
       "quotes": {
@@ -213,9 +226,10 @@
           "container": "max-w-none",
           "show_payment_icons": true,
           "color_footer_bg": "#f6f6f6",
-          "color_footer_text": "#333232",
+          "color_footer_text": "#3a3a3a",
           "show_locale_selector": true,
-          "show_currency_selector": true
+          "show_currency_selector": true,
+          "disclaimer_text": "These statements have not been evaluated by the Food and Drug Administration. This product is not intended to diagnose, treat, cure, or prevent any disease."
         }
       },
       "1604686235e8c7a893": {
@@ -227,24 +241,6 @@
               "image": "shopify:\/\/shop_images\/HORSE-SPORT.png"
             }
           },
-          "1604686235e8c7a893-2": {
-            "type": "logo_image",
-            "settings": {
-              "image": "shopify:\/\/shop_images\/LEAFLY.png"
-            }
-          },
-          "1604686235e8c7a893-0": {
-            "type": "logo_image",
-            "settings": {
-              "image": "shopify:\/\/shop_images\/DailyHive.png"
-            }
-          },
-          "1604686235e8c7a893-3": {
-            "type": "logo_image",
-            "settings": {
-              "image": "shopify:\/\/shop_images\/THE-GROWTH-OP.png"
-            }
-          },
           "630dd242-94dd-4d24-97f2-a11f12299d43": {
             "type": "logo_image",
             "settings": {
@@ -254,45 +250,66 @@
           "c68a6be0-a36b-47ed-8853-eb639aa1e9eb": {
             "type": "logo_image",
             "settings": {
-              "image": "shopify:\/\/shop_images\/MUGGLEHEAD.png"
+              "image": "shopify:\/\/shop_images\/nat_post.png"
+            }
+          },
+          "1604686235e8c7a893-3": {
+            "type": "logo_image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/horsenetwork.png"
+            }
+          },
+          "1604686235e8c7a893-0": {
+            "type": "logo_image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/time_logo.png"
+            }
+          },
+          "1604686235e8c7a893-2": {
+            "type": "logo_image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/BLOOM.png"
             }
           }
         },
         "block_order": [
           "1604686235e8c7a893-1",
-          "1604686235e8c7a893-2",
-          "1604686235e8c7a893-0",
-          "1604686235e8c7a893-3",
           "630dd242-94dd-4d24-97f2-a11f12299d43",
-          "c68a6be0-a36b-47ed-8853-eb639aa1e9eb"
+          "c68a6be0-a36b-47ed-8853-eb639aa1e9eb",
+          "1604686235e8c7a893-3",
+          "1604686235e8c7a893-0",
+          "1604686235e8c7a893-2"
         ],
         "settings": {
           "title": "AS SEEN IN",
-          "container": "max-w-none"
+          "container": "max-w-none",
+          "spacing": "py-4"
         }
       },
       "1605039777a53d097f": {
         "type": "feature-row-two",
         "settings": {
-          "image": "shopify:\/\/shop_images\/Pets-and-Cannabis_e33d0e48-ae46-44b7-b355-948a7f6dba5c.jpg",
+          "image": "shopify:\/\/shop_images\/cannabis-researcher-testing-cannabinoids.png",
           "layout": "left",
           "aspect": "aspect-4-3",
-          "title": "Pets & Cannabis",
-          "text": "<p>A number of clinical trials for dogs and cats have been completed. These studies have shown success in treating similar ailments to humans such as pain and arthritis, seizures, and anxiety.<\/p>",
+          "title": "Cannabinoids 101",
+          "text": "<p>Read our Education section to learn about cannabinoids, terpenes and how the endocannabioid system works. <\/p><p><\/p><p>Don&#x27;t worry, we&#x27;ll tell you what those words mean too.<\/p>",
           "button_label": "READ MORE",
-          "button_link": "#"
+          "button_link": "shopify:\/\/pages\/education",
+          "show_calendly": false
         }
       },
       "160503979120498332": {
         "type": "feature-row-two",
         "settings": {
-          "image": "shopify:\/\/shop_images\/Patients.jpg",
+          "image": "shopify:\/\/shop_images\/athelete-on-cbd-training-on-outdoor-steps_1.jpg",
           "layout": "right",
           "aspect": "aspect-4-3",
-          "title": "Patients",
-          "text": "<p>There are a multitude of ways medical cannabis could help your horse. Below we introduce you to a few of our “patients&quot;. These are fictional case studies outlining the various situations where cannabis could benefit your horse. <\/p>",
+          "title": "Athletes & Cannabis",
+          "text": "<p>Athletes are seeing the benefits of cannabinoids for everyday health, training and competition recovery. Early trials in animals such as dogs and even horses seem to be showing the same benefits as humans. <\/p>",
           "button_label": "READ MORE",
-          "button_link": "#"
+          "button_link": "shopify:\/\/pages\/education",
+          "show_calendly": false
         }
       },
       "1605057359e5d3918b": {
@@ -301,8 +318,8 @@
           "1605057359e5d3918b-0": {
             "type": "text",
             "settings": {
-              "title": "How Cannabis Can Help Your Horse",
-              "text": "<p>Use this text to share information about your brand with your customers. Describe a product, share announcements, or welcome customers to your store.<\/p>",
+              "title": "How CannaHorse Can Help Your Horse",
+              "text": "<p>We take cannabis seriously. Learn how CannaHorse is different from our commitment to research, pharmaceutical grade ingredients, science based formulations and precise and efficient dosing.<\/p>",
               "width": "50%",
               "alignment": "center",
               "align_text": "left"
@@ -311,10 +328,10 @@
           "8aa1c776-0e50-4f64-abe4-879e5a8d417d": {
             "type": "article",
             "settings": {
-              "article": "news\/what-canna-loving-canadians-have-to-be-thankful-for-this-thanksgiving",
-              "width": "50%",
+              "article": "why-cannahorse\/using-data-to-inform-cannabinoid-and-terpene-formulations",
+              "width": "25%",
               "alignment": "center",
-              "cover_image": "large",
+              "cover_image": "small",
               "show_author": false,
               "show_date": false,
               "show_tags": false
@@ -323,7 +340,19 @@
           "101e9112-7491-409c-a93e-1cc1a04586d9": {
             "type": "article",
             "settings": {
-              "article": "news\/the-straight-dope-on-equine-cbd",
+              "article": "why-cannahorse\/pharmaceutical-grade-ingredients-safe-enough-for-you-and-your-horse",
+              "width": "25%",
+              "alignment": "bottom-middle",
+              "cover_image": "small",
+              "show_author": false,
+              "show_date": false,
+              "show_tags": false
+            }
+          },
+          "901e70ce-d5bf-4961-8166-224632db7b88": {
+            "type": "article",
+            "settings": {
+              "article": "why-cannahorse\/proving-efficacy-and-safety-via-clinical-trials",
               "width": "50%",
               "alignment": "center",
               "cover_image": "large",
@@ -332,14 +361,16 @@
               "show_tags": false
             }
           },
-          "a82dc95c-2b5d-4272-9b73-e56bc9d6c3a4": {
-            "type": "text",
+          "6615a424-5890-4dd0-a83f-4f8f78535947": {
+            "type": "article",
             "settings": {
-              "title": "",
-              "text": "<p>There&#x27;s more where that came from<\/p><p><a href=\"\/blogs\/education\" title=\"Education\">SEE ALL ARTICLES<\/a><\/p>",
+              "article": "why-cannahorse\/increased-bioavailability-near-perfect-dosing-and-a-faster-onset",
               "width": "50%",
               "alignment": "center",
-              "align_text": "center"
+              "cover_image": "large",
+              "show_author": false,
+              "show_date": false,
+              "show_tags": false
             }
           }
         },
@@ -347,7 +378,8 @@
           "1605057359e5d3918b-0",
           "8aa1c776-0e50-4f64-abe4-879e5a8d417d",
           "101e9112-7491-409c-a93e-1cc1a04586d9",
-          "a82dc95c-2b5d-4272-9b73-e56bc9d6c3a4"
+          "901e70ce-d5bf-4961-8166-224632db7b88",
+          "6615a424-5890-4dd0-a83f-4f8f78535947"
         ],
         "settings": {
           "title": "",
@@ -360,13 +392,14 @@
         "settings": {
           "title": "In The Press",
           "spacing": "py-20",
-          "blog": "patients",
+          "blog": "news",
           "post_limit": 6,
           "blog_show_author": false,
           "blog_show_date": false,
           "show_tags": false,
-          "show_view_all": false,
-          "aspect_ratio": "aspect-16-9"
+          "show_view_all": true,
+          "card_spacing": "md:px-4",
+          "aspect_ratio": "aspect-4-3"
         }
       },
       "blog-template": {
@@ -406,6 +439,7 @@
           "cta_title": "Have questions?",
           "cta_content": "We're here to help, If you’re an equine professional or veterinary professional book a 30 minute consultation with us below. Otherwise you can try the live chat if you have any questions about how medical cannabis could benefit your horse.",
           "cta_text": "Schedule Consulation",
+          "show_calendly": true,
           "spacing": "py-16"
         }
       },
@@ -422,22 +456,29 @@
           "57afc725-60c0-4be4-9589-4be95a962b98": {
             "type": "Blog",
             "settings": {
-              "link_text": "HORSES & CANNABIS",
-              "link_url": "#horses-&-cannabis"
+              "link_text": "TERPENES",
+              "link_url": "#terpenes"
             }
           },
           "310c37a3-f700-43db-b863-460fad626614": {
             "type": "Blog",
             "settings": {
-              "link_text": "SPORTS & CANNABIS",
-              "link_url": "#sports-&-cannabis"
+              "link_text": "CANNABINOIDS",
+              "link_url": "#cannabinoids"
             }
           },
           "2e50869f-cd72-4923-b7d2-e3dcd116a125": {
             "type": "Blog",
             "settings": {
-              "link_text": "PETS & CANNABIS",
-              "link_url": "#pets-&-cannabis"
+              "link_text": "SAFETY",
+              "link_url": "#safety"
+            }
+          },
+          "b57bdf02-73cf-4995-bf87-08a2d02dbefb": {
+            "type": "Blog",
+            "settings": {
+              "link_text": "ATHLETES",
+              "link_url": "#athletes"
             }
           }
         },
@@ -445,7 +486,8 @@
           "ef3e4992-f95b-49b3-af19-f535a8c5b8a2",
           "57afc725-60c0-4be4-9589-4be95a962b98",
           "310c37a3-f700-43db-b863-460fad626614",
-          "2e50869f-cd72-4923-b7d2-e3dcd116a125"
+          "2e50869f-cd72-4923-b7d2-e3dcd116a125",
+          "b57bdf02-73cf-4995-bf87-08a2d02dbefb"
         ],
         "settings": {}
       },
@@ -464,7 +506,7 @@
       "blog-banner-default": {
         "type": "blog-banner-default",
         "settings": {
-          "show_icon": false,
+          "show_icon": true,
           "blog_banner_title": "CannaHorse Blog",
           "blog_banner_subtitle": "Product info, latest events in the news and notes on CannaHorse.",
           "spacing": "py-16"
@@ -484,7 +526,8 @@
         "type": "feature-blog-article",
         "settings": {
           "feature_section_heading": "FEATURED STORY",
-          "feature_article": "news\/what-canna-loving-canadians-have-to-be-thankful-for-this-thanksgiving"
+          "feature_article": "",
+          "show_article": true
         }
       },
       "blog-banner-education": {
@@ -493,13 +536,13 @@
           "show_icon": true,
           "blog_banner_title": "Education",
           "blog_banner_subtitle": "Insights & Education about the use of cannabis in horses, humans, sports and pets.",
-          "spacing": "py-16"
+          "spacing": "py-20"
         }
       },
       "article-template": {
         "type": "article-template",
         "settings": {
-          "blog_show_author": true,
+          "blog_show_author": false,
           "blog_show_date": true,
           "show_share_buttons": false
         }
@@ -531,22 +574,21 @@
       "custom-content": {
         "type": "custom-content",
         "blocks": {
-          "abcecd32-7b70-42c4-8696-db3787b5ac99": {
-            "type": "video",
+          "2661a386-6123-4fb9-bc3f-648c67cd0efc": {
+            "type": "html",
             "settings": {
-              "video_url": "",
-              "width": "100%",
-              "alignment": "top-middle"
+              "code": "",
+              "width": "100%"
             }
           }
         },
         "block_order": [
-          "abcecd32-7b70-42c4-8696-db3787b5ac99"
+          "2661a386-6123-4fb9-bc3f-648c67cd0efc"
         ],
         "settings": {
-          "title": "Custom content",
+          "title": "",
           "spacing": "py-16",
-          "bg_color": "rgba(0,0,0,0)"
+          "bg_color": "#ffffff"
         }
       },
       "blog-block-education": {
@@ -555,60 +597,83 @@
           "b5373968-0320-4f2b-9cae-b6493e9e9b0e": {
             "type": "Blog",
             "settings": {
-              "blog_block_content": "It’s vitally important that cannabis use in both humans and animals is taken very seriously. Cannabis, especially the cannabinoid CBD has the potential to become an alternative to a multitude of pharmaceutical medications. Offering few, if any, side affects, cannabis can help horses to live a healthier, more natural life.",
+              "blog_block_title": "CANNABIS 101",
+              "blog_block_content": "",
               "blog_block_tag": "cannabis 101",
-              "post_limit": 6,
-              "blog_show_author": true,
-              "blog_show_date": true,
-              "blog_show_tags": false,
-              "aspect_ratio": "aspect-16-9"
-            }
-          },
-          "b7f50922-ccc3-4779-9184-4b92bbb432cc": {
-            "type": "Blog",
-            "settings": {
-              "blog_block_content": "We are only in the infancy of the use of cannabis in animals. To date, there have not been any clinical trials for dosage, efficacy, tolerance or benefits conducted. While numerous untested products exist, the manufacturers have no knowledge of dosage or efficacy.  \n\nBelow you can learn about advancements in animal and equine medical cannabis and how cannabis could help your horse.",
-              "blog_block_tag": "horses & cannabis",
               "post_limit": 3,
               "blog_show_author": false,
-              "blog_show_date": true,
+              "blog_show_date": false,
               "blog_show_tags": false,
+              "show_blog_image": true,
               "aspect_ratio": "aspect-16-9"
             }
           },
           "ddb8f0fa-5ea1-4c44-b66e-e192b3af6ca3": {
             "type": "Blog",
             "settings": {
-              "blog_block_content": "Athletes are seeing the benefits of CBD for everyday health, training and competition recovery. Anecdotally dogs seem to be having the same physical benefits as humans and the similarity of the endocannabinoid systems should extend to horses. While we await comprehensive trials in horses we think it is important to follow along with the developments of human athletes to gain a better understanding of the benefits and risks of cannabis for athletes.",
-              "blog_block_tag": "sports & cannabis",
+              "blog_block_title": "CANNABINOIDS",
+              "blog_block_content": "",
+              "blog_block_tag": "Cannabinoids",
               "post_limit": 3,
               "blog_show_author": false,
-              "blog_show_date": true,
+              "blog_show_date": false,
               "blog_show_tags": false,
+              "show_blog_image": true,
+              "aspect_ratio": "aspect-16-9"
+            }
+          },
+          "b7f50922-ccc3-4779-9184-4b92bbb432cc": {
+            "type": "Blog",
+            "settings": {
+              "blog_block_title": "TERPENES",
+              "blog_block_content": "",
+              "blog_block_tag": "terpenes",
+              "post_limit": 3,
+              "blog_show_author": false,
+              "blog_show_date": false,
+              "blog_show_tags": false,
+              "show_blog_image": true,
               "aspect_ratio": "aspect-16-9"
             }
           },
           "51deafab-57b4-417f-a994-64984d77a5ff": {
             "type": "Blog",
             "settings": {
-              "blog_block_content": "A number of clinical trials for dogs and cats have been completed. These studies have shown success in treating similar ailments to humans such as pain and arthritis, seizures, and anxiety.",
-              "blog_block_tag": "pets & cannabis",
+              "blog_block_title": "SAFETY",
+              "blog_block_content": "",
+              "blog_block_tag": "safety",
               "post_limit": 3,
               "blog_show_author": false,
-              "blog_show_date": true,
+              "blog_show_date": false,
               "blog_show_tags": false,
-              "aspect_ratio": "aspect-1-1"
+              "show_blog_image": true,
+              "aspect_ratio": "aspect-16-9"
+            }
+          },
+          "91ec914e-dae7-450f-8733-5e3d8ad7f34d": {
+            "type": "Blog",
+            "settings": {
+              "blog_block_title": "ATHLETES",
+              "blog_block_content": "",
+              "blog_block_tag": "sports & cannabis",
+              "post_limit": 3,
+              "blog_show_author": false,
+              "blog_show_date": false,
+              "blog_show_tags": false,
+              "show_blog_image": true,
+              "aspect_ratio": "aspect-16-9"
             }
           }
         },
         "block_order": [
           "b5373968-0320-4f2b-9cae-b6493e9e9b0e",
-          "b7f50922-ccc3-4779-9184-4b92bbb432cc",
           "ddb8f0fa-5ea1-4c44-b66e-e192b3af6ca3",
-          "51deafab-57b4-417f-a994-64984d77a5ff"
+          "b7f50922-ccc3-4779-9184-4b92bbb432cc",
+          "51deafab-57b4-417f-a994-64984d77a5ff",
+          "91ec914e-dae7-450f-8733-5e3d8ad7f34d"
         ],
         "settings": {
-          "blog_handle": "patients"
+          "blog_handle": "education"
         }
       },
       "blog-block-default": {
@@ -639,7 +704,7 @@
           "show_vendor": false,
           "enable_payment_button": false,
           "show_share_buttons": false,
-          "media_size": "small",
+          "media_size": "medium",
           "enable_image_zoom": false,
           "enable_video_looping": false
         }
@@ -658,7 +723,8 @@
           "heading_font": "helvetica_n4",
           "heading_size": 20,
           "feed_width": 90,
-          "html_area": "<h2 class=\"brand-primary text-4xl mx-auto w-90\">Follow Us <\/h2>"
+          "spacing": "py-16",
+          "html_area": "<div class=\"flex items-center mx-auto w-90 space-x-6\">\n<h2 id=\"social-header\" class=\"brand-primary text-4xl relative\">Follow Us <\/h2>\n<svg class=\"text-primary stroke-current mb-4\" width=\"24\" height=\"24\" viewbox=\"0 0 24 24\" fill=\"none\" xmlns=\"http:\/\/www.w3.org\/2000\/svg\">\n<path d=\"M17 2H7C4.23858 2 2 4.23858 2 7V17C2 19.7614 4.23858 22 7 22H17C19.7614 22 22 19.7614 22 17V7C22 4.23858 19.7614 2 17 2Z\" stroke=\"\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><\/path>\n<path d=\"M16 11.37C16.1234 12.2022 15.9813 13.0522 15.5938 13.799C15.2063 14.5458 14.5932 15.1514 13.8416 15.5297C13.0901 15.9079 12.2385 16.0396 11.4078 15.9059C10.5771 15.7723 9.80977 15.3801 9.21485 14.7852C8.61993 14.1902 8.22774 13.4229 8.09408 12.5922C7.96042 11.7615 8.09208 10.9099 8.47034 10.1584C8.8486 9.40685 9.4542 8.79374 10.201 8.40624C10.9478 8.01874 11.7978 7.87658 12.63 8C13.4789 8.12588 14.2649 8.52146 14.8717 9.1283C15.4785 9.73515 15.8741 10.5211 16 11.37Z\" stroke=\"\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><\/path>\n<path d=\"M17.5 6.5H17.51\" stroke=\"\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><\/path>\n<\/svg>\n\n<\/div>"
         }
       },
       "blog-banner-patients": {
@@ -712,36 +778,42 @@
           "a05451b9-7c12-4651-a5f4-fb18613a08c5": {
             "type": "Blog",
             "settings": {
+              "blog_block_title": "",
               "blog_block_content": "",
               "blog_block_tag": "cannabis 101",
               "post_limit": 3,
               "blog_show_author": true,
               "blog_show_date": true,
               "blog_show_tags": true,
+              "show_blog_image": true,
               "aspect_ratio": "aspect-16-9"
             }
           },
           "ea2835ff-8057-4326-b92f-72671de05770": {
             "type": "Blog",
             "settings": {
+              "blog_block_title": "",
               "blog_block_content": "",
-              "blog_block_tag": "pets & cannabis",
+              "blog_block_tag": "animal",
               "post_limit": 3,
               "blog_show_author": false,
               "blog_show_date": true,
               "blog_show_tags": true,
+              "show_blog_image": true,
               "aspect_ratio": "aspect-1-1"
             }
           },
           "ac64e33e-9967-48d4-966d-fe71a07b349a": {
             "type": "Blog",
             "settings": {
+              "blog_block_title": "",
               "blog_block_content": "",
               "blog_block_tag": "cannabis 101",
               "post_limit": 3,
               "blog_show_author": true,
               "blog_show_date": true,
               "blog_show_tags": false,
+              "show_blog_image": true,
               "aspect_ratio": "aspect-1-1"
             }
           }
@@ -781,32 +853,49 @@
           "d47e3aab-670d-47b3-831b-f843245ba8a3": {
             "type": "FAQ",
             "settings": {
-              "faq_question": "What is this",
-              "faq_answer": "A city for ants"
+              "faq_question": "Is cannabis safe?",
+              "faq_answer": "Cannabis has been proven to have a safety profile unmatched by most pharmaceuticals. See our education section for more safety information."
             }
           },
           "0dfce523-fb4f-4bc8-9cf6-4dfb53900207": {
             "type": "FAQ",
             "settings": {
-              "faq_question": "But really what is this?",
-              "faq_answer": "I have no idea"
+              "faq_question": "What's the difference between Cannabis, Hemp and Marijuana?",
+              "faq_answer": "Cannabis is the general term used for all species of Cannabis Sativa. Hemp is used to describe varieties\/strains\/cultivars of the plant that contain less than 0.3% THC. Marijuana is an American term for varieties of cannabis with higher levels of THC."
             }
           },
           "1fe3f3e0-2926-4b80-b405-b9e0f70ed296": {
             "type": "FAQ",
             "settings": {
-              "faq_question": "I really have a question?",
-              "faq_answer": "And I don't an answer for you"
+              "faq_question": "Will my horse get high?",
+              "faq_answer": "No. CannaHorse products do not contain levels of THC to have an intoxicating effect."
+            }
+          },
+          "cba8d74c-feab-40c1-aadb-0761e8c870e0": {
+            "type": "FAQ",
+            "settings": {
+              "faq_question": "What's the difference between CBD and THC?",
+              "faq_answer": "CBD (Cannabidiol) and THC (Tetrahydrocannabinol) are the two most common cannabinoids found in the cannabis plant. For more information about cannabinoids visit our education section."
+            }
+          },
+          "0a8c71ab-678a-44de-aa9c-1ce23925e851": {
+            "type": "FAQ",
+            "settings": {
+              "faq_question": "Can I use your products in competition?",
+              "faq_answer": "No.\n\nCannabinoids including THC and CBD are banned from international competition and most national federations as well. \n\nWe cannot yet give an accurate guideline on withdrawal, but in some cases in humans, phytocannabinoids can stay in the body for 30-45 days +."
             }
           }
         },
         "block_order": [
           "d47e3aab-670d-47b3-831b-f843245ba8a3",
           "0dfce523-fb4f-4bc8-9cf6-4dfb53900207",
-          "1fe3f3e0-2926-4b80-b405-b9e0f70ed296"
+          "1fe3f3e0-2926-4b80-b405-b9e0f70ed296",
+          "cba8d74c-feab-40c1-aadb-0761e8c870e0",
+          "0a8c71ab-678a-44de-aa9c-1ce23925e851"
         ],
         "settings": {
           "faq_heading": "FAQ",
+          "text_size": "text-4xl",
           "faq_intro": ""
         }
       },
@@ -820,6 +909,7 @@
       "hero-stories": {
         "type": "hero-stories",
         "settings": {
+          "image": "shopify:\/\/shop_images\/128275635_401008351110471_5181640451626027318_n.jpg",
           "show_gradient": true,
           "text_alignment": "",
           "container": "max-w-none",
@@ -827,24 +917,607 @@
           "hero_layout": "full_width",
           "hero_size": "large",
           "text_size": "large",
-          "title": "Your Stories",
-          "text": "<p>Use overlay text to give your customers insight into your brand. Select imagery and text that relates to your style and story.<\/p>",
+          "title": "Equestrians of Cannabis",
+          "text": "<p>More and more equestrians are turning to plant based medicines. Here are some of their stories.<\/p>",
           "button_label": ""
         }
       },
       "horse-stories": {
         "type": "horse-stories",
         "settings": {
+          "show_section": false,
           "heading": "",
           "content": "",
-          "bg_color": "rgba(0,0,0,0)"
+          "cta_text": "",
+          "bg_color": "rgba(0,0,0,0)",
+          "spacing": "py-16"
         }
       },
       "cta-bar": {
         "type": "cta-bar",
         "settings": {
+          "cta_text": "If your life has been improved by cannabis, we'd love to share your story.",
+          "cta_link_text": "TELL US YOUR STORY",
+          "cta_url": "#story-form",
+          "spacing": "py-2"
+        }
+      },
+      "equestrians-of-cannabis": {
+        "type": "equestrians-of-cannabis",
+        "settings": {
+          "heading": "Plant Powered",
+          "content": "We believe in the power of plant-based medicine for humans and how that can extend to our horses. In our ongoing series Equestrians of Cannabis we profile how the plant has helped the lives of horse people around the world.",
+          "article_one": "",
+          "article_two": "",
           "cta_text": "",
-          "cta_link_text": ""
+          "cta_url": "#all-articles",
+          "spacing": "py-16",
+          "aspect_ratio": "aspect-1-1"
+        }
+      },
+      "all-articles-stories": {
+        "type": "all-articles-stories",
+        "settings": {
+          "title": "All Articles",
+          "spacing": "py-16",
+          "blog_handle": "equestrians-of-cannabis"
+        }
+      },
+      "article-equestrian-template": {
+        "type": "article-equestrian-template",
+        "settings": {
+          "blog_show_author": false,
+          "blog_show_date": true,
+          "show_share_buttons": false,
+          "blog_banner": "shopify:\/\/shop_images\/equestrians-of-cannabis.png"
+        }
+      },
+      "16069259612a236ec5": {
+        "type": "feature-product-custom",
+        "settings": {
+          "section_heading": "FEATURED PRODUCT",
+          "feature_row_title": "",
+          "text_size": "text-3xl",
+          "feature_row_content": "EQUILIBRIUM ORAL is scientifically formulated to provide a customized hemp solution to support a well-balanced metabolic, immune, and wellness profile in your horse. The dosage is selected based on our research to provide optimum blood concentrations when consumed orally. \n<br><br><b>COMING SOON<\/b>",
+          "feature_row_image": "shopify:\/\/shop_images\/Screen_Shot_2021-03-31_at_10.37.03_AM.png",
+          "product_logo": "shopify:\/\/shop_images\/Asset_2icons.png",
+          "spacing": "py-16"
+        }
+      },
+      "all-articles": {
+        "type": "all-articles",
+        "settings": {
+          "title": "Recent Articles",
+          "spacing": "py-16"
+        }
+      },
+      "blog-banner-professionals": {
+        "type": "blog-banner-professionals",
+        "settings": {
+          "show_icon": true,
+          "blog_banner_title": "Equine Professionals",
+          "blog_banner_subtitle": "Find research studies, educational materials and book consultations to learn how you can incorporate cannabinoid based therapy in your practice or equine facility.",
+          "spacing": "py-20"
+        }
+      },
+      "feature-blog-article-professionals": {
+        "type": "feature-blog-article-professionals",
+        "settings": {
+          "feature_section_heading": "FEATURED STORY",
+          "feature_article": "",
+          "show_article": false
+        }
+      },
+      "blog-category-bar-professionals": {
+        "type": "blog-category-bar-professionals",
+        "blocks": {
+          "60d18084-a270-4b70-8e9a-c51fee6b96b2": {
+            "type": "Blog",
+            "settings": {
+              "link_text": "HUMAN",
+              "link_url": "#human"
+            }
+          },
+          "780dc271-3a6f-4426-970f-75392b83da10": {
+            "type": "Blog",
+            "settings": {
+              "link_text": "ANIMAL",
+              "link_url": "#animal"
+            }
+          },
+          "96e4da7b-9c46-456e-857a-121876ef6b65": {
+            "type": "Blog",
+            "settings": {
+              "link_text": "PETS",
+              "link_url": "#pets"
+            }
+          },
+          "a0b46658-a888-414d-ac91-1bb72f2da152": {
+            "type": "Blog",
+            "settings": {
+              "link_text": "EQUINE",
+              "link_url": "#equine"
+            }
+          }
+        },
+        "block_order": [
+          "60d18084-a270-4b70-8e9a-c51fee6b96b2",
+          "780dc271-3a6f-4426-970f-75392b83da10",
+          "96e4da7b-9c46-456e-857a-121876ef6b65",
+          "a0b46658-a888-414d-ac91-1bb72f2da152"
+        ],
+        "settings": {}
+      },
+      "blog-block-professionals": {
+        "type": "blog-block-professionals",
+        "blocks": {
+          "d72a052a-5686-4e0c-88ff-67f13dad92cc": {
+            "type": "Blog",
+            "settings": {
+              "blog_block_title": "Human",
+              "blog_block_content": "",
+              "blog_block_tag": "human",
+              "post_limit": 6,
+              "blog_show_author": false,
+              "blog_show_date": false,
+              "blog_show_tags": false,
+              "show_blog_image": false,
+              "aspect_ratio": "aspect-1-1"
+            }
+          },
+          "fd88ca40-345f-4457-b947-a5938c87b157": {
+            "type": "Blog",
+            "settings": {
+              "blog_block_title": "Animal",
+              "blog_block_content": "",
+              "blog_block_tag": "animal",
+              "post_limit": 3,
+              "blog_show_author": false,
+              "blog_show_date": false,
+              "blog_show_tags": false,
+              "show_blog_image": false,
+              "aspect_ratio": "aspect-1-1"
+            }
+          },
+          "d8990771-2f4b-4aa9-addf-c7347409d1cd": {
+            "type": "Blog",
+            "settings": {
+              "blog_block_title": "PETS",
+              "blog_block_content": "",
+              "blog_block_tag": "pets",
+              "post_limit": 3,
+              "blog_show_author": false,
+              "blog_show_date": false,
+              "blog_show_tags": false,
+              "show_blog_image": false,
+              "aspect_ratio": "aspect-1-1"
+            }
+          },
+          "f57ddbc7-af57-48d8-bed1-57202632f3e8": {
+            "type": "Blog",
+            "settings": {
+              "blog_block_title": "EQUINE",
+              "blog_block_content": "",
+              "blog_block_tag": "equine",
+              "post_limit": 3,
+              "blog_show_author": false,
+              "blog_show_date": false,
+              "blog_show_tags": false,
+              "show_blog_image": false,
+              "aspect_ratio": "aspect-1-1"
+            }
+          }
+        },
+        "block_order": [
+          "d72a052a-5686-4e0c-88ff-67f13dad92cc",
+          "fd88ca40-345f-4457-b947-a5938c87b157",
+          "d8990771-2f4b-4aa9-addf-c7347409d1cd",
+          "f57ddbc7-af57-48d8-bed1-57202632f3e8"
+        ],
+        "settings": {
+          "blog_handle": "equestrian-professionals"
+        }
+      },
+      "feature-blog-article-default": {
+        "type": "feature-blog-article-default",
+        "settings": {
+          "feature_section_heading": "Featured Article",
+          "feature_article": "",
+          "show_article": true
+        }
+      },
+      "page-about-template": {
+        "type": "page-about-template",
+        "blocks": {
+          "7a410929-e8de-4ef8-a939-d085631929a0": {
+            "type": "Text",
+            "settings": {
+              "block_title": "<br><center>Data\/research-driven product formulations<\/center>",
+              "block_content": "",
+              "block_icon": "shopify:\/\/shop_images\/1.png"
+            }
+          },
+          "d3accb32-8abf-4bc9-939f-2d2f7ba80194": {
+            "type": "Text",
+            "settings": {
+              "block_title": "<br><center>Research and development<\/center>",
+              "block_content": "",
+              "block_icon": "shopify:\/\/shop_images\/Development.png"
+            }
+          },
+          "a97ef81a-ce84-4080-9be7-5567db88a2e1": {
+            "type": "Text",
+            "settings": {
+              "block_title": "<br><center>Pharmaceutical grade ingredients<\/center>",
+              "block_content": "",
+              "block_icon": "shopify:\/\/shop_images\/pharma.png"
+            }
+          },
+          "60439a94-a0b6-4315-ae41-42382e705e76": {
+            "type": "Text",
+            "settings": {
+              "block_title": "<br><center>Reliable, consistent, and precise dosing<\/center>",
+              "block_content": "",
+              "block_icon": "shopify:\/\/shop_images\/white-label.png"
+            }
+          },
+          "9f82950e-cd01-45d2-bf52-6f4337f972b1": {
+            "type": "Partners",
+            "settings": {
+              "block_title": "Strainprint",
+              "block_content": "<p>Strainprint maintains the world&#x27;s largest dataset on medical cannabis use in humans. Strainprint helps medical cannabis patients and doctors to use cannabis in the most effective and responsible way possible.<br\/><br\/> The data collected by Strainprint is used to guide doctors and patients to specific cannabis products, in order to treat specific ailments, based on cannabinoid and terpene formulas.<br\/><br\/>CannaHorse uses this data to determine the cannabinoid and terpene content and ratios for our product lines.<\/p>",
+              "block_icon": "shopify:\/\/shop_images\/StrainPrint_Logo.png"
+            }
+          },
+          "368ebf9d-b4b3-4ed4-a930-2929b7d77720": {
+            "type": "Partners",
+            "settings": {
+              "block_title": "Biopharm",
+              "block_content": "<p>Biopharm is one of Europe&#x27;s leading contract research organizations, based just outside Prague in the Czech Republic. <\/p><p>Biopharm received approval from the Czech Ministry of Health to conduct CannaHorse&#x27;s initial pharmacokinetic, bioavailability and behavioural studies. These were among the first ever licenses by a federal government for invasive trials of cannabis on animals in Europe.<\/p><p><br\/><\/p>",
+              "block_icon": "shopify:\/\/shop_images\/3.png"
+            }
+          },
+          "5685f225-26ca-4c50-bab6-558764e21dc3": {
+            "type": "Partners",
+            "settings": {
+              "block_title": "Bimeda",
+              "block_content": "<p>Bimeda is an Irish animal pharmaceutical manufacturer with manufacturing operations on 5 continents and sales to 75 countries. Based in Chicago, Bimeda manufacture leading equine products including Polyglycan and ConfidenceEQ among a number of anti-parasitic drugs, vaccines and others.<\/p><p>Bimeda aid CannaHorse in research, manufacturing and distribution strategy.<\/p>",
+              "block_icon": "shopify:\/\/shop_images\/4.png"
+            }
+          },
+          "e6e27ae3-c224-4dab-bd8d-de376831cfd7": {
+            "type": "Team",
+            "settings": {
+              "block_title": "<center>Warren Byrne<\/center>",
+              "block_position": "<center>Founder<\/center>",
+              "block_content": "<p>An experienced owner, breeder, and buyer of thoroughbred champions, whose marketing clients have included EquiLottery, the RCMP, and BBC Films.<\/p>",
+              "block_icon": "shopify:\/\/shop_images\/photo.png"
+            }
+          },
+          "8ed342cf-e28f-4af8-8e11-3a8dafcfc9d5": {
+            "type": "Team",
+            "settings": {
+              "block_title": "<center>Danielle O'Beirne<\/center>",
+              "block_position": "<center>Commercialization and Regulatory Advisor<\/center>",
+              "block_content": "<p>Cannabis industry expert with 150+ products launched into regulated markets and provincial dressage champion.<\/p>",
+              "block_icon": "shopify:\/\/shop_images\/photo.png"
+            }
+          },
+          "6485a64e-78de-4716-ade9-c748bfa7f6dd": {
+            "type": "Team",
+            "settings": {
+              "block_title": "<center>Dr. Shea Porr, PhD<\/center>",
+              "block_position": "<center>Scientific Advisor<\/center>",
+              "block_content": "<p>Head of Equine Science at Murray State University with world-leading equine cannabis knowledge.<\/p>",
+              "block_icon": "shopify:\/\/shop_images\/photo.png"
+            }
+          },
+          "580010eb-b689-4691-9023-26c6c67d989d": {
+            "type": "Team",
+            "settings": {
+              "block_title": "<center>Matt Schwartz<\/center>",
+              "block_position": "<center>Finance and Strategic Advisor<\/center>",
+              "block_content": "<p>Former CitiBank Investment Banker and insurance executive, horse owner and amateur polo player.<\/p>",
+              "block_icon": "shopify:\/\/shop_images\/photo.png"
+            }
+          }
+        },
+        "block_order": [
+          "7a410929-e8de-4ef8-a939-d085631929a0",
+          "d3accb32-8abf-4bc9-939f-2d2f7ba80194",
+          "a97ef81a-ce84-4080-9be7-5567db88a2e1",
+          "60439a94-a0b6-4315-ae41-42382e705e76",
+          "9f82950e-cd01-45d2-bf52-6f4337f972b1",
+          "368ebf9d-b4b3-4ed4-a930-2929b7d77720",
+          "5685f225-26ca-4c50-bab6-558764e21dc3",
+          "e6e27ae3-c224-4dab-bd8d-de376831cfd7",
+          "8ed342cf-e28f-4af8-8e11-3a8dafcfc9d5",
+          "6485a64e-78de-4716-ade9-c748bfa7f6dd",
+          "580010eb-b689-4691-9023-26c6c67d989d"
+        ],
+        "settings": {
+          "hero_text": "<center>About Us<\/center>",
+          "hero_image": "shopify:\/\/shop_images\/Screen_Shot_2020-12-04_at_1.55.48_PM.png",
+          "row_one_title": "",
+          "row_one_content": "CannaHorse was founded with the goal of bringing the medicinal properties of the cannabis plant to horses. As more jurisdictions allow veterinarians access to cannabis and hemp-derived health products, vets and horse owners are seeking quality, scientifically proven products.\n<br><br>\nTraditional overprescribed pharmaceutical products can lead to negative side effects for horses and their owners, which is why more horse owners are seeking healthier alternatives.\n<br><br>Cannahorse’s world-leading team of cannabis and veterinary research institutions includes universities and equine research professionals focused on proving efficacy and safety for their product formulations.",
+          "row_one_image": "shopify:\/\/shop_images\/dreamstime_m_59070769.jpg",
+          "three_col_title": "CannaHorse products are developed with the following principles in mind:",
+          "partner_title": "Our Industry Partners",
+          "row_two_title": "",
+          "team_title": "Our Team",
+          "row_two_content": ""
+        }
+      },
+      "1607193309d0414a19": {
+        "type": "how-does-it-work",
+        "settings": {
+          "section_title": "How does cannabis work?",
+          "section_content": "The Endocannabinoid System (ECS) is a vital molecular system in the body of all mammals that helps to maintain homeostasis, in other words the ECS helps your body stay in the Goldilocks Zone.",
+          "col_one_title": "CB1",
+          "col_one_color": "#015801",
+          "col_one_content": "Receptors are situated within the central nervous system",
+          "col_one_listing": "<p>APPETITE<\/p><p>IMMUNE CELLS<\/p><p>MOTOR ACTIVITY<\/p><p>PAIN RECEPTORS<\/p><p>SHORT TERM MEMORY<\/p><p>THINKING<\/p>",
+          "image_one": "shopify:\/\/shop_images\/CB1.png",
+          "image_two": "shopify:\/\/shop_images\/CBD2.png",
+          "col_two_title": "CB2",
+          "col_two_color": "#ff0000",
+          "col_two_content": "CB2 endocannabinoid receptors are found in the peripheral system, such as within immune cells",
+          "col_two_listing": "<p>CARDIOVASCULAR SYSTEM<\/p><p>CENTRAL NERVOUS SYSTEM<\/p><p>BONE | EYES | GUT<\/p><p>IMMUNE SYSTEM<\/p><p>KIDNEYS | LIVER | PANCREAS<\/p><p>MUSCLE | SKIN | TUMORS<\/p>",
+          "spacing": "py-12 md:py-20"
+        }
+      },
+      "16071946464a6a0a1a": {
+        "type": "feature-row-two",
+        "settings": {
+          "image": "shopify:\/\/shop_images\/equestrian-riding-her-horse-out-to-the-show.jpg",
+          "layout": "left",
+          "aspect": "aspect-4-3",
+          "title": "Equine Professionals",
+          "text": "<p>Cannabis medicine is new, we&#x27;re here to help educate veterinarians, equine health professionals, and stable owners and managers.<\/p><p>Book a 20-30 min consultation via Zoom at the button below. We can help you fit cannabinoid therapy into your equine healthcare routine.<\/p>",
+          "button_label": "SCHEDULE CONSULTATION",
+          "show_calendly": true
+        }
+      },
+      "cart-template": {
+        "type": "cart-template",
+        "settings": {
+          "cart_ajax_enable": true,
+          "cart_notes_enable": false
+        }
+      },
+      "blog-banner-equestrians": {
+        "type": "blog-banner-equestrians",
+        "settings": {
+          "show_icon": true,
+          "blog_banner_title": "",
+          "blog_banner_subtitle": "",
+          "spacing": "py-16"
+        }
+      },
+      "feature-blog-article-equestrians": {
+        "type": "feature-blog-article-equestrians",
+        "settings": {
+          "feature_section_heading": "Feature Story",
+          "feature_article": ""
+        }
+      },
+      "blog-banner-press": {
+        "type": "blog-banner-press",
+        "settings": {
+          "show_icon": true,
+          "blog_banner_title": "",
+          "blog_banner_subtitle": "",
+          "spacing": "py-16"
+        }
+      },
+      "feature-blog-article-press": {
+        "type": "feature-blog-article-press",
+        "settings": {
+          "feature_section_heading": "",
+          "feature_article": "",
+          "show_article": true
+        }
+      },
+      "welcome-banner": {
+        "type": "welcome-banner",
+        "settings": {
+          "show_icon": true,
+          "blog_banner_title": "Welcome.",
+          "blog_banner_subtitle": "Thank you for registering your account.",
+          "spacing": "py-8 md:py-16"
+        }
+      },
+      "welcome-buttons": {
+        "type": "welcome-buttons",
+        "blocks": {
+          "cfd32f20-a06c-4935-b982-4548421bee2f": {
+            "type": "text",
+            "settings": {
+              "button_text": "Equine Professionals",
+              "button_url": "shopify:\/\/pages\/equine-professionals"
+            }
+          },
+          "2c8a6306-918e-4efd-a53b-74d34d73870d": {
+            "type": "text",
+            "settings": {
+              "button_text": "Continue Shopping",
+              "button_url": "shopify:\/\/products\/equilibrium"
+            }
+          },
+          "4c43ce0a-908e-402f-82ed-648dbf83d9b4": {
+            "type": "text",
+            "settings": {
+              "button_text": "Go Home",
+              "button_url": "https:\/\/cannahorse.com"
+            }
+          }
+        },
+        "block_order": [
+          "cfd32f20-a06c-4935-b982-4548421bee2f",
+          "2c8a6306-918e-4efd-a53b-74d34d73870d",
+          "4c43ce0a-908e-402f-82ed-648dbf83d9b4"
+        ],
+        "settings": {
+          "title": "Explore CannaHorse -",
+          "content": "",
+          "spacing": "py-16"
+        }
+      },
+      "block-hero-template": {
+        "type": "block-hero-template",
+        "settings": {
+          "hero_text": "About Us",
+          "hero_image": "shopify:\/\/shop_images\/cannabis-researcher-testing-cannabinoids.png"
+        }
+      },
+      "block-text-template": {
+        "type": "block-text-template",
+        "settings": {
+          "row_one_title": "",
+          "row_one_content": "<p>CannaHorse was founded with the goal of bringing the medicinal properties of the cannabis plant to horses. As more jurisdictions allow veterinarians access to cannabis and hemp-derived health products, vets and horse owners are seeking quality, scientifically proven products.<\/p><p>Traditional overprescribed pharmaceutical products can lead to negative side effects for horses and their owners, which is why more horse owners are seeking healthier alternatives.<\/p><p>Cannahorse’s world-leading team of cannabis and veterinary research institutions includes universities and equine research professionals focused on proving efficacy and safety for their product formulations.<\/p>",
+          "bg_color": "#ffffff",
+          "mobile_margin_top": 8,
+          "mobile_margin_bottom": 8,
+          "desktop_margin_top": 40,
+          "desktop_margin_bottom": 40
+        }
+      },
+      "block-icon-text-template": {
+        "type": "block-icon-text-template",
+        "blocks": {
+          "585d04e4-c6f3-43cc-a57f-824abad32819": {
+            "type": "Text",
+            "settings": {
+              "block_title": "Data\/research-driven product formulations",
+              "block_content": "",
+              "block_icon": "shopify:\/\/shop_images\/1.png"
+            }
+          },
+          "03a28f11-15bf-4dd9-9732-5b83bb9fa800": {
+            "type": "Text",
+            "settings": {
+              "block_title": "Research and development",
+              "block_content": "",
+              "block_icon": "shopify:\/\/shop_images\/Development.png"
+            }
+          },
+          "7aac60ad-fcfd-431f-ac57-24481f5e9b69": {
+            "type": "Text",
+            "settings": {
+              "block_title": "Pharmaceutical grade ingredients",
+              "block_content": "",
+              "block_icon": "shopify:\/\/shop_images\/pharma.png"
+            }
+          },
+          "b6e00d77-5d1a-4c16-9287-30e73c08a642": {
+            "type": "Text",
+            "settings": {
+              "block_title": "Reliable, consistent, and precise dosing",
+              "block_content": "",
+              "block_icon": "shopify:\/\/shop_images\/white-label.png"
+            }
+          }
+        },
+        "block_order": [
+          "585d04e4-c6f3-43cc-a57f-824abad32819",
+          "03a28f11-15bf-4dd9-9732-5b83bb9fa800",
+          "7aac60ad-fcfd-431f-ac57-24481f5e9b69",
+          "b6e00d77-5d1a-4c16-9287-30e73c08a642"
+        ],
+        "settings": {
+          "section_title": "CannaHorse products are developed with the following principles in mind:",
+          "bg_color": "#ffffff",
+          "mobile_margin_top": 8,
+          "mobile_margin_bottom": 8,
+          "desktop_margin_top": 8,
+          "desktop_margin_bottom": 8
+        }
+      },
+      "block-team-template": {
+        "type": "block-team-template",
+        "blocks": {
+          "f950f53e-f301-4e0b-a2b6-bfab337e7f85": {
+            "type": "Team",
+            "settings": {
+              "block_title": "Warren Byrne",
+              "block_position": "Founder",
+              "block_content": "<p>An experienced owner, breeder, and buyer of thoroughbred champions, whose marketing clients have included EquiLottery, the RCMP, and BBC Films.<\/p>",
+              "block_icon": "shopify:\/\/shop_images\/Screen_Shot_2021-03-30_at_11.32.59_AM.png"
+            }
+          },
+          "123fddf5-33e2-477f-abd5-f938633088e6": {
+            "type": "Team",
+            "settings": {
+              "block_title": "Danielle O'Beirne",
+              "block_position": "Commercialization and Regulatory Advisor",
+              "block_content": "<p>Cannabis industry expert with 150+ products launched into regulated markets and provincial dressage champion.<\/p>",
+              "block_icon": "shopify:\/\/shop_images\/Screen_Shot_2021-03-30_at_11.32.44_AM.png"
+            }
+          },
+          "9863da13-87ed-4acd-9fef-89d92cb89f2b": {
+            "type": "Team",
+            "settings": {
+              "block_title": "Dr. Shea Porr, PhD",
+              "block_position": "Scientific Advisor",
+              "block_content": "<p>Head of Equine Science at Murray State University with world-leading equine cannabis knowledge.<\/p>",
+              "block_icon": "shopify:\/\/shop_images\/download.jpg"
+            }
+          },
+          "c7071d16-00d0-4fca-879e-f7cfc357217c": {
+            "type": "Team",
+            "settings": {
+              "block_title": "Matt Schwartz",
+              "block_position": "Finance and Strategic Advisor",
+              "block_content": "<p>Former CitiBank Investment Banker and insurance executive, horse owner and amateur polo player.<\/p>",
+              "block_icon": "shopify:\/\/shop_images\/Matt_headshot.jpg"
+            }
+          }
+        },
+        "block_order": [
+          "f950f53e-f301-4e0b-a2b6-bfab337e7f85",
+          "123fddf5-33e2-477f-abd5-f938633088e6",
+          "9863da13-87ed-4acd-9fef-89d92cb89f2b",
+          "c7071d16-00d0-4fca-879e-f7cfc357217c"
+        ],
+        "settings": {
+          "team_title": "Our Team"
+        }
+      },
+      "block-partners-template": {
+        "type": "block-partners-template",
+        "blocks": {
+          "59671935-7879-4fb1-b270-29542d4839f7": {
+            "type": "Partners",
+            "settings": {
+              "block_title": "Strainprint",
+              "block_content": "<p>Strainprint maintains the world&#x27;s largest dataset on medical cannabis use in humans. Strainprint helps medical cannabis patients and doctors to use cannabis in the most effective and responsible way possible.<br\/><br\/>The data collected by Strainprint is used to guide doctors and patients to specific cannabis products, in order to treat specific ailments, based on cannabinoid and terpene formulas.<br\/><br\/>CannaHorse uses this data to determine the cannabinoid and terpene content and ratios for our product lines.<\/p>",
+              "block_icon": "shopify:\/\/shop_images\/1_a4532dee-320a-47d5-a7f8-d2c5ebe2cbed.png"
+            }
+          },
+          "46e5180f-2531-4cb9-9745-bbe9d61521aa": {
+            "type": "Partners",
+            "settings": {
+              "block_title": "Biopharm",
+              "block_content": "<p>Biopharm is one of Europe&#x27;s leading contract research organizations, based just outside Prague in the Czech Republic.<\/p><p>Biopharm received approval from the Czech Ministry of Health to conduct CannaHorse&#x27;s initial pharmacokinetic, bioavailability and behavioural studies. These were among the first ever licenses by a federal government for invasive trials of cannabis on animals in Europe.<\/p>",
+              "block_icon": "shopify:\/\/shop_images\/3.png"
+            }
+          },
+          "2e6951cf-d95e-4934-837b-16414dfe4c1e": {
+            "type": "Partners",
+            "settings": {
+              "block_title": "Bimeda",
+              "block_content": "<p>Bimeda is an Irish animal pharmaceutical manufacturer with manufacturing operations on 5 continents and sales to 75 countries. Based in Chicago, Bimeda manufacture leading equine products including Polyglycan and ConfidenceEQ among a number of anti-parasitic drugs, vaccines and others.<\/p><p>Bimeda aid CannaHorse in research, manufacturing and distribution strategy.<\/p>",
+              "block_icon": "shopify:\/\/shop_images\/4.png"
+            }
+          }
+        },
+        "block_order": [
+          "59671935-7879-4fb1-b270-29542d4839f7",
+          "46e5180f-2531-4cb9-9745-bbe9d61521aa",
+          "2e6951cf-d95e-4934-837b-16414dfe4c1e"
+        ],
+        "settings": {
+          "partner_title": "Our Partners"
         }
       }
     },
@@ -852,9 +1525,12 @@
       "hero-1",
       "1604686235e8c7a893",
       "collection",
+      "16069259612a236ec5",
       "1605057359e5d3918b",
       "1605039777a53d097f",
       "160503979120498332",
+      "1607193309d0414a19",
+      "16071946464a6a0a1a",
       "hero-2",
       "1605061965e60258cf",
       "16063481606dc8124f"

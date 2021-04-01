@@ -1,0 +1,41 @@
+  <!-- First Row: Our Story -->
+  <div class="px-4 md:px-0 my-8 md:my-0">
+    
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-y-6 md:gap-x-12 md:gap-y-0 items-center container mx-auto bg-grey px-6 py-6 my-0 md:my-20">
+      <div data-aos="up" data-aos-delay="200" class="block aspect-3-2 relative w-full overflow-hidden">
+        <img id="" class="absolute w-full h-full object-cover lazyload" src="{{ section.settings.row_one_image | img_url: '1200x', scale: 2 }}" data-src="{{ img_url }}" data-widths="[180, 360, 540, 720, 900, 1080, 1296, 1512, 1728, 2048]" data-aspectratio="{{ section.settings.row_one_image.aspect_ratio }}" data-sizes="auto" alt="{{ section.settings.row_one_image.alt | escape }}">
+      </div>
+      <div data-aos="down">
+        <h2 class="text-4xl font-bold">{{section.settings.row_one_title}}</h2>
+        <p class="mt-4">{{section.settings.row_one_content}}</p>
+      </div>
+
+    </div>
+  </div>
+
+{% schema %}
+  {
+    "name": "Image + Text",
+    "settings": [    {
+      "type": "text",
+      "id": "row_one_title",
+      "label": "Row One Title"
+    },
+    {
+      "type": "textarea",
+      "id": "row_one_content",
+      "label": "Row One Content"
+    },
+    {
+      "type": "image_picker",
+      "id": "row_one_image",
+      "label": "Row One Image"
+    }]
+  }
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

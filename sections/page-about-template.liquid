@@ -3,8 +3,12 @@
       <h1 class="font-bold text-5xl text-white">{{section.settings.hero_text}}</h1>
     </div>
   </div>
+
+
+
   <!-- First Row: Our Story -->
   <div class="px-4 md:px-0 my-8 md:my-0">
+    
     <div class="grid grid-cols-1 md:grid-cols-2 gap-y-6 md:gap-x-12 md:gap-y-0 items-center container mx-auto bg-grey px-6 py-6 my-0 md:my-20">
       <div data-aos="up" data-aos-delay="200" class="block aspect-3-2 relative w-full overflow-hidden">
         <img id="" class="absolute w-full h-full object-cover lazyload" src="{{ section.settings.row_one_image | img_url: '1200x', scale: 2 }}" data-src="{{ img_url }}" data-widths="[180, 360, 540, 720, 900, 1080, 1296, 1512, 1728, 2048]" data-aspectratio="{{ section.settings.row_one_image.aspect_ratio }}" data-sizes="auto" alt="{{ section.settings.row_one_image.alt | escape }}">
@@ -17,6 +21,37 @@
     </div>
   </div>
 
+<!-- Our Team  -->
+  <div class="py-24">
+    <div class="container mx-auto px-4 md:px-0">
+      <div data-aos="down">
+        <h2 class="text-4xl font-bold brand-primary">{{section.settings.team_title}}</h2>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 mt-8 gap-x-12 gap-y-4 lg:gap-20">
+          {% for block in section.blocks %}
+        			{% if block.type == "Team"%}
+          <div data-aos="up" data-aos-delay="{{forloop.index | times:150}}" class="bg-white px-4 py-4">
+                <div style="clip-path:circle();" class="block w-96 h-64 mx-auto relative">
+                  <img id=""
+                    class="w-full h-full object-cover lazyload"
+                    src="{{ block.settings.block_icon | img_url: '1200x', scale: 2 }}"
+                    data-src="{{ img_url }}"
+                    data-widths="[180, 360, 540, 720, 900, 1080, 1296, 1512, 1728, 2048]"
+                    data-aspectratio="{{ block.settings.block_icon.aspect_ratio }}"
+                    data-sizes="auto"
+                    alt="{{ block.settings.block_icon.alt | escape }}">
+                  </div>
+            <h4 class="font-bold text-lg mt-4 mb-0">{{block.settings.block_title}}</h4>
+			<p class="font-bold text-lg mb-0">{{block.settings.block_position}}</p>
+            <div class="mt-4">{{block.settings.block_content}}</div>
+          </div>
+                {%endif%}
+          {% endfor %}
+      </div>
+    </div>
+  </div>
+
   <!-- What We Do  -->
   <div class="bg-grey py-24">
     <div class="container mx-auto px-4 md:px-0">
@@ -24,8 +59,9 @@
         <h2 class="text-4xl font-bold brand-primary">{{section.settings.three_col_title}}</h2>
       </div>
 
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 mt-8 gap-x-12 gap-y-4 lg:gap-20">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 mt-8 gap-x-12 gap-y-4 lg:gap-20">
           {% for block in section.blocks %}
+        			{% if block.type == "Text"%}
           <div data-aos="up" data-aos-delay="{{forloop.index | times:150}}" class="bg-white px-4 py-4">
                 <div class="block w-24 h-32 mx-auto relative">
                   <img id=""
@@ -38,12 +74,13 @@
                     alt="{{ block.settings.block_icon.alt | escape }}">
                   </div>
             <h4 class="font-bold text-lg">{{block.settings.block_title}}</h4>
-            <p class="mt-4">{{block.settings.block_content}}</p>
+            
+            <div class="mt-4">{{block.settings.block_content}}</div>
           </div>
+                {%endif%}
           {% endfor %}
       </div>
     </div>
-
   </div>
 
   <!--  Second Row: Our Products  -->
@@ -58,6 +95,37 @@
       </div>
 
     </div>
+  </div>
+
+<!-- Partners  -->
+  <div class="py-24">
+    <div class="container mx-auto px-4 md:px-0">
+      <div data-aos="down">
+        <h2 class="text-4xl font-bold brand-primary">{{section.settings.partner_title}}</h2>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 mt-8 gap-x-12 gap-y-4 lg:gap-20">
+          {% for block in section.blocks %}
+			{% if block.type == "Partners"%}
+  <div data-aos="up" data-aos-delay="{{forloop.index | times:150}}" class="bg-white px-4 py-4">
+                <div class="block w-48 h-32 mx-auto relative">
+                  <img id=""
+                    class="w-full h-full object-contain lazyload"
+                    src="{{ block.settings.block_icon | img_url: '1200x', scale: 2 }}"
+                    data-src="{{ img_url }}"
+                    data-widths="[180, 360, 540, 720, 900, 1080, 1296, 1512, 1728, 2048]"
+                    data-aspectratio="{{ block.settings.block_icon.aspect_ratio }}"
+                    data-sizes="auto"
+                    alt="{{ block.settings.block_icon.alt | escape }}">
+                  </div>
+            <h4 class="font-bold text-lg">{{block.settings.block_title}}</h4>
+            <div class="mt-4 text-sm">{{block.settings.block_content}}</div>
+          </div>
+        {%endif%}
+          {% endfor %}
+      </div>
+    </div>
+
   </div>
 
 
@@ -97,8 +165,18 @@
     },
     {
       "type": "text",
+      "id": "partner_title",
+      "label": "Partner Title"
+    },
+    {
+      "type": "text",
       "id": "row_two_title",
       "label": "Row Two Title"
+    },
+    {
+      "type": "text",
+      "id": "team_title",
+      "label": "Team Title"
     },
     {
       "type": "textarea",
@@ -111,11 +189,11 @@
       "label": "Row Two Image"
     }
   ],
-  "max_blocks": 3,
   "blocks": [
   {
       "type": "Text",
       "name": "Text Block",
+	  "limit": 4,
       "settings": [
           {
               "type": "text",
@@ -133,8 +211,56 @@
               "label": "Block Icon"
           }
       ]
+  },
+  {
+      "type": "Partners",
+      "name": "Partner Block",
+	  "limit": 4,
+      "settings": [
+          {
+              "type": "text",
+              "id": "block_title",
+              "label": "Partner Title"
+          },
+          {
+              "type": "richtext",
+              "id": "block_content",
+              "label": "Parter Content"
+          },
+          {
+              "type": "image_picker",
+              "id": "block_icon",
+              "label": "Partner Logo"
+          }
+      ]
+  },
+  {
+      "type": "Team",
+      "name": "Team",
+	  "limit": 6,
+      "settings": [
+          {
+              "type": "text",
+              "id": "block_title",
+              "label": "Person Name"
+          },
+          {
+              "type": "text",
+              "id": "block_position",
+              "label": "Person Position"
+          },
+          {
+              "type": "richtext",
+              "id": "block_content",
+              "label": "Person Bio"
+          },
+          {
+              "type": "image_picker",
+              "id": "block_icon",
+              "label": "Person Headshot"
+          }
+      ]
   }
   ]
-  
 }
 {% endschema %}

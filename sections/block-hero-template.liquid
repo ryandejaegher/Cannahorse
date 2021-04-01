@@ -1,0 +1,27 @@
+<div class="bg-brand-primary cover bg-blend-multiply bg-center px-4 md:px-0" style="background-image: url({{section.settings.hero_image | img_url:'1920x', scale:2}})">
+    <div data-aos="left" class="container mx-auto py-32 md:py-64">
+      <h1 class="font-bold text-5xl text-white text-center">{{section.settings.hero_text}}</h1>
+    </div>
+  </div>
+
+{% schema %}
+  {
+    "name": "Hero Block",
+    "settings": [{
+      "type": "text",
+      "id": "hero_text",
+      "label": "Hero Title"
+    },
+    {
+      "type": "image_picker",
+      "id": "hero_image",
+      "label": "Hero Image"
+    }]
+  }
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

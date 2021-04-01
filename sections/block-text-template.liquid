@@ -1,0 +1,102 @@
+<style>
+  #shopify-section-{{section.id}} .section-mt {
+    margin-top: {{section.settings.mobile_margin_top}}px;
+	}
+  
+    #shopify-section-{{section.id}} .section-mb {
+    margin-bottom: {{section.settings.mobile_margin_bottom}}px;
+	}
+  
+  @media(min-width: 767px) {
+	      #shopify-section-{{section.id}} .section-mt {
+    margin-top: {{section.settings.desktop_margin_top}}px;
+	}
+    
+     #shopify-section-{{section.id}} .section-mb {
+    margin-bottom: {{section.settings.desktop_margin_bottom}}px;
+	}
+
+}
+
+</style>  
+
+<!-- First Row: Our Story -->
+  <div class="px-4 md:px-0 section-mt section-mb">
+    
+    <div style="background:{{section.settings.bg_color}}" class="grid grid-cols-1 md:grid-cols-1 gap-y-6 md:gap-x-12 md:gap-y-0 items-center container mx-auto px-6 py-6">
+      <div data-aos="down" class="max-w-xl mx-auto">
+        <h2 class="text-4xl font-bold">{{section.settings.row_one_title}}</h2>
+        <p class="mt-4">{{section.settings.row_one_content}}</p>
+      </div>
+
+    </div>
+  </div>
+
+{% schema %}
+  {
+    "name": "Text Block",
+    "settings": [    {
+      "type": "text",
+      "id": "row_one_title",
+      "label": "Row One Title"
+    },
+    {
+      "type": "richtext",
+      "id": "row_one_content",
+      "label": "Row One Content"
+    },
+	{
+   "type":      "color",
+   "id":        "bg_color",
+   "label":     "Background Color",
+   "default":   "#fff"
+},
+{
+    "type": "range",
+    "id": "mobile_margin_top",
+    "min": 8,
+    "max": 160,
+    "step": 8,
+    "unit": "px",
+    "label": "Mobile Top Spacing",
+	"default":8
+},
+{
+    "type": "range",
+    "id": "mobile_margin_bottom",
+    "min": 8,
+    "max": 160,
+    "step": 8,
+    "unit": "px",
+    "label": "Mobile Bottom Spacing",
+	"default":8
+},
+{
+    "type": "range",
+    "id": "desktop_margin_top",
+    "min": 8,
+    "max": 160,
+    "step": 8,
+    "unit": "px",
+    "label": "Desktop Top Spacing",
+	"default":8
+},
+{
+    "type": "range",
+    "id": "desktop_margin_bottom",
+    "min": 8,
+    "max": 160,
+    "step": 8,
+    "unit": "px",
+    "label": "Desktop Bottom Spacing",
+	"default":8
+}
+]
+  }
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

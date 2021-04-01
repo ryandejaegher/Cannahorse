@@ -1,0 +1,71 @@
+<!-- Partners  -->
+  <div class="py-24">
+    <div class="container mx-auto px-4 md:px-0">
+      <div data-aos="down">
+        <h2 class="text-4xl font-bold brand-primary">{{section.settings.partner_title}}</h2>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 mt-8 gap-x-12 gap-y-4 lg:gap-20">
+          {% for block in section.blocks %}
+			{% if block.type == "Partners"%}
+  <div data-aos="up" data-aos-delay="{{forloop.index | times:150}}" class="bg-white px-4 py-4">
+                <div class="block w-48 h-32 mx-auto relative">
+                  <img id=""
+                    class="w-full h-full object-contain lazyload"
+                    src="{{ block.settings.block_icon | img_url: '1200x', scale: 2 }}"
+                    data-src="{{ img_url }}"
+                    data-widths="[180, 360, 540, 720, 900, 1080, 1296, 1512, 1728, 2048]"
+                    data-aspectratio="{{ block.settings.block_icon.aspect_ratio }}"
+                    data-sizes="auto"
+                    alt="{{ block.settings.block_icon.alt | escape }}">
+                  </div>
+            <h4 class="font-bold text-lg text-center">{{block.settings.block_title}}</h4>
+            <div class="mt-4 text-sm text-center">{{block.settings.block_content}}</div>
+          </div>
+        {%endif%}
+          {% endfor %}
+      </div>
+    </div>
+
+  </div>
+
+{% schema %}
+  {
+    "name": "Partners",
+    "settings": [
+
+{
+   "type":      "text",
+   "id":        "partner_title",
+   "label":     "Partner Title"
+}],
+	"blocks": [{
+      "type": "Partners",
+      "name": "Partner Block",
+	  "limit": 4,
+      "settings": [
+          {
+              "type": "text",
+              "id": "block_title",
+              "label": "Partner Title"
+          },
+          {
+              "type": "richtext",
+              "id": "block_content",
+              "label": "Parter Content"
+          },
+          {
+              "type": "image_picker",
+              "id": "block_icon",
+              "label": "Partner Logo"
+          }
+      ]
+  }]
+  }
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

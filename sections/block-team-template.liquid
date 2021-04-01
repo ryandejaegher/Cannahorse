@@ -1,0 +1,99 @@
+	<!-- Our Team  -->
+  <div class="py-24">
+    <div class="container mx-auto px-4 md:px-0">
+      <div data-aos="down">
+        <h2 class="text-4xl font-bold brand-primary text-center">{{section.settings.team_title}}</h2>
+      </div>
+
+      <div class="grid grid-cols-1 mt-8 gap-8 max-w-xl mx-auto">
+          {% for block in section.blocks %}
+        {% if block.type == "Team"%}
+          <div data-aos="up" data-aos-delay="{{forloop.index | times:150}}" class="bg-white px-4 py-4 flex items-start">
+                <div style="clip-path:circle();" class="block mx-auto relative self-start">
+                  <img id=""
+                    class="w-32 h-32 object-cover lazyload max-w-none"
+                    src="{{ block.settings.block_icon | img_url: '1200x', scale: 2 }}"
+                    data-src="{{ img_url }}"
+                    data-widths="[180, 360, 540, 720, 900, 1080, 1296, 1512, 1728, 2048]"
+                    data-aspectratio="{{ block.settings.block_icon.aspect_ratio }}"
+                    data-sizes="auto"
+                    alt="{{ block.settings.block_icon.alt | escape }}">
+                  </div>
+            <div class="ml-4">
+              <h4 class="font-bold text-lg mt-0 mb-0">{{block.settings.block_title}}</h4>
+              <p class="font-bold text-lg mb-0">{{block.settings.block_position}}</p>
+              <div class="mt-4">{{block.settings.block_content}}</div>
+            </div>
+          </div>
+                {%endif%}
+          {% endfor %}
+      </div>
+    </div>
+  </div>
+
+
+{% comment %}
+<div data-aos="up" data-aos-delay="{{forloop.index | times:150}}" class="bg-white px-4 py-4 flex">
+                <div style="clip-path:circle();" class="block w-48 h-64 mx-auto relative">
+                  <img id=""
+                    class="w-full h-full object-cover lazyload"
+                    src="{{ block.settings.block_icon | img_url: '1200x', scale: 2 }}"
+                    data-src="{{ img_url }}"
+                    data-widths="[180, 360, 540, 720, 900, 1080, 1296, 1512, 1728, 2048]"
+                    data-aspectratio="{{ block.settings.block_icon.aspect_ratio }}"
+                    data-sizes="auto"
+                    alt="{{ block.settings.block_icon.alt | escape }}">
+                  </div>
+  <div>
+            <h4 class="font-bold text-lg mt-4 mb-0 text-center">{{block.settings.block_title}}</h4>
+			<p class="font-bold text-lg mb-0 text-center">{{block.settings.block_position}}</p>
+            <div class="mt-4">{{block.settings.block_content}}</div>
+  </div>
+          </div>
+{% endcomment %}
+
+{% schema %}
+  {
+    "name": "Team",
+    "settings": [
+	{
+   "type":      "text",
+   "id":        "team_title",
+   "label":     "Team Title"
+}
+],
+	"blocks": [{
+      "type": "Team",
+      "name": "Team Member",
+	  "limit": 6,
+      "settings": [
+          {
+              "type": "text",
+              "id": "block_title",
+              "label": "Person Name"
+          },
+          {
+              "type": "text",
+              "id": "block_position",
+              "label": "Person Position"
+          },
+          {
+              "type": "richtext",
+              "id": "block_content",
+              "label": "Person Bio"
+          },
+          {
+              "type": "image_picker",
+              "id": "block_icon",
+              "label": "Person Headshot"
+          }
+      ]
+  }]
+  }
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}
